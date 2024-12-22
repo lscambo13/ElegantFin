@@ -1124,3 +1124,13 @@ div[data-role=controlgroup] a.ui-btn-active {
 .checkboxIcon {
     font-size: 1em;
 }
+
+.checkboxOutline {
+    border-width: var(--borderWidth);
+}
+
+.emby-checkbox:checked + span + .checkboxOutline {
+  box-shadow: none;
+  background: var(--selectorBackgroundColor);
+  border: var(--lighterBorderColor) solid var(--borderWidth);
+}
