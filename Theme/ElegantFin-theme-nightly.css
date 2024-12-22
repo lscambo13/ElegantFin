@@ -1139,3 +1139,8 @@ div[data-role=controlgroup] a.ui-btn-active {
     border-radius: 8px;
     border-color: var(--borderColor);
 }
+
+.sectionTitleTextButton:not(.padded-left) {
+    margin: 0 -0.5em !important;
+    padding: 0 0.5em !important;
+}
