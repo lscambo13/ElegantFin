@@ -1114,6 +1114,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     background: linear-gradient(140deg,#aa5cc3,#00a4dc);
     display: flex;
     place-content: center;
+    text-shadow: rgb(0, 0, 0) 0px 0px 7px;
 }
 
 .sliderBubbleText {
