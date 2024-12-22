@@ -491,6 +491,10 @@ html {
     backdrop-filter: blur(.1em);
 }
 
+.btnPlay {
+    padding-right: 1em !important;
+}
+
 .button-flat:hover {
     color: unset;
     background-color: rgba(255, 255, 255, 0.2);
