@@ -1144,3 +1144,12 @@ div[data-role=controlgroup] a.ui-btn-active {
     margin: 0 -0.5em !important;
     padding: 0 0.5em !important;
 }
+
+.sectionTitleTextButton > .material-icons::before {
+    font-size: 1em;
+}
+
+.sectionTitleTextButton:hover {
+    background: transparent !important;
+    color: white !important;
+}
