@@ -1115,3 +1115,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     display: flex;
     place-content: center;
 }
+
+.sliderBubbleText {
+    font-size: 1.5em;
+}
