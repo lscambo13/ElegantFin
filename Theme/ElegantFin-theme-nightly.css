@@ -1134,3 +1134,8 @@ div[data-role=controlgroup] a.ui-btn-active {
   background: var(--selectorBackgroundColor);
   border: var(--lighterBorderColor) solid var(--borderWidth);
 }
+
+.verticalSection {
+    border-radius: 8px;
+    border-color: var(--borderColor);
+}
