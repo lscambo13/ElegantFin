@@ -1120,3 +1120,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 .sliderBubbleText {
     font-size: 1.5em;
 }
+
+.checkboxIcon {
+    font-size: 1em;
+}
