@@ -1099,3 +1099,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     border-color: var(--dimTextColor);
     border-style: inset;
 }
+
+.subtitleappearance-preview {
+    border-radius: 8px;
+}
