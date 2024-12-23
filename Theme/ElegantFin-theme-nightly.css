@@ -474,7 +474,7 @@ html {
 .btnPlay>.detailButton-content::after {
     padding-left: .25em;
     padding-right: 1em;
-    margin-top: .18em;
+    place-content: center;
     content: "Play";
 }
 
