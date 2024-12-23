@@ -1122,18 +1122,18 @@ div[data-role=controlgroup] a.ui-btn-active {
     font-size: 1.5em;
 }
 
-.checkboxIcon {
+.checkboxOutline:not(.multiSelectCheckboxOutline) .checkboxIcon {
     font-size: 1em;
 }
 
-.checkboxOutline {
+.checkboxOutline:not(.multiSelectCheckboxOutline) {
     border-width: var(--borderWidth);
 }
 
-.emby-checkbox:checked + span + .checkboxOutline {
-  box-shadow: none;
-  background: var(--selectorBackgroundColor);
-  border: var(--lighterBorderColor) solid var(--borderWidth);
+.emby-checkbox:checked + span + .checkboxOutline:not(.multiSelectCheckboxOutline) {
+    box-shadow: none;
+    background: var(--selectorBackgroundColor);
+    border: var(--lighterBorderColor) solid var(--borderWidth);
 }
 
 fieldset {
