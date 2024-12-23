@@ -28,6 +28,7 @@
     --smallRadius: .5em;
     --smallerRadius: .375em;
     --borderWidth: 0.075em;
+    --tableBodyColor: rgb(31 41 55 / 1);
 }
 
 html {
@@ -1152,4 +1153,16 @@ div[data-role=controlgroup] a.ui-btn-active {
 .sectionTitleTextButton:hover {
     background: transparent !important;
     color: white !important;
+}
+
+#serverActivityPage .MuiPaper-elevation2 {
+    border: solid var(--borderColor) var(--borderWidth) !important;
+    box-shadow: unset !important;
+    background-color: var(--tableBodyColor);
+}
+
+#serverActivityPage .MuiPaper-elevation2 > .MuiBox-root,
+#serverActivityPage .MuiTableRow-root.MuiTableRow-head,
+#serverActivityPage .MuiTableRow-root {
+    background-color: var(--tableBodyColor) !important;
 }
