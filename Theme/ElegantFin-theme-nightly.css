@@ -1107,7 +1107,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .subtitleappearance-preview {
-    border-radius: 8px;
+    border-radius: var(--smallRadius);
 }
 
 .infoBanner {
@@ -1136,14 +1136,9 @@ div[data-role=controlgroup] a.ui-btn-active {
   border: var(--lighterBorderColor) solid var(--borderWidth);
 }
 
-.verticalSection {
-    border-radius: 8px;
-    border-color: var(--borderColor);
-}
-
-.sectionTitleTextButton:not(.padded-left) {
-    margin: 0 -0.5em !important;
-    padding: 0 0.5em !important;
+fieldset {
+    border-radius: var(--smallRadius);
+    border-color: var(--borderColor) solid var(--borderWidth);
 }
 
 .sectionTitleTextButton > .material-icons::before {
