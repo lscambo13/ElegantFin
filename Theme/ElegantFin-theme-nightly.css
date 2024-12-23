@@ -1166,3 +1166,12 @@ div[data-role=controlgroup] a.ui-btn-active {
 #serverActivityPage .MuiTableRow-root {
     background-color: var(--tableBodyColor) !important;
 }
+
+.MuiList-root.MuiMenu-list {
+    background-color: var(--drawerColor);
+}
+
+ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
+    /* ! Don't change these units. They are rem because that is standard for MUI */
+    gap: 0.5rem;
+}
