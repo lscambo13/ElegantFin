@@ -473,6 +473,7 @@ html {
 
 .btnPlay>.detailButton-content::after {
     padding-left: .25em;
+    padding-right: 1em;
     margin-top: .18em;
     content: "Play";
 }
@@ -490,10 +491,6 @@ html {
     padding: .5em .5em !important;
     margin: 0.125em !important;
     backdrop-filter: blur(.1em);
-}
-
-.btnPlay {
-    padding-right: 1em !important;
 }
 
 .button-flat:hover {
