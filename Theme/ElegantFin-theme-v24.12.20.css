@@ -17,7 +17,7 @@
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), var(--lighterGradientPoint) 25%);
     --hoverGradient: linear-gradient(130deg, rgb(255 255 255 / 20%) 20%, rgb(255 255 255 / 10%) 40%);
-    --activeColor: rgb(201 143 255 / 40%);
+    --activeColor: rgb(201 143 255 / 80%);
     --largerRadius: 1.25em;
     --largeRadius: 1em;
     --smallRadius: .5em;
