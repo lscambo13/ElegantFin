@@ -32,6 +32,8 @@
     --smallRadius: .5em;
     --smallerRadius: .375em;
     --borderWidth: 0.075em;
+    --loginPageBgUrl: url(https://image.tmdb.org/t/p/original/2meX1nMdScFOoV4370rqHWKmXhY.jpg);
+    --loginPageText: "Sign in to continue";
 }
 
 html {
@@ -1330,4 +1332,84 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 #scenesContent .cardScalable:hover {
     border-color: var(--dimTextColor) !important;
+}
+
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.semiTransparent.noHeaderRight {
+    display: none;
+}
+
+#loginPage {
+    padding-top: 20em !important;
+}
+
+@media (max-height: 890px) {
+    #loginPage {
+        padding-top: 6.5em !important;
+    }
+}
+
+#loginPage .readOnlyContent,
+#loginPage form {
+    max-width: 28em;
+}
+
+#loginPage .readOnlyContent {
+    margin: .5em auto 0em !important;
+}
+
+#loginPage .padded-left.padded-right.padded-bottom-page {
+    margin: 2em auto 0;
+    width: 28em;
+    background: rgba(30, 40, 54, 0.7);
+    padding: 2em 2em 1em 2em !important;
+    border-radius: var(--largerRadius);
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+    #loginPage .readOnlyContent,
+    #loginPage form {
+        max-width: 100%;
+    }
+
+    #loginPage .padded-left.padded-right.padded-bottom-page {
+        width: 100%;
+        margin: 1em auto;
+    }
+}
+
+#loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2em 0;
+    overflow-y: auto;
+    background:
+        linear-gradient(rgba(45, 55, 72, 0.47) 0%, rgb(26, 32, 46) 100%),
+        var(--loginPageBgUrl);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.manualLoginForm .sectionTitle {
+    display: none;
+}
+
+.manualLoginForm::before {
+    content: var(--loginPageText);
+    position: relative;
+    display: block;
+    top: -3.5em;
+    margin-bottom: -1em;
+    font-size: 1.875em;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+
+.manualLoginForm {
+    position: relative;
 }
