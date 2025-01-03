@@ -1348,9 +1348,10 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     }
 }
 
-#loginPage .readOnlyContent,
-#loginPage form {
-    max-width: 28em;
+@media (max-height: 1300px) {
+    #loginPage:has(.padded-left.padded-right.padded-bottom-page .visualLoginForm:not(.hide)) {
+        padding-top: 6.5em !important;
+    }
 }
 
 #loginPage .readOnlyContent {
@@ -1367,13 +1368,19 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     box-sizing: border-box;
 }
 
-@media (max-width: 640px) {
-    #loginPage .readOnlyContent,
-    #loginPage form {
-        max-width: 100%;
-    }
+#loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
+    width: 80em;
+}
 
+@media (max-width: 640px) {
     #loginPage .padded-left.padded-right.padded-bottom-page {
+        width: 100%;
+        margin: 2em;
+    }
+}
+
+@media (max-width: 1300px) {
+    #loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
         width: 100%;
         margin: 2em;
     }
@@ -1386,18 +1393,20 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     min-height: 100vh;
     padding: 2em 0;
     overflow-y: auto;
-    background: 
+    background:
         var(--loginPageBgUrl, linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.manualLoginForm .sectionTitle {
+.manualLoginForm .sectionTitle,
+.visualLoginForm>h1 {
     display: none;
 }
 
-.manualLoginForm::before {
+.manualLoginForm::before,
+.visualLoginForm::before {
     content: var(--loginPageText);
     position: relative;
     display: block;
@@ -1409,6 +1418,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     text-align: center;
 }
 
-.manualLoginForm {
+.manualLoginForm,
+.visualLoginForm {
     position: relative;
 }
