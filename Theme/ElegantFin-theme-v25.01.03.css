@@ -32,8 +32,6 @@
     --smallRadius: .5em;
     --smallerRadius: .375em;
     --borderWidth: 0.075em;
-    --loginPageBgUrl: url("");
-    --loginPageText: "Sign in to continue";
 }
 
 html {
@@ -49,7 +47,7 @@ html {
 }
 
 .dashboardFooter::after {
-    content: "ElegantFin Nightly";
+    content: "ElegantFin v25.01.03";
     font-size: .8em;
     color: #4e4e60;
 }
@@ -1354,93 +1352,4 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 .progressring-spiner {
     border-color: var(--btnSubmitBorderColor);
-}
-
-.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.semiTransparent.noHeaderRight {
-    display: none;
-}
-
-#loginPage {
-    padding-top: 20em !important;
-}
-
-@media (max-height: 890px) {
-    #loginPage {
-        padding-top: 6.5em !important;
-    }
-}
-
-@media (max-height: 1300px) {
-    #loginPage:has(.padded-left.padded-right.padded-bottom-page .visualLoginForm:not(.hide)) {
-        padding-top: 6.5em !important;
-    }
-}
-
-#loginPage .readOnlyContent {
-    margin: .5em auto 0em !important;
-}
-
-#loginPage .padded-left.padded-right.padded-bottom-page {
-    margin: 2em auto 0;
-    width: 28em;
-    background: rgba(30, 40, 54, 0.7);
-    padding: 2em 2em 1em 2em !important;
-    border-radius: var(--largerRadius);
-    backdrop-filter: blur(5px);
-    box-sizing: border-box;
-}
-
-#loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
-    width: 80em;
-}
-
-@media (max-width: 640px) {
-    #loginPage .padded-left.padded-right.padded-bottom-page {
-        width: 100%;
-        margin: 2em;
-    }
-}
-
-@media (max-width: 1300px) {
-    #loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
-        width: 100%;
-        margin: 2em;
-    }
-}
-
-#loginPage {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 2em 0;
-    overflow-y: auto;
-    background:
-        var(--loginPageBgUrl, linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)));
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.manualLoginForm .sectionTitle,
-.visualLoginForm>h1 {
-    display: none;
-}
-
-.manualLoginForm::before,
-.visualLoginForm::before {
-    content: var(--loginPageText);
-    position: relative;
-    display: block;
-    top: -3.5em;
-    margin-bottom: -1em;
-    font-size: 1.875em;
-    font-weight: 800;
-    color: white;
-    text-align: center;
-}
-
-.manualLoginForm,
-.visualLoginForm {
-    position: relative;
 }
