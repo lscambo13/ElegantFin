@@ -32,7 +32,7 @@
     --smallRadius: .5em;
     --smallerRadius: .375em;
     --borderWidth: 0.075em;
-    --loginPageBgUrl: "";
+    --loginPageBgUrl: url("");
     --loginPageText: "Sign in to continue";
 }
 
@@ -1387,7 +1387,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     padding: 2em 0;
     overflow-y: auto;
     background: 
-        linear-gradient(rgba(45, 55, 72, 0.47) 0%, rgb(26, 32, 46) 100%),
         var(--loginPageBgUrl, linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)));
     background-size: cover;
     background-position: center;
