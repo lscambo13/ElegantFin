@@ -33,8 +33,9 @@
     --smallRadius: .5em;
     --smallerRadius: .375em;
     --borderWidth: 0.075em;
-    --loginPageBgUrl: url("https://image.tmdb.org/t/p/original/2meX1nMdScFOoV4370rqHWKmXhY.jpg");
-    --loginPageText: "Sign in to continue";
+    --loginPageBgUrl: url("");
+    --loginPageBackground: linear-gradient(var(--lighterGradientPointAlpha) 10%, var(--lighterGradientPoint)), var(--loginPageBgUrl);
+    --loginPageText: "\A\A\A\A\ASign in to continue";
 }
 
 html {
@@ -1386,100 +1387,101 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* min-height: 100vh; */
-    padding: 2em 0;
-    overflow-y: auto;
-    background: linear-gradient(var(--lighterGradientPointAlpha) 10%, var(--lighterGradientPoint)), var(--loginPageBgUrl);
-    background-size: cover;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    background: var(--loginPageBackground);
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
-
-/* @media (max-height: 890px) {
-    #loginPage {
-        padding-top: 6.5em !important;
-    }
-}
-
-@media (max-height: 1300px) {
-    #loginPage:has(.padded-left.padded-right.padded-bottom-page .visualLoginForm:not(.hide)) {
-        padding-top: 6.5em !important;
-    }
-} */
 
 #loginPage .padded-left.padded-right.padded-bottom-page {
     background: var(--headerColor);
     border-radius: var(--largeRadius);
     backdrop-filter: blur(5px);
-    box-sizing: border-box;
+    margin-top: 13em;
+}
+
+#loginPage::before{
+    content: var(--loginPageText);
+    position: absolute;
+    width: 100%;
+    width: 100svw;
+    max-width: 28em;
+    display: block;
+    margin: auto;
+    top: -1em;
+    line-height: 2em;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    background: url(./assets/img/banner-light.png);
+    white-space: pre;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm.hide) {
-    width: 28em;
+    width: 24em;
     padding: 2em 2em 1em 2em !important;
 }
 
 #loginPage .padded-left.padded-right.padded-bottom-page:has(.manualLoginForm.hide) {
     width: 100%;
-    max-width: 45em;
+    max-width: 35em;
     padding: 2em 1em 1em 1em !important;
 }
 
 #loginPage .padded-left.padded-right.padded-bottom-page:has(.manualLoginForm.hide) .readOnlyContent{
-    /* width: 100%; */
-    max-width: 37em;
+    max-width: 24em;
     padding: 0em 1em 0em 1em !important;
 }
 
-/* @media (max-width: 640px) {
-    #loginPage .padded-left.padded-right.padded-bottom-page {
-    width: 100%;
-    margin: 1em;
+@media (max-width: 50em) {
+    #divUsers{
+        max-height: 16em;
+        max-height: 35svh;
+        overflow-y: auto;
     }
 }
 
-@media (max-width: 1300px) {
-    #loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
-    width: 100%;
-    margin: 1em;
-    }
-} */
+#divUsers {
+    padding-block: 2em;
+}
 
+#divUsers .cardBox.cardBox-bottompadded{
+    margin: auto !important;
+}
 
+#divUsers .cardScalable{
+    border-radius: 50%  !important;
+    border-width: var(--borderWidth) !important;
+    transition: transform .125s;
+}
+
+#divUsers button:hover .cardScalable{
+    transform: scale(1.06);
+    filter: brightness(1.1);
+}
 
 .manualLoginForm .sectionTitle,
 .visualLoginForm>h1 {
     display: none;
 }
 
-.manualLoginForm::before,
-.visualLoginForm::before {
-    content: var(--loginPageText);
-    position: relative;
-    display: block;
-    top: -3.5em;
-    margin-bottom: -1em;
-    font-size: 1.875em;
-    font-weight: 800;
-    color: white;
-    text-align: center;
-}
-
-.manualLoginForm,
-.visualLoginForm {
-    position: relative;
-}
-
 #loginPage .readOnlyContent {
     margin: .5em auto 0em !important;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Create two equal columns */
-    grid-template-rows: auto auto auto; /* Define three rows */
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         "row1-1 row1-2"
         "row2-1 row2-2"
         "row3-1 row3-2"
-        "row4-1 row4-2"; /* Define grid areas for each section */
+        "row4-1 row4-2"; 
     gap: .5em .75em;
 }
 
@@ -1500,7 +1502,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 .loginDisclaimerContainer {
-    grid-area: row4-1 / span 2; /* Span the third row across two columns */
+    grid-area: row4-1 / span 2;
 }
 
 #txtLoginDisclaimer{
