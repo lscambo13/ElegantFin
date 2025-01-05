@@ -185,8 +185,17 @@ html {
     display: none;
 }
 
+.layout-mobile .cardOverlayButton{
+        padding: .425em;
+}
+
+.layout-mobile .cardOverlayButton-br>.cardOverlayButtonIcon {
+    border: solid var(--borderColor) var(--borderWidth); 
+}
+
 .layout-mobile .portraitCard .cardOverlayButton-br,
-.layout-mobile .backdropCard .cardOverlayButton-br {
+.layout-mobile .backdropCard .cardOverlayButton-br,
+.layout-mobile .cardOverlayButton-br[data-action="menu"]{
     display: none;
 }
 
@@ -250,7 +259,7 @@ html {
 }
 
 h1 {
-    font-size: 3em;
+    /* font-size: 3em; */
 }
 
 .detailPageWrapperContainer {
@@ -731,6 +740,11 @@ progress+span {
     padding: 0 0.5em !important;
 }
 
+.formDialogFooter:not(.formDialogFooter-clear.formDialogFooter-flex)>.formDialogFooterItem{
+    -webkit-flex-basis: 6em;
+    flex-basis: 6em;
+}
+
 .collapseContent {
     background-color: unset !important;
     backdrop-filter: unset !important;
@@ -794,11 +808,6 @@ progress+span {
 
 .cardScalable+.itemSelectionPanel>.checkboxContainer {
     height: calc(100% - 0em);
-}
-
-.checkboxContainer:hover .checkboxOutline:not(.multiSelectCheckboxOutline) {
-    border-color: var(--checkboxCheckedBgColor);
-    border-width: calc(2 * var(--borderWidth));
 }
 
 .checkboxOutline.multiSelectCheckboxOutline {
@@ -1218,6 +1227,17 @@ div[data-role=controlgroup] a.ui-btn-active {
         color: #fff;
         background-color: rgb(255 255 255 / 5%);
     }
+
+    .emby-select-withcolor:hover:not(.emby-select[disabled], :focus),
+    .emby-input:hover:not(:focus),
+    .emby-textarea:hover:not(:focus) {
+        border-color: var(--dimTextColor) !important;
+    }
+
+    .checkboxContainer:hover .checkboxOutline:not(.multiSelectCheckboxOutline) {
+        border-color: var(--checkboxCheckedBgColor);
+        border-width: calc(2 * var(--borderWidth));
+    }
 }
 
 .paper-icon-button-light:active:not(:disabled) {
@@ -1246,12 +1266,6 @@ div[data-role=controlgroup] a.ui-btn-active {
 .emby-textarea:focus {
     border-color: var(--highlightOutlineColor) !important;
     outline: thin solid var(--highlightOutlineColor) !important;
-}
-
-.emby-select-withcolor:hover:not(.emby-select[disabled], :focus),
-.emby-input:hover:not(:focus),
-.emby-textarea:hover:not(:focus) {
-    border-color: var(--dimTextColor) !important;
 }
 
 .emby-select-withcolor>option {
@@ -1457,4 +1471,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#txtLoginDisclaimer{
+    resize: none;
 }
