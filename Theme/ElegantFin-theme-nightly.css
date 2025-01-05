@@ -33,6 +33,7 @@
     --smallRadius: .5em;
     --smallerRadius: .375em;
     --borderWidth: 0.075em;
+    /* --loginPageBgUrl: url("https://image.tmdb.org/t/p/original/fVsy8Z646SZUP6qLJrQCAwi0jhq.jpg"); */
     --loginPageBgUrl: url("");
     --loginPageBackground: linear-gradient(var(--lighterGradientPointAlpha) 10%, var(--lighterGradientPoint)), var(--loginPageBgUrl);
     --loginPageText: "\A\A\A\A\ASign in to continue";
@@ -1389,9 +1390,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     align-items: flex-start;
     min-height: 100vh;
     min-height: 100svh;
-    min-height: 100dvh;
+    min-height: calc(100dvh - 4em);;
     background: var(--loginPageBackground);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -1427,12 +1428,14 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 #loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm.hide) {
     width: 24em;
     padding: 2em 2em 1em 2em !important;
+    margin-inline: 1em !important;
 }
 
 #loginPage .padded-left.padded-right.padded-bottom-page:has(.manualLoginForm.hide) {
     width: 100%;
     max-width: 35em;
     padding: 2em 1em 1em 1em !important;
+    margin-inline: 1em !important;
 }
 
 #loginPage .padded-left.padded-right.padded-bottom-page:has(.manualLoginForm.hide) .readOnlyContent{
@@ -1485,13 +1488,13 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     gap: .5em .75em;
 }
 
-.btnForgotPassword {
+/* .btnForgotPassword {
     font-size: .8em;
 }
 
 .btnQuick {
     font-size: .8em;
-}
+} */
 
 .btnManual  {
     grid-area: row1-1 / span 2;
