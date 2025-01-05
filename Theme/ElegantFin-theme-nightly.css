@@ -7,6 +7,7 @@
     --darkerGradientPoint: #111827;
     --darkerGradientPointAlpha: rgba(17, 24, 39, 0.85);
     --lighterGradientPoint: #1d2635;
+    --lighterGradientPointAlpha: rgba(29, 38, 53, 0.5);
     --borderColor: rgb(71, 80, 92);
     --headerColor: rgba(30, 40, 54, 0.8);
     --drawerColor: rgba(30, 40, 54, 0.9);
@@ -32,7 +33,7 @@
     --smallRadius: .5em;
     --smallerRadius: .375em;
     --borderWidth: 0.075em;
-    --loginPageBgUrl: url("");
+    --loginPageBgUrl: url("https://image.tmdb.org/t/p/original/2meX1nMdScFOoV4370rqHWKmXhY.jpg");
     --loginPageText: "Sign in to continue";
 }
 
@@ -1382,10 +1383,19 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 #loginPage {
-    padding-top: 20em !important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* min-height: 100vh; */
+    padding: 2em 0;
+    overflow-y: auto;
+    background: linear-gradient(var(--lighterGradientPointAlpha) 10%, var(--lighterGradientPoint)), var(--loginPageBgUrl);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-@media (max-height: 890px) {
+/* @media (max-height: 890px) {
     #loginPage {
         padding-top: 6.5em !important;
     }
@@ -1395,53 +1405,47 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     #loginPage:has(.padded-left.padded-right.padded-bottom-page .visualLoginForm:not(.hide)) {
         padding-top: 6.5em !important;
     }
-}
-
-#loginPage .readOnlyContent {
-    margin: .5em auto 0em !important;
-}
+} */
 
 #loginPage .padded-left.padded-right.padded-bottom-page {
-    margin: 2em auto 0;
-    width: 28em;
-    background: rgba(30, 40, 54, 0.7);
-    padding: 2em 2em 1em 2em !important;
-    border-radius: var(--largerRadius);
+    background: var(--headerColor);
+    border-radius: var(--largeRadius);
     backdrop-filter: blur(5px);
     box-sizing: border-box;
 }
 
-#loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
-    width: 80em;
+#loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm.hide) {
+    width: 28em;
+    padding: 2em 2em 1em 2em !important;
 }
 
-@media (max-width: 640px) {
+#loginPage .padded-left.padded-right.padded-bottom-page:has(.manualLoginForm.hide) {
+    width: 100%;
+    max-width: 45em;
+    padding: 2em 1em 1em 1em !important;
+}
+
+#loginPage .padded-left.padded-right.padded-bottom-page:has(.manualLoginForm.hide) .readOnlyContent{
+    /* width: 100%; */
+    max-width: 37em;
+    padding: 0em 1em 0em 1em !important;
+}
+
+/* @media (max-width: 640px) {
     #loginPage .padded-left.padded-right.padded-bottom-page {
-        width: 100%;
-        margin: 2em;
+    width: 100%;
+    margin: 1em;
     }
 }
 
 @media (max-width: 1300px) {
     #loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
-        width: 100%;
-        margin: 2em;
+    width: 100%;
+    margin: 1em;
     }
-}
+} */
 
-#loginPage {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 2em 0;
-    overflow-y: auto;
-    background:
-        var(--loginPageBgUrl, linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)));
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 
 .manualLoginForm .sectionTitle,
 .visualLoginForm>h1 {
@@ -1464,6 +1468,39 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .manualLoginForm,
 .visualLoginForm {
     position: relative;
+}
+
+#loginPage .readOnlyContent {
+    margin: .5em auto 0em !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create two equal columns */
+    grid-template-rows: auto auto auto; /* Define three rows */
+    grid-template-areas:
+        "row1-1 row1-2"
+        "row2-1 row2-2"
+        "row3-1 row3-2"
+        "row4-1 row4-2"; /* Define grid areas for each section */
+    gap: .5em .75em;
+}
+
+.btnForgotPassword {
+    font-size: .8em;
+}
+
+.btnQuick {
+    font-size: .8em;
+}
+
+.btnManual  {
+    grid-area: row1-1 / span 2;
+}
+
+.btnSelectServer    {
+    grid-area: row3-1 / span 2;
+}
+
+.loginDisclaimerContainer {
+    grid-area: row4-1 / span 2; /* Span the third row across two columns */
 }
 
 #txtLoginDisclaimer{
