@@ -65,6 +65,17 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 4. Click save.
 </details>
 
+<details>
+  <summary><i>Create themed library covers</i></summary>
+
+1. Visit [Jellyfin Library Cover Generator](https://jf-library-cover-generator.vercel.app/)
+2. Download generated image.
+3. Open Jellyfin, "right click", "My Media" images and select "edit images".
+4. Upload new cover image.
+
+<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/myMedia.png" style="width:360px;height:auto;"></img>
+<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/TV%20-%20General.png" style="width:360px;height:auto;"></img>
+</details>
 
 <hr>
 
