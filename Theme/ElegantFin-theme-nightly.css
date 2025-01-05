@@ -1451,3 +1451,10 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .visualLoginForm {
     position: relative;
 }
+
+#quickConnectPreferencesPage .padded-left.padded-right.padded-bottom-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
