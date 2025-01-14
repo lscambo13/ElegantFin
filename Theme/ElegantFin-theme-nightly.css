@@ -34,8 +34,8 @@
     --smallerRadius: .375em;
     --borderWidth: 0.075em;
     /* --loginPageBgUrl: url("https://image.tmdb.org/t/p/original/fVsy8Z646SZUP6qLJrQCAwi0jhq.jpg"); */
-    --loginPageBgUrl: url("");
-    --loginPageBackground: linear-gradient(var(--lighterGradientPointAlpha) 10%, var(--lighterGradientPoint)), var(--loginPageBgUrl);
+    /* --loginPageBgUrl: url(""); */
+    /* --loginPageBackground: linear-gradient(var(--lighterGradientPointAlpha) 10%, var(--lighterGradientPoint)), var(--loginPageBgUrl); */
     --loginPageText: "\A\A\A\A\ASign in to continue";
 }
 
@@ -188,17 +188,17 @@ html {
     display: none;
 }
 
-.layout-mobile .cardOverlayButton{
-        padding: .425em;
+.layout-mobile .cardOverlayButton {
+    padding: .425em;
 }
 
 .layout-mobile .cardOverlayButton-br>.cardOverlayButtonIcon {
-    border: solid var(--borderColor) var(--borderWidth); 
+    border: solid var(--borderColor) var(--borderWidth);
 }
 
 .layout-mobile .portraitCard .cardOverlayButton-br,
 .layout-mobile .backdropCard .cardOverlayButton-br,
-.layout-mobile .cardOverlayButton-br[data-action="menu"]{
+.layout-mobile .cardOverlayButton-br[data-action="menu"] {
     display: none;
 }
 
@@ -743,7 +743,7 @@ progress+span {
     padding: 0 0.5em !important;
 }
 
-.formDialogFooter:not(.formDialogFooter-clear.formDialogFooter-flex)>.formDialogFooterItem{
+.formDialogFooter:not(.formDialogFooter-clear.formDialogFooter-flex)>.formDialogFooterItem {
     -webkit-flex-basis: 6em;
     flex-basis: 6em;
 }
@@ -1385,16 +1385,38 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 #loginPage {
+    /* --loginPageBgUrl: url(""); */
+    --loginPageBgUrl: url("https://image.tmdb.org/t/p/original/fVsy8Z646SZUP6qLJrQCAwi0jhq.jpg");
+    --loginPageBackground: linear-gradient(var(--lighterGradientPointAlpha) 10%, var(--lighterGradientPoint)), var(--loginPageBgUrl);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
     min-height: 100svh;
-    min-height: calc(100dvh - 4em);;
+    min-height: calc(100dvh - 4em);
     background: var(--loginPageBackground);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    animation: slideshow 1s infinite;
+}
+
+@keyframes slideshow {
+    0% {
+        --loginPageBgUrl: url("https: //artworks.thetvdb.com/banners/v4/movie/355641/backgrounds/670008ff9a98b.jpg");
+    }
+
+    33% {
+        --loginPageBgUrl: url("https://artworks.thetvdb.com/banners/v4/movie/355641/backgrounds/664df612c7c31.jpg");
+    }
+
+    66% {
+        --loginPageBgUrl: url("https://artworks.thetvdb.com/banners/v4/movie/355641/backgrounds/67479e1c49c20.jpg");
+    }
+
+    100% {
+        --loginPageBgUrl: url("https://artworks.thetvdb.com/banners/v4/movie/355641/backgrounds/670008dd9f571.jpg");
+    }
 }
 
 #loginPage .padded-left.padded-right.padded-bottom-page {
@@ -1404,7 +1426,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     margin-top: 13em;
 }
 
-#loginPage::before{
+#loginPage::before {
     content: var(--loginPageText);
     position: absolute;
     width: 100%;
@@ -1438,13 +1460,13 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     margin-inline: 1em !important;
 }
 
-#loginPage .padded-left.padded-right.padded-bottom-page:has(.manualLoginForm.hide) .readOnlyContent{
+#loginPage .padded-left.padded-right.padded-bottom-page:has(.manualLoginForm.hide) .readOnlyContent {
     max-width: 24em;
     padding: 0em 1em 0em 1em !important;
 }
 
 @media (max-width: 50em) {
-    #divUsers{
+    #divUsers {
         max-height: 16em;
         max-height: 35svh;
         overflow-y: auto;
@@ -1455,17 +1477,17 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     padding-block: 2em;
 }
 
-#divUsers .cardBox.cardBox-bottompadded{
+#divUsers .cardBox.cardBox-bottompadded {
     margin: auto !important;
 }
 
-#divUsers .cardScalable{
-    border-radius: 50%  !important;
+#divUsers .cardScalable {
+    border-radius: 50% !important;
     border-width: var(--borderWidth) !important;
     transition: transform .125s;
 }
 
-#divUsers button:hover .cardScalable{
+#divUsers button:hover .cardScalable {
     transform: scale(1.06);
     filter: brightness(1.1);
 }
@@ -1478,13 +1500,13 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 #loginPage .readOnlyContent {
     margin: .5em auto 0em !important;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
         "row1-1 row1-2"
         "row2-1 row2-2"
         "row3-1 row3-2"
-        "row4-1 row4-2"; 
+        "row4-1 row4-2";
     gap: .5em .75em;
 }
 
@@ -1496,11 +1518,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     font-size: .8em;
 } */
 
-.btnManual  {
+.btnManual {
     grid-area: row1-1 / span 2;
 }
 
-.btnSelectServer    {
+.btnSelectServer {
     grid-area: row3-1 / span 2;
 }
 
@@ -1508,6 +1530,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     grid-area: row4-1 / span 2;
 }
 
-#txtLoginDisclaimer{
+#txtLoginDisclaimer {
     resize: none;
 }
