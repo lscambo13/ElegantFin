@@ -283,7 +283,7 @@ html {
 
 .listViewUserDataButtons {
     flex-direction: column;
-    font-size: x-small;
+    font-size: larger;
 }
 
 .smallBackdropCard,
