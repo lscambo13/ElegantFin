@@ -2117,10 +2117,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background: var(--activeColor);
 }
 
-.card-withuserdata[data-isfolder="true"] .cardPadder-overflowBackdrop {
-    padding-bottom: 50%;
-}
-
 .card-withuserdata[data-isfolder="true"] .cardImageContainer.cardContent::before {
     position: absolute;
     font-size: 3.5vh;
