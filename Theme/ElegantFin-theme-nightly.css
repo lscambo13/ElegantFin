@@ -421,6 +421,11 @@ html {
     flex-direction: column;
 }
 
+.layout-desktop .detailPagePrimaryContent {
+    min-height: 17vw !important;
+    padding-left: 18vw !important;
+}
+
 [dir=ltr] .detailPagePrimaryContent {
     padding-right: 0;
 }
@@ -429,8 +434,10 @@ html {
     background: linear-gradient(0deg, var(--darkerGradientPoint) 70%, transparent);
 }
 
-.layout-desktop .detailPagePrimaryContainer {
+.layout-desktop .detailPagePrimaryContainer,
+.layout-desktop .detailPageContent {
     background: transparent;
+    padding-left: 2%;
 }
 
 .layout-mobile .detailPageSecondaryContainer {
@@ -483,7 +490,11 @@ html {
 }
 
 .itemBackdrop {
-    height: 13em;
+    height: 18em;
+}
+
+.layout-desktop .itemBackdrop {
+    height: 7.5em;
 }
 
 .itemMiscInfo>.mediaInfoItem:not(:first-child, .mediaInfoCriticRating) {
@@ -535,11 +546,12 @@ html {
 .layout-desktop .detailRibbon {
     height: auto !important;
     margin-top: unset !important;
+    padding-left: 20vw !important;
 }
 
 .layout-desktop .detailImageContainer .card {
     top: unset !important;
-    width: 23vw !important;
+    width: 15vw !important;
 }
 
 @media (max-width: 62.5em) {
@@ -868,7 +880,7 @@ progress+span {
 }
 
 .mainDrawer-scrollContainer {
-    padding-bottom: 5vh;
+    padding-bottom: 2em;
 }
 
 .btnHeaderSave.button-flat {
