@@ -38,12 +38,14 @@
     --tableBodyColor: rgb(31 41 55 / 1);
     --uiAccentColor: rgb(117 111 226);
     --btnMiniPlayColor: rgb(41 154 93);
+    --btnCardControlsColor: rgba(30, 40, 54);
     /* --btnMiniPlayColor: rgb(32, 32, 32); */
     --btnPlayBorderColor: color-mix(in srgb, var(--btnMiniPlayColor), rgb(255, 255, 255) 5%);
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), var(--lighterGradientPoint) 25%);
     --hoverGradientA: linear-gradient(130deg, rgb(255 255 255 / 35%) 20%, rgb(255 255 255 / 15%) 40%);
     --hoverGradientB: radial-gradient(100% 250% at 90% 190%, rgba(255, 255, 255, 0.15) 85%, rgba(255, 255, 255, 0.33) 100%);
+    --hoverGradientC: linear-gradient(130deg, rgba(69, 69, 69, 0.35) 20%, rgb(69 69 69 / 15%) 40%);
     --shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
     --largerRadius: 1.25em;
     --largeRadius: 1em;
@@ -264,7 +266,24 @@ html {
 }
 
 .layout-desktop .cardOverlayButton-br {
-    display: none;
+    display: flex;
+    gap: 0.125em;
+    padding: 0 2px 2px 0;
+}
+
+.cardOverlayButton-br>.cardOverlayButton {
+    backdrop-filter: var(--blurDefault);
+    background-color: var(--drawerColor);
+    border: var(--defaultBorder);
+    color: white;
+    font-size: 60%;
+    transition: transform 125ms;
+}
+
+.cardOverlayButton-br>.cardOverlayButton:hover {
+    background-color: var(--btnCardControlsColor);
+    border-color: var(--textColor);
+    color: white;
 }
 
 .layout-mobile .cardOverlayButton {
