@@ -550,6 +550,7 @@ html {
 .layout-desktop .detailRibbon {
     height: auto !important;
     margin-top: unset !important;
+    padding-left: 20vw !important;
 }
 
 .layout-desktop .detailImageContainer .card {
