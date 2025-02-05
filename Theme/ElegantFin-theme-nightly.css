@@ -1721,6 +1721,10 @@ div[data-role=controlgroup] a.ui-btn-active {
     margin: 0 0 !important;
 }
 
+.dashboardColumn {
+    flex-shrink: unset;
+}
+
 .dashboardSection .sectionTitleTextButton>.material-icons,
 .sectionTitleTextButton>.material-icons,
 .dashboardSection .sectionTitleTextButton>.material-icons.material-icons {
