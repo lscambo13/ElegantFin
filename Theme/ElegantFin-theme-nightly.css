@@ -241,12 +241,8 @@ html {
 }
 
 .cardOverlayContainer>.cardOverlayFab-primary {
-    left: unset;
-    margin-left: unset;
-    margin-top: unset;
-    top: unset;
-    right: 1.25em;
-    bottom: 1.25em;
+    height: 3.5em;
+    width: 3.5em;
 }
 
 .cardOverlayContainer>.cardOverlayFab-primary,
