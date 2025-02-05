@@ -286,6 +286,10 @@ html {
     font-size: larger;
 }
 
+.listItem-largeImage[data-type="Episode"] .listViewUserDataButtons {
+    font-size: small;
+}
+
 .smallBackdropCard,
 .squareCard,
 .backdropCard,
@@ -546,7 +550,6 @@ html {
 .layout-desktop .detailRibbon {
     height: auto !important;
     margin-top: unset !important;
-    padding-left: 20vw !important;
 }
 
 .layout-desktop .detailImageContainer .card {
@@ -2117,12 +2120,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background: var(--activeColor);
 }
 
-
-#indexPage:not(.hide) .card-withuserdata[data-isfolder="true"] .cardPadder-overflowBackdrop {
+#indexPage:not(.hide) .card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"], [data-type="Season"], [data-type="Playlist"]) .cardPadder-overflowBackdrop {
     padding-bottom: 50%;
 }
 
-.card-withuserdata[data-isfolder="true"] .cardImageContainer.cardContent::before {
+.card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"], [data-type="Season"], [data-type="Playlist"]) .cardImageContainer.cardContent::before {
     position: absolute;
     font-size: 3.5vh;
     margin-bottom: .175em;
@@ -2132,8 +2134,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     text-align: center;
 }
 
-#indexPage:not(.hide) .card-withuserdata[data-isfolder="true"] .cardText-first,
-#indexPage:not(.hide) .card-withuserdata[data-isfolder="true"] .cardText.cardTextCentered {
+#indexPage:not(.hide) .card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"], [data-type="Season"], [data-type="Playlist"]) .cardText-first,
+#indexPage:not(.hide) .card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"], [data-type="Season"], [data-type="Playlist"]) .cardText.cardTextCentered {
     display: none;
 }
 
