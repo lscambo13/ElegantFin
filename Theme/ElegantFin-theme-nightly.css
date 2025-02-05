@@ -1435,17 +1435,17 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .listItem[data-type="Audio"] {
     margin-inline: 1em;
-    /* padding-inline: 1em !important; */
+}
+
+.listItem[data-type="Audio"]:has(.playlistIndexIndicatorImage) .listItemBodyText {
+    color: white;
+    font-weight: 600;
 }
 
 [dir="ltr"] .listItem:not(.actionSheetMenuItem)[data-type="Episode"] .listItemBodyText:not(.secondary) {
     font-size: 1.17em;
     font-weight: 600;
 }
-
-/* .listItemBody {
-    padding: 0;
-} */
 
 .listItemBody>.listItemBodyText:not(.secondary) {
     display: -webkit-box;
@@ -2117,6 +2117,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background: var(--activeColor);
 }
 
+
+#indexPage:not(.hide) .card-withuserdata[data-isfolder="true"] .cardPadder-overflowBackdrop {
+    padding-bottom: 50%;
+}
+
 .card-withuserdata[data-isfolder="true"] .cardImageContainer.cardContent::before {
     position: absolute;
     font-size: 3.5vh;
@@ -2127,13 +2132,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     text-align: center;
 }
 
-.card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"], [data-type="Season"], [data-type="Playlist"]) .cardText-first,
-.card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"], [data-type="Season"], [data-type="Playlist"]) .cardText.cardTextCentered {
+#indexPage:not(.hide) .card-withuserdata[data-isfolder="true"] .cardText-first,
+#indexPage:not(.hide) .card-withuserdata[data-isfolder="true"] .cardText.cardTextCentered {
     display: none;
-}
-
-.padded-right-withalphapicker .card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"], [data-type="Season"], [data-type="Playlist"]) {
-    margin-bottom: -1.5em;
 }
 
 /* input[type="radio"]:checked {
@@ -2228,7 +2229,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     margin-bottom: .5em;
 }
 
-.nowPlayingArtist.nowPlayingSerie{
+.nowPlayingArtist.nowPlayingSerie {
     margin-bottom: .5em;
 }
 
