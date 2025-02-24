@@ -879,11 +879,18 @@ progress+span {
 }
 
 
+.btnPlay[title="Play"]>.detailButton-content::after {
+    content: "Play";
+}
+
+.btnPlay[title="Resume"]>.detailButton-content::after {
+    content: "Resume";
+}
+
 .btnPlay>.detailButton-content::after {
     padding-left: .25em;
     padding-right: .5em;
     place-content: center;
-    content: "Play";
 }
 
 .mainDrawer,
