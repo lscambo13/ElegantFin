@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --elegantFinFooterText: "ElegantFin Nightly";
+    --elegantFinFooterText: "ElegantFin v25.03.18";
     color-scheme: dark;
     --darkerGradientPoint: #111827;
     --darkerGradientPointAlpha: rgba(17, 24, 39, 0.85);
@@ -32,8 +32,6 @@
     --tableBodyColor: rgb(31 41 55 / 1);
     --uiAccentColor: rgb(117 111 226);
     --btnMiniPlayColor: rgb(41 154 93);
-    --btnCardControlsColor: rgba(30, 40, 54);
-    /* --btnMiniPlayColor: rgb(32, 32, 32); */
     --btnPlayBorderColor: color-mix(in srgb, var(--btnMiniPlayColor), rgb(255, 255, 255) 5%);
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), var(--lighterGradientPoint) 25%);
@@ -234,8 +232,12 @@ html {
 }
 
 .cardOverlayContainer>.cardOverlayFab-primary {
-    height: 3.5em;
-    width: 3.5em;
+    left: unset;
+    margin-left: unset;
+    margin-top: unset;
+    top: unset;
+    right: 1.25em;
+    bottom: 1.25em;
 }
 
 .cardOverlayContainer>.cardOverlayFab-primary,
@@ -254,24 +256,7 @@ html {
 }
 
 .layout-desktop .cardOverlayButton-br {
-    display: flex;
-    gap: 0.125em;
-    padding: 0 2px 2px 0;
-}
-
-.cardOverlayButton-br>.cardOverlayButton {
-    backdrop-filter: var(--blurDefault);
-    background-color: var(--drawerColor);
-    border: var(--defaultBorder);
-    color: white;
-    font-size: 60%;
-    transition: transform 125ms;
-}
-
-.cardOverlayButton-br>.cardOverlayButton:hover {
-    background-color: var(--btnCardControlsColor);
-    border-color: var(--textColor);
-    color: white;
+    display: none;
 }
 
 .layout-mobile .cardOverlayButton {
@@ -290,7 +275,7 @@ html {
 
 .listViewUserDataButtons {
     flex-direction: column;
-    font-size: larger;
+    font-size: x-small;
 }
 
 .listItem-largeImage[data-type="Episode"] .listViewUserDataButtons {
@@ -318,7 +303,7 @@ html {
     }
 
     .backdropCard {
-        width: 15%;
+        width: 9.5%;
     }
 }
 
@@ -432,11 +417,6 @@ html {
     flex-direction: column;
 }
 
-.layout-desktop .detailPagePrimaryContent {
-    min-height: 17vw !important;
-    padding-left: 18vw !important;
-}
-
 [dir=ltr] .detailPagePrimaryContent {
     padding-right: 0;
 }
@@ -445,10 +425,8 @@ html {
     background: linear-gradient(0deg, var(--darkerGradientPoint) 70%, transparent);
 }
 
-.layout-desktop .detailPagePrimaryContainer,
-.layout-desktop .detailPageContent {
+.layout-desktop .detailPagePrimaryContainer {
     background: transparent;
-    padding-left: 2%;
 }
 
 .layout-mobile .detailPageSecondaryContainer {
@@ -479,6 +457,10 @@ html {
     overflow: hidden;
 }
 
+.paper-icon-button-light>.material-icons {
+    font-size: 1.25em;
+}
+
 .verticalSection.emby-scroller-container>h2.sectionTitle.sectionTitle-cards {
     padding-top: 1.25em !important;
 }
@@ -497,11 +479,7 @@ html {
 }
 
 .itemBackdrop {
-    height: 18em;
-}
-
-.layout-desktop .itemBackdrop {
-    height: 7.5em;
+    height: 13em;
 }
 
 .mediaInfoItem {
@@ -542,12 +520,11 @@ html {
 .layout-desktop .detailRibbon {
     height: auto !important;
     margin-top: unset !important;
-    padding-left: 20vw !important;
 }
 
 .layout-desktop .detailImageContainer .card {
     top: unset !important;
-    width: 15vw !important;
+    width: 23vw !important;
 }
 
 @media (max-width: 62.5em) {
@@ -885,7 +862,7 @@ progress+span {
 }
 
 .mainDrawer-scrollContainer {
-    padding-bottom: 2em;
+    padding-bottom: 5vh;
 }
 
 .btnHeaderSave.button-flat {
@@ -1036,7 +1013,7 @@ progress+span {
     background: transparent;
     font-weight: 500;
     text-shadow: .1em .1em 0px black;
-    padding: 0.5em;
+    padding: 1em;
     width: auto;
 }
 
@@ -1726,10 +1703,6 @@ div[data-role=controlgroup] a.ui-btn-active {
 .sectionTitleTextButton>* {
     padding: .3em 0 !important;
     margin: 0 0 !important;
-}
-
-.dashboardColumn {
-    flex-shrink: unset;
 }
 
 .dashboardSection .sectionTitleTextButton>.material-icons,

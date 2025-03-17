@@ -86,7 +86,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
   <summary>1️⃣ - <i>How do I check if I am using the latest version on ElegantFin?</i></summary>
 
 - To make sure that you are using the latest version of ElegantFin, check the version number at the bottom in the Dashboard screen. 
-- It should be something like ElegantFin v24.12.XX
+- It should be something like ElegantFin v25.03.XX
 </details>
 
 <details>
@@ -103,11 +103,24 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
   <summary>3️⃣ - <i>Why do I notice visual bugs and inconsistencies on Jellyfin Media Player?</i></summary>
 
 - Currently JMP uses Qt 5.x which uses an outdated web engine, so many new CSS features do not work. Once they release a new version based on Qt 6.x, most issues should automatically be resolved. Until then, I advise using the web app instead.
-- Are you not using JMP and still facing issues? See the 4th point below.
 </details>
 
 <details>
-  <summary>4️⃣ - <i>How do I report bugs/issues?</i></summary>
+  <summary>4️⃣ - <i>All the icons on my LG TV seem to be broken. How to fix?</i></summary>
+
+- It seems that modern Material Icons which this theme uses are [not compatible on some WebOS TVs](https://github.com/lscambo13/ElegantFin/issues/39). There is a [huge similar thread](https://www.reddit.com/r/youtubetv/comments/e27go3/chinese_symbols_instead_of_icons_on_lg_tv/) about this.
+- This bug can be fixed by using the older icons, so I have implemented the following workaround to bring back older, supported icons.
+- Simply add the following code at the end in Custom CSS box and save, then refresh your apps and webpages:
+  
+  ```
+  :root{
+    --iconPack: 'Material Icons';
+  }
+  ```
+</details>
+
+<details>
+  <summary>5️⃣ - <i>How do I report bugs/issues?</i></summary>
 
 - First check [here](https://github.com/lscambo13/ElegantFin/issues?q=) whether a similar issue has been reported already. If it exists, upvote and comment there to let me know. 
 - Alternatively, create a new issue [here](https://github.com/lscambo13/ElegantFin/issues/new/choose).
@@ -115,7 +128,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 
 </details>
 <details>
-  <summary>5️⃣ - <i>When can I expect another update?</i></summary>
+  <summary>6️⃣ - <i>When can I expect another update?</i></summary>
 
 - 🤷
 </details>
