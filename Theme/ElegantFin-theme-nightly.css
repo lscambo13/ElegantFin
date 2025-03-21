@@ -260,7 +260,6 @@ html {
 }
 
 .cardOverlayButton-br>.cardOverlayButton {
-    backdrop-filter: var(--blurDefault);
     background-color: var(--drawerColor);
     border: var(--defaultBorder);
     color: white;
