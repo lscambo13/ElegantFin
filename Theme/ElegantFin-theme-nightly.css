@@ -529,6 +529,10 @@ html {
     width: 23vw !important;
 }
 
+.layout-tv .detailImageContainer .card {
+    width: 23vw !important;
+}
+
 @media (max-width: 62.5em) {
     .layout-desktop .itemBackdrop {
         height: 7em !important;
