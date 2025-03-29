@@ -661,11 +661,6 @@ html {
     backdrop-filter: var(--blurDefault) !important;
 }
 
-/* Stops header from flickering when scrolling on webOS */
-.layout-tv .skinHeader-blurred:not(.osdHeader){
-    backdrop-filter: none !important;
-}
-
 .headroom--unpinned {
     -webkit-transform: translateY(-3.5em);
     transform: translateY(-3.5em);
