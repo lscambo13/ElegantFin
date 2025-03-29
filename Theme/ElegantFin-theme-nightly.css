@@ -529,6 +529,10 @@ html {
     width: 23vw !important;
 }
 
+.layout-tv .detailImageContainer .card {
+    width: 23vw !important;
+}
+
 @media (max-width: 62.5em) {
     .layout-desktop .itemBackdrop {
         height: 7em !important;
@@ -655,6 +659,11 @@ html {
 .appfooter {
     background-color: var(--headerColor) !important;
     backdrop-filter: var(--blurDefault) !important;
+}
+
+/* Stops header from flickering when scrolling on webOS */
+.layout-tv .skinHeader-blurred:not(.osdHeader){
+    backdrop-filter: none !important;
 }
 
 .headroom--unpinned {
