@@ -49,6 +49,7 @@
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
 
     /* login page customizations */
+    /* --loginPageBgUrl: url("<YOUR-JELLYFIN-SERVER-ADDRESS>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2"); */
     --loginPageBgUrl: url("");
     --loginPageText: "Sign in to continue";
 
@@ -462,9 +463,11 @@ html {
     display: none;
 }
 
-/* hide sync button on home screen */
-.skinHeader.noHomeButtonHeader .headerSyncButton {
-    display: none;
+/* hide sync button on home screen on phones only in portrait mode */
+@media (orientation: portrait) {
+    .layout-mobile .skinHeader.noHomeButtonHeader .headerSyncButton {
+        display: none;
+    }
 }
 
 .pageTitle {
@@ -549,6 +552,10 @@ html {
     width: 15vw !important;
 }
 
+.layout-tv .detailImageContainer .card {
+    width: 23vw !important;
+}
+
 @media (max-width: 62.5em) {
     .layout-desktop .itemBackdrop {
         height: 7em !important;
@@ -561,11 +568,12 @@ html {
 
 @media (max-width: 50em) {
     .homeLibraryButton {
-        width: 45% !important;
+        width: 45.6% !important;
     }
 }
 
 .homeLibraryButton {
+    padding-inline-start: .25em;
     min-width: 15%;
 }
 
@@ -714,6 +722,10 @@ html {
 
 .buttonActive {
     color: var(--uiAccentColor) !important;
+}
+
+#divRunningTasks progress {
+    width: calc(100% - 7em);
 }
 
 .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress) {
@@ -1387,9 +1399,15 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding: 1em;
 }
 
+.serverInfo>:nth-child(1n) {
+    -webkit-flex: 1 0 30%;
+    flex: 1 0 30%;
+}
+
 .serverInfo>:nth-child(2n) {
-    -webkit-flex: 1 0 60%;
-    flex: 1 0 60%;
+    -webkit-flex: 1 0 50%;
+    flex: 1 0 50%;
+    text-align: end;
 }
 
 .listItemIcon:not(.listItemIcon-transparent) {
@@ -1664,11 +1682,11 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--highlightOutlineColor);
 }
 
-[dir=ltr] .padded-left.vertical-wrap {
+[dir=ltr] .padded-left.vertical-wrap:not(div:has(.homeLibraryButton)) {
     padding-left: 5% !important;
 }
 
-[dir=ltr] .padded-right.vertical-wrap {
+[dir=ltr] .padded-right.vertical-wrap:not(div:has(.homeLibraryButton)) {
     padding-right: 5% !important;
 }
 
@@ -1807,7 +1825,6 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .activeSession {
     width: 98% !important;
-    max-width: 27rem !important;
 }
 
 .emby-tab-button:hover {
@@ -1983,6 +2000,19 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--lighterGradientPointAlpha);
 }
 
+.channelPrograms>.programCell:nth-child(odd) {
+    background-color: var(--darkerGradientPoint);
+}
+
+.channelPrograms>.programCell:nth-child(even) {
+    /* background-color: #11182700; */
+}
+
+.guide-channelHeaderCell:focus,
+.programCell:focus {
+    background-color: var(--highlightOutlineColor) !important;
+}
+
 .emby-select-iconbutton {
     background-color: var(--selectorBackgroundColor);
     border: var(--defaultLighterBorder);
@@ -2106,70 +2136,44 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 #loginPage {
-    padding-top: 20em !important;
-}
-
-@media (max-height: 890px) {
-    #loginPage {
-        padding-top: 6.5em !important;
-    }
-}
-
-@media (max-height: 1300px) {
-    #loginPage:has(.padded-left.padded-right.padded-bottom-page .visualLoginForm:not(.hide)) {
-        padding-top: 6.5em !important;
-    }
-}
-
-#loginPage .readOnlyContent {
-    margin: .5em auto 0em !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1em;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)), var(--loginPageBgUrl);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 #loginPage .padded-left.padded-right.padded-bottom-page {
-    margin: 2em auto 0;
     width: 28em;
     background: rgba(30, 40, 54, 0.7);
     padding: 2em 2em 1em 2em !important;
     border-radius: var(--largerRadius);
     backdrop-filter: var(--blurDefault);
     box-sizing: border-box;
-}
-
-#loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
-    width: 80em;
-}
-
-@media (max-width: 640px) {
-    #loginPage .padded-left.padded-right.padded-bottom-page {
-        width: 100%;
-        margin: 2em;
-    }
-}
-
-@media (max-width: 1300px) {
-    #loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
-        width: 100%;
-        margin: 2em;
-    }
-}
-
-#loginPage {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 2em 0;
-    overflow-y: auto;
-    background:
-        var(--loginPageBgUrl, linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)));
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    transform: translateY(3em);
 }
 
 .manualLoginForm .sectionTitle,
 .visualLoginForm>h1 {
     display: none;
+}
+
+#loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
+    width: 40em;
+}
+
+#divUsers .squareCard {
+    width: 30% !important;
+}
+
+.layout-mobile #divUsers .squareCard {
+    width: 45% !important;
 }
 
 .manualLoginForm::before,

@@ -76,7 +76,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 <hr>
 
 ### 🆗 Tested on 
-- Jellyfin Server v10.10.3
+- Jellyfin Server v10.10.6
 - Jellyfin Android App v2.6.2
 
 <hr>
@@ -106,7 +106,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 </details>
 
 <details>
-  <summary>4️⃣ - <i>All the icons on my LG TV seem to be broken. How to fix?</i></summary>
+  <summary>4️⃣ - <i>All the icons on my LG TV seem to be broken. How to fix them?</i></summary>
 
 - It seems that modern Material Icons which this theme uses are [not compatible on some WebOS TVs](https://github.com/lscambo13/ElegantFin/issues/39). There is a [huge similar thread](https://www.reddit.com/r/youtubetv/comments/e27go3/chinese_symbols_instead_of_icons_on_lg_tv/) about this.
 - This bug can be fixed by using the older icons, so I have implemented the following workaround to bring back older, supported icons.
@@ -120,7 +120,23 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 </details>
 
 <details>
-  <summary>5️⃣ - <i>How do I report bugs/issues?</i></summary>
+  <summary>5️⃣ - <i>How to customize the login screen? (Just for the development version for now)</i></summary>
+
+- To enable the background wallpaper [like this](https://user-images.githubusercontent.com/16425113/129554147-6ac7ba51-43e7-4c8e-ba77-e646a3ef6b12.jpg) on the login screen, first tick the 'Enable the splash screen' option in your Jellyfin Dashboard below the Custom CSS Box.
+- Second, copy and paste the following code at the end in Custom CSS box but don't save yet.
+  ```
+  :root{
+    --loginPageBgUrl: url("<YOUR-JELLYFIN-SERVER-ADDRESS>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2");
+  }
+  ```
+- Third, replace `<YOUR-JELLYFIN-SERVER-ADDRESS>` with your Jellyfin server address, for example, `http://192.168.0.1:8097`.
+- Don't forget the correct http or https in your domain.
+- You can also modify the parameters, for example blur size or the resolution, according to your liking.
+- Once done, save and refresh your apps and webpages.
+</details>
+
+<details>
+  <summary>6️⃣ - <i>How do I report bugs/issues?</i></summary>
 
 - First check [here](https://github.com/lscambo13/ElegantFin/issues?q=) whether a similar issue has been reported already. If it exists, upvote and comment there to let me know. 
 - Alternatively, create a new issue [here](https://github.com/lscambo13/ElegantFin/issues/new/choose).
@@ -128,7 +144,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 
 </details>
 <details>
-  <summary>6️⃣ - <i>When can I expect another update?</i></summary>
+  <summary>7️⃣ - <i>When can I expect another update?</i></summary>
 
 - 🤷
 </details>
