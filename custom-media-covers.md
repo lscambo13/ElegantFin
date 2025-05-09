@@ -5,7 +5,7 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 
 <hr>
 
-### 🖼️ Presets: Modify these styles according to your own liking 
+### 🖼️ Presets with previews: Modify these styles according to your own liking 
 
 <details>
   <summary><i>This is how the covers look without this add-on.</i></summary>
