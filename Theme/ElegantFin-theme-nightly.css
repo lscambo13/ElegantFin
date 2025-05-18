@@ -265,7 +265,8 @@ html {
     padding: 0 2px 2px 0;
 }
 
-.cardOverlayButton-br>.cardOverlayButton {
+.cardOverlayButton-br>.cardOverlayButton,
+.splide__arrow, .splide__toggle {
     background-color: var(--drawerColor);
     border: var(--defaultBorder);
     color: white;
