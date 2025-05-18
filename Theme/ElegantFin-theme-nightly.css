@@ -161,7 +161,8 @@ html {
     border: var(--defaultLighterBorder);
 }
 
-.cardScalable {
+.cardScalable,
+.homeSectionsContainer.editorsChoiceAdded .editorsChoiceContainer {
     border-radius: var(--largeRadius);
     border: var(--borderColor) solid calc(2 * var(--borderWidth)) !important;
     overflow: hidden !important;
@@ -192,11 +193,13 @@ html {
     color: var(--borderColor);
 }
 
-.card.card-hoverable:hover .cardScalable {
+.card.card-hoverable:hover .cardScalable,
+.homeSectionsContainer.editorsChoiceAdded .editorsChoiceContainer:hover {
     border-color: var(--textColor) !important;
 }
 
-.card.card-hoverable:hover .cardImageContainer {
+.card.card-hoverable:hover .cardImageContainer,
+.homeSectionsContainer.editorsChoiceAdded .editorsChoiceContainer:hover {
     transform: scale(1.025);
     filter: brightness(1.125);
 }
@@ -270,8 +273,9 @@ html {
     transition: transform 125ms;
 }
 
-.cardOverlayButton-br>.cardOverlayButton:hover {
-    background-color: var(--btnCardControlsColor);
+.cardOverlayButton-br>.cardOverlayButton:hover,
+.splide__arrow:hover, .splide__toggle:hover {
+    background-color: var(--btnCardControlsColor) !important;
     border-color: var(--textColor);
     color: white;
 }
@@ -2433,4 +2437,21 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 #viewPanel .ui-panel-inner {
     margin-top: 4em;
+}
+
+.homeSectionsContainer.editorsChoiceAdded .editorsChoiceContainer {
+    padding: unset !important;
+    margin-top: 25px;
+    margin-left: 3.3%;
+    margin-left: max(env(safe-area-inset-left), 3.3%);
+    margin-right: 3.3%;
+    margin-right: max(env(safe-area-inset-right), 3.3%);
+}
+
+.editorsChoiceScrollButtonsContainer, .editorsChoicePlayPauseContainer {
+    mix-blend-mode: unset;
+}
+
+.splide__toggle.is-active .splide__toggle__pause {
+    display: block;
 }
