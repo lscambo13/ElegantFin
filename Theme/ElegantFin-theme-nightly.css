@@ -1890,7 +1890,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .emby-textarea {
-    font-family: consolas;
+    font-family: consolas, monaco, monospace;
 }
 
 .emby-select-withcolor,
