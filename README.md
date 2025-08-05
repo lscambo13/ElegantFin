@@ -1,5 +1,8 @@
-# ElegantFin Theme
-This is a Jellyfin theme inspired from JellySeerr to improve the overall look and experience with various fixes to the UI and behaviour.
+<!-- Banner Image -->
+<img src="https://github.com/lscambo13/ElegantFin/blob/main/Theme/assets/img/banner.png?raw=true" alt="ElegantFin Theme for Jellyfin - Banner">
+
+# ⭐ ElegantFin Theme
+This is a Jellyfin theme inspired from Jellyseerr to improve the overall look and experience with various fixes to the UI/UX. It gives Jellyfin a fresh, modern look, and it aims to work on mobile, desktop, and TV, with just one import.
 
 
 #### **Author:** [lscambo13](https://github.com/lscambo13)
@@ -7,37 +10,78 @@ This is a Jellyfin theme inspired from JellySeerr to improve the overall look an
 <hr>
 
 ### ✨ Key Features  
-- modern layouts and colors
-- new animations on some elements
-- reduced clutter by hiding unimportant buttons and elements
-- overall rounded design
+- modern layouts and color tones
+- new and improved animations on most elements
+- rounded corners and even spacing everywhere
 - stylish borders, hover effects and shadows
-- various fixes to the user experience
+- neat layout that puts important stuff up front
+- reduced unnecessary clutter
+- various fixes to improve the user experience
+- same clean design across phone, desktop, and TV
 
 <hr>
 
-### ▶️ Demo
-
-https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
-
-<hr>
-
-### 🖼️ Previews
+### 🖼️ Theme Showcase 
+Captured on ElegantFin v25.08.02
 
 <details>
-  <summary><i>Click here to reveal (last updated: 2025-01-19)</i></summary>
-  
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/1.%20Homepage.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/2.%20Movies%20Library.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/3.%20Sidebar.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/4.%20Movie%20Page.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/5.%20Extra%20Dialog.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/6.%20Settings%20Page.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/7.%20Metadata%20Menu.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/8.%20Dashboard%20Settings.png" style="width:360px;height:auto;"></img>
-<img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/9.%20Web%20Player.png" style="width:360px;height:auto;"></img>
+  <summary> 💻 <i>Desktop and </i>📱 <i>Mobile Screenshots</i></summary>
+
+| Desktop                                                                                                          | Mobile                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/21.%20Login%20Page.webp?raw=true"><br><strong>Login Page</strong></div>         | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/21.%20Login%20Page.webp?raw=true"></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/1.%20Homepage.webp?raw=true"><br><strong>Homepage</strong></div>             | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/1.%20Homepage.webp?raw=true"></div>             |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/2.%20Movies%20Library.webp?raw=true"><br><strong>Movies Library</strong></div> | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/2.%20Movies%20Library.webp?raw=true"></div>     |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/4.%20Movie%20Page.webp?raw=true"><br><strong>Movie Page</strong></div>         | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/4.%20Movie%20Page.webp?raw=true"></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/12.%20Movie%20Details.webp?raw=true"><br><strong>Movie Details</strong></div> | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/12.%20Movie%20Details.webp?raw=true"></div>     |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/11.%20TV%20Show%20Page.webp?raw=true"><br><strong>TV Show Page</strong></div> | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/11.%20TV%20Show%20Page.webp?raw=true"></div>    |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/18.%20TV%20Episode%20Page.webp?raw=true"><br><strong>TV Episode Page</strong></div> | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/18.%20TV%20Episode%20Page.webp?raw=true"></div> |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/16.%20TV%20Show%20Seasons.webp?raw=true"><br><strong>TV Show Seasons</strong></div> | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/16.%20TV%20Show%20Seasons.webp?raw=true"></div> |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/9.%20Web%20Player.webp?raw=true"><br><strong>Web Player</strong></div>         | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/9.%20Web%20Player.webp?raw=true"></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/17.%20Cast%20Page.webp?raw=true"><br><strong>Cast Page</strong></div>          | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/17.%20Cast%20Page.webp?raw=true"></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/14.%20Artist%20Page.webp?raw=true"><br><strong>Artist Page</strong></div>       | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/14.%20Artist%20Page.webp?raw=true"></div>       |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/15.%20Music%20Player.webp?raw=true"><br><strong>Music Player</strong></div>     | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/15.%20Music%20Player.webp?raw=true"></div>      |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/13.%20Book%20Page.webp?raw=true"><br><strong>Book Page</strong></div>          | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/13.%20Book%20Page.webp?raw=true"></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/3.%20Sidebar.webp?raw=true"><br><strong>Sidebar</strong></div>                | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/3.%20Sidebar.webp?raw=true"></div>              |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/5.%20Extra%20Dialog.webp?raw=true"><br><strong>Extra Dialog</strong></div>     | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/5.%20Extra%20Dialog.webp?raw=true"></div>       |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/6.%20Settings%20Page.webp?raw=true"><br><strong>Settings Page</strong></div>   | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/6.%20Settings%20Page.webp?raw=true"></div>      |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/7.%20Metadata%20Menu.webp?raw=true"><br><strong>Metadata Menu</strong></div>   | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/7.%20Metadata%20Menu.webp?raw=true"></div>      |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/8.%20Dashboard%20Settings.webp?raw=true"><br><strong>Dashboard Settings</strong></div> | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/8.%20Dashboard%20Settings.webp?raw=true"></div> |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/19.%20Live%20TV%20Page.webp?raw=true"><br><strong>Live TV Page</strong></div>   | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/19.%20Live%20TV%20Page.webp?raw=true"></div>    |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/20.%20Live%20TV%20Guide.webp?raw=true"><br><strong>Live TV Guide</strong></div> | <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/20.%20Live%20TV%20Guide.webp?raw=true"></div>   |
 
 </details>
+
+<details>
+  <summary> 📺 <i>TV Screenshots</i></summary>
+
+| TV View                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------- |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/21.%20Login%20Page.webp?raw=true"><br><strong>Login Page</strong></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/1.%20Homepage.webp?raw=true"><br><strong>Homepage</strong></div>             |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/2.%20Movies%20Library.webp?raw=true"><br><strong>Movies Library</strong></div> |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/4.%20Movie%20Page.webp?raw=true"><br><strong>Movie Page</strong></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/5.%20Extra%20Dialog.webp?raw=true"><br><strong>Extra Dialog</strong></div>     |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/6.%20Settings%20Page.webp?raw=true"><br><strong>Settings Page</strong></div>   |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/9.%20Web%20Player.webp?raw=true"><br><strong>Web Player</strong></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/11.%20TV%20Show%20Page.webp?raw=true"><br><strong>TV Show Page</strong></div> |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/12.%20Movie%20Details.webp?raw=true"><br><strong>Movie Details</strong></div> |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/13.%20Book%20Page.webp?raw=true"><br><strong>Book Page</strong></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/14.%20Artist%20Page.webp?raw=true"><br><strong>Artist Page</strong></div>     |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/15.%20Music%20Player.webp?raw=true"><br><strong>Music Player</strong></div>   |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/16.%20TV%20Show%20Seasons.webp?raw=true"><br><strong>TV Show Seasons</strong></div> |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/17.%20Cast%20Page.webp?raw=true"><br><strong>Cast Page</strong></div>         |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/18.%20TV%20Episode%20Page.webp?raw=true"><br><strong>TV Episode Page</strong></div> |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/19.%20Live%20TV%20Page.webp?raw=true"><br><strong>Live TV Page</strong></div> |
+| <div align="center"><img src="https://github.com/lscambo13/ElegantFin/blob/main/Previews/previews-v25.08.02/optimized/tv/20.%20Live%20TV%20Guide.webp?raw=true"><br><strong>Live TV Guide</strong></div> |
+
+</details>
+
+
+
+
+https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
+
 
 <hr>
 
@@ -97,10 +141,61 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 </details>
 
 <details>
-  <summary><i>3. Bring back the home button in the app header</i></summary>
+  <summary><i>3. Enable extra overlay buttons on cards on desktop</i></summary>
 
-- Read more about steps [here](https://github.com/lscambo13/ElegantFin/issues/51)
+- To enable 'Mark Played' and 'Add to Favorites' buttons that show up at the bottom right corner of cards while hovering, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+  ```
+  :root{
+    --extraCardButtonsVisibility: block;
+  }
+  ```
+- To hide them again, simply remove this code block or replace `block` with `none`.
+</details>
 
+<details>
+  <summary><i>4. Place the overlay play button at the center of cards on desktop</i></summary>
+
+- To bring the mini play button to the center of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+  ```
+  :root{
+    --overlayPlayButtonPosition: 50%;
+  }
+  ```
+- To undo this change, simply remove this code block or replace `50%` with `2.8em`.
+</details>
+
+<details>
+  <summary><i>5. Disable the card hover effect on desktop</i></summary>
+
+- To disable the reflection on cards that shows when hovering over them on desktop, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+```
+  :root{
+    --cardHoverEffect: none;
+  }
+```
+- To undo this change, simply remove this code block or replace `none` with `""`.
+</details>
+
+<details>
+  <summary><i>6. Enable labels below library cards</i></summary>
+
+- To enable text labels under the media library cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+```
+  :root{
+    --libraryLabelVisibility: block;
+  }
+```
+- To undo this change, simply remove this code block or replace `block` with `none`.
+</details>
+
+<details>
+  <summary><i>7. Enable experimental support for the Media Bar plugin</i></summary>
+
+- ElegantFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+```
+	@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
+```
+- To undo this change, simply remove this code block.
 </details>
 
 <hr>
@@ -113,10 +208,10 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 
 ### 🛠️ Troubleshooting 
 <details>
-  <summary>1️⃣ - <i>How do I check if I am using the latest version on ElegantFin?</i></summary>
+  <summary>1️⃣ - <i>How do I check if I am using the latest version of ElegantFin?</i></summary>
 
 - To make sure that you are using the latest version of ElegantFin, check the version number at the bottom in the Dashboard screen. 
-- It should be something like ElegantFin v25.03.XX
+- It should be something like ElegantFin v25.07.XX
 </details>
 
 <details>
@@ -132,11 +227,17 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 <details>
   <summary>3️⃣ - <i>Why do I notice visual bugs and inconsistencies on Jellyfin Media Player?</i></summary>
 
-- Currently JMP uses Qt 5.x which uses an outdated web engine, so many new CSS features do not work. Once they release a new version based on Qt 6.x, most issues should automatically be resolved. Until then, I advise using the web app instead.
+- As of version 1.12.0, JMP is based on Qt 5.x which uses a very outdated web engine, so it does not support many new CSS features. Once a new version based on Qt 6.x is released, most issues should automatically be resolved. Until then, JMP is unsupported and I recommend using the web app instead.
 </details>
 
 <details>
-  <summary>4️⃣ - <i>All the icons on my LG TV seem to be broken. How to fix them?</i></summary>
+  <summary>4️⃣ - <i>Does it work on the AndroidTV version of the Jellyfin app?</i></summary>
+
+- As of version 0.18.11, the official Jellyfin app on the AndroidTVs does not support css themes, but the Android mobile phone app supports them. The WebOS version of the app seems to be based on the mobile phone version, so it supports the theme just fine.
+</details>
+
+<details>
+  <summary>5️⃣ - <i>All the icons on my LG TV seem to be broken. How to fix them?</i></summary>
 
 - It seems that modern Material Icons which this theme uses are [not compatible on some WebOS TVs](https://github.com/lscambo13/ElegantFin/issues/39). There is a [huge similar thread](https://www.reddit.com/r/youtubetv/comments/e27go3/chinese_symbols_instead_of_icons_on_lg_tv/) about this.
 - This bug can be fixed by using the older icons, so I have implemented the following workaround to bring back older, supported icons.
@@ -150,7 +251,7 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 </details>
 
 <details>
-  <summary>5️⃣ - <i>How do I report bugs/issues?</i></summary>
+  <summary>6️⃣ - <i>How do I report bugs/issues?</i></summary>
 
 - First check [here](https://github.com/lscambo13/ElegantFin/issues?q=) whether a similar issue has been reported already. If it exists, upvote and comment there to let me know. 
 - Alternatively, create a new issue [here](https://github.com/lscambo13/ElegantFin/issues/new/choose).
@@ -158,12 +259,19 @@ https://github.com/user-attachments/assets/7a492f89-9c82-4038-a07a-a9a59e4f8eef
 
 </details>
 <details>
-  <summary>6️⃣ - <i>When can I expect another update?</i></summary>
+  <summary>7️⃣ - <i>When can I expect another update?</i></summary>
 
 - 🤷
 </details>
 
 <hr>
 
+### 📌 Contributing
 
-## 🙏 FEEDBACK APPRECIATED
+Please read the [Contributor Guidelines](./CONTRIBUTING.md) before opening pull requests.
+
+
+### 🙏 Feedback Appreciated
+
+Please use the right template when creating an [issue](https://github.com/lscambo13/ElegantFin/issues/new/choose) to [report bugs](https://github.com/lscambo13/ElegantFin/issues/new?template=bug_report.md) or [provide suggestions](https://github.com/lscambo13/ElegantFin/issues/new?template=feature_request.md).
+

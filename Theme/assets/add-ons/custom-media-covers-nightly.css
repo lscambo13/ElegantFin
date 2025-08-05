@@ -1,6 +1,6 @@
-/* Add-on: Custom media covers for the ElegantFin Theme for Jellyfin by lscambo13 */
+/* Add-on: Custom media covers nightly for the ElegantFin Theme for Jellyfin by lscambo13 */
 
-:root{
+:root {
     /* my media library default covers customizations */
     --colorOverlayMoviesCover: rgb(193, 103, 104);
     --colorOverlayTvshowsCover: rgb(140, 149, 43);
@@ -22,9 +22,26 @@
     --urlFoldersCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
 }
 
-.card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"],[data-type="Series"],[data-type="Folder"]) .cardImageIcon.material-icons:not(.quiz)::before{
+.card-withuserdata[data-isfolder="true"] .cardImageContainer.defaultCardBackground {
+    filter: contrast(0.85);
+    background-size: cover !important;
+    background-position: 50% !important;
+    background-blend-mode: multiply;
+}
+
+.card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"], [data-type="Season"], [data-type="Playlist"]) .cardImageContainer.cardContent::before {
+    position: absolute;
+    font-size: 3.5vh;
+    margin-bottom: .175em;
+    font-weight: 800;
+    color: white;
+    font-family: 'Noto Sans';
+    text-align: center;
+}
+
+.card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"]) .cardImageIcon.material-icons:not(.quiz)::before {
     display: none;
-} 
+}
 
 /* These show up when no image is set */
 
