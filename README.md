@@ -179,7 +179,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <details>
   <summary><i>6. Enable labels below library cards</i></summary>
 
-- To enable text labels under the media library cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+- To enable [text labels under the media library cards](https://github.com/lscambo13/ElegantFin/issues/52), copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
 ```
   :root{
     --libraryLabelVisibility: block;
