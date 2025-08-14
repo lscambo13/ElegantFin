@@ -219,6 +219,16 @@ html {
     color: #fff !important;
 }
 
+.emby-button.show-focus:focus {
+    transform: scale(1.125);
+}
+.paper-icon-button-light.show-focus:focus {
+    transform: scale(1.05);
+}
+.emby-tabs .emby-button.show-focus:focus {
+    transform: scale(1.15) !important;
+}
+
 .emby-tabs .emby-button.show-focus:focus {
     outline: none !important;
 }
