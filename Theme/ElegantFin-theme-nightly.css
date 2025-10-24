@@ -78,7 +78,7 @@
 
     --sidePadding: 3.3%;
     --itemColumnGap: 1em;
-    --primaryItemPageNegativeSpace: 15vh;
+    --primaryItemPageNegativeSpace: 17vh;
     --secondaryItemPageNegativeSpace: 35vh;
 
     --blurSmallest: blur(2px);
@@ -896,17 +896,19 @@ html {
     flex-direction: column;
     /* center content on desktop */
     align-items: center;
-    text-align: center;
-    margin-bottom: -1.5em;
+    /* this aligns the plot to left on 10.11.0 */
+    text-align: left;
+    /* temporarily disabled for 10.11.0 */
+    /* margin-bottom: -1.5em; */
 }
 
-.layout-mobile .detailPagePrimaryContainer {
+/* test disabled for 10.11.0 */
+/* .layout-mobile .detailPagePrimaryContainer {
     padding: .5em var(--sidePadding);
-}
-
-[dir=ltr] .detailPagePrimaryContent {
+} */
+/* [dir=ltr] .detailPagePrimaryContent {
     padding-right: 0;
-}
+} */
 
 .layout-desktop .detailPagePrimaryContainer {
     background: transparent;
@@ -914,6 +916,24 @@ html {
 
 .layout-desktop .detailPageSecondaryContainer {
     background-color: transparent;
+}
+
+/* this removes the extra large left paading on 10.11.0 */
+.detailPagePrimaryContainer>.detailPagePrimaryContent,
+[dir=ltr] .detailPagePrimaryContainer>.detailRibbon,
+/* this removes the extra large left paading on pre-10.11.0 */
+[dir=ltr] .detailPagePrimaryContainer.detailRibbon {
+    padding-left: var(--sidePadding);
+}
+
+/* this places main media buttons below the title on 10.11.0 */
+.layout-desktop [dir=ltr] .detailRibbon,
+.layout-tv [dir=ltr] .detailRibbon {
+    flex-direction: column;
+}
+
+.detailPagePrimaryContainer>.detailPagePrimaryContent {
+    padding-top: 0;
 }
 
 .detailPageSecondaryContainer {
@@ -1035,10 +1055,11 @@ html {
     margin-top: unset !important;
 }
 
-.layout-desktop [dir=ltr] .detailPagePrimaryContainer,
+/* test disabled for 10.11.0 */
+/* .layout-desktop [dir=ltr] .detailPagePrimaryContainer,
 .layout-tv [dir=ltr] .detailPagePrimaryContainer {
     padding-left: var(--sidePadding);
-}
+} */
 
 @keyframes animMoveDown {
     from {
@@ -1197,6 +1218,8 @@ html {
     align-content: end;
     place-items: center;
     display: grid;
+    /* this centers the title and other text on 10.11.0 */
+    text-align: center;
 }
 
 /* Both the blocks below position the poster in main media page in the center */
@@ -2692,14 +2715,21 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding-right: 6.5%;
 }
 
-.detailPagePrimaryContent.padded-right {
+/* test disabled for 10.11.0 */
+/* .detailPagePrimaryContent.padded-right {
     padding-right: 0 !important;
-}
+} */
 
 [dir=ltr] .detailPageContent,
 .content-primary {
     padding-left: var(--sidePadding) !important;
     padding-right: var(--sidePadding) !important;
+}
+
+/* this prevents double padding on Jellyfin pre-10.11.0 */
+[dir=ltr] .detailPageContent>.detailPagePrimaryContent {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 /* this removes right padding from cast page sections to place cards evenly*/
