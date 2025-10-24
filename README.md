@@ -220,7 +220,10 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 
 ### 🆗 Tested on 
 - Jellyfin Server v10.10.7
+- Microsoft Edge (Chromium)
 - Jellyfin Android App v2.6.3
+
+Note: Support for v10.11.0 is a work in progress
 
 <hr>
 
