@@ -905,10 +905,13 @@ html {
     /* margin-bottom: -1.5em; */
 }
 
-/* test disabled for 10.11.0 */
-/* .layout-mobile .detailPagePrimaryContainer {
-    padding: .5em var(--sidePadding);
-} */
+/* this disables block padding on pre-10.11.0 */
+.layout-mobile .detailPagePrimaryContainer.detailRibbon,
+/* this disables block padding on 10.11.0 */
+.layout-mobile .detailPagePrimaryContainer>.detailRibbon {
+    padding: 0 var(--sidePadding);
+}
+
 /* [dir=ltr] .detailPagePrimaryContent {
     padding-right: 0;
 } */
@@ -929,6 +932,11 @@ html {
     padding-left: var(--sidePadding);
 }
 
+.layout-mobile .detailPagePrimaryContent {
+    padding-left: var(--sidePadding) !important;
+    padding-right: var(--sidePadding) !important;
+}
+
 /* this places main media buttons below the title on 10.11.0 */
 .layout-desktop [dir=ltr] .detailRibbon,
 .layout-tv [dir=ltr] .detailRibbon {
@@ -940,7 +948,8 @@ html {
 }
 
 .detailPageSecondaryContainer {
-    padding-top: 0;
+    /* use !important for pre-10.11.0 compatibility */
+    padding-top: 0 !important;
 }
 
 /* this hides the header home button everywhere except the main media page */
@@ -2316,7 +2325,9 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 
 .mainDetailButtons {
     justify-content: center;
-    margin: 0 0 1em 0;
+    /* test for 10.11.0 */
+    /* margin: 0 0 1em 0; */
+    margin: 0;
 }
 
 .layout-mobile [dir=ltr] .mainDetailButtons {
