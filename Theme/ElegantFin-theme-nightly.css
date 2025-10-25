@@ -140,7 +140,6 @@ html {
 
 .layout-mobile {
     --itemColumnGap: 0;
-    --sidePadding: 5%;
     --headerColorGradient: var(--headerColorGradientAlt);
     --blurLargest: blur(12px);
     --headerBlurMask: linear-gradient(180deg, white 60%, 90%, transparent);
@@ -844,6 +843,10 @@ html {
     }
 }
 
+.layout-mobile .card {
+    --sidePadding: 5%;
+}
+
 .card {
     --effectiveWidth: calc((99vw - (var(--sidePadding) * 2)));
     --cardWidth: calc(var(--effectiveWidth) / var(--cardCount) - var(--itemColumnGap));
@@ -967,6 +970,7 @@ html {
 
 .verticalSection.emby-scroller-container>h2.sectionTitle.sectionTitle-cards {
     padding-top: 1.25em !important;
+    margin: 0 0 -.5em 0;
 }
 
 #itemDetailPage .emby-scroller-container,
@@ -974,12 +978,18 @@ html {
 #itemDetailPage .scrollX {
     margin: 0 calc(-1 * var(--sidePadding));
     padding: 0 var(--sidePadding);
+    padding-left: calc(var(--sidePadding) - .375em);
 }
 
 .layout-desktop .emby-scroller-container,
 .layout-desktop .emby-scroller,
 .layout-desktop .scrollX {
     --itemColumnGap: 0.5em;
+}
+
+.emby-scroller,
+.hiddenScrollX.scrollX {
+    padding-left: calc(var(--sidePadding) - .375em);
 }
 
 .itemsContainer:not(.editorsChoiceItemsContainer) {
@@ -993,14 +1003,16 @@ html {
 
 .sectionTitleContainer-cards {
     padding-top: 0;
-}
-
-.sectionTitleContainer+.emby-scrollbuttons {
-    padding-top: 0;
+    margin: .75em 0 -.75em 0;
 }
 
 .layout-mobile :not(.sectionTitleContainer-cards)>.sectionTitle-cards {
     text-align: left;
+    margin: .75em 0 -.75em 0;
+}
+
+.sectionTitleContainer+.emby-scrollbuttons {
+    padding-top: 0;
 }
 
 .emby-scrollbuttons-button.paper-icon-button-light>.material-icons {
