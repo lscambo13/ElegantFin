@@ -78,7 +78,7 @@
 
     --sidePadding: 3.3%;
     --itemColumnGap: 1em;
-    --primaryItemPageNegativeSpace: 17vh;
+    --primaryItemPageNegativeSpace: 12vh;
     --secondaryItemPageNegativeSpace: 35vh;
 
     --blurSmallest: blur(2px);
@@ -1063,8 +1063,8 @@ html {
 }
 
 .layout-desktop .detailRibbon {
-    height: 32vh !important;
-    margin-top: unset !important;
+    height: 28vh;
+    margin-top: unset;
 }
 
 /* test disabled for 10.11.0 */
@@ -1111,7 +1111,7 @@ html {
 
 .detailLogo {
     display: block;
-    top: calc(100vh - 10em - var(--primaryItemPageNegativeSpace));
+    top: calc(100vh - 11em - var(--primaryItemPageNegativeSpace));
     left: 0;
     width: 40%;
     transform: translateY(-100%);
@@ -1196,14 +1196,26 @@ html {
 }
 
 .layout-desktop .detailImageContainer .card {
-    top: unset !important;
+    position: absolute !important;
     width: 22vh !important;
+    float: none;
+    left: 0 !important;
+    top: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 0;
+    place-self: center;
+    transform: translateY(-80%);
+}
+
+.layout-desktop .detailImageContainer .backdropCard,
+.layout-desktop .detailImageContainer .squareCard {
+    transform: translateY(-100%);
 }
 
 .detailImageContainer .card.backdropCard {
     width: 40vh !important;
     max-width: 50vw;
-    margin-bottom: 1em;
 }
 
 .detailImageContainer .card {
@@ -2581,10 +2593,6 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .detailPageContent {
     gap: 1em;
-}
-
-.detailImageContainer .card {
-    position: inherit !important;
 }
 
 .trackSelections {
