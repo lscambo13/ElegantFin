@@ -1194,15 +1194,15 @@ html {
     height: 33vh;
 }
 
-.detailImageContainer.padded-left {
+/* .detailImageContainer.padded-left {
     padding-left: 0;
-}
+} */
 
-.layout-tv .detailImageContainer.padded-left {
-    padding-left: 0;
-    height: 0;
+/* .layout-tv .detailImageContainer .card {
+    padding-left: var(--sidePadding);
+
     position: fixed;
-}
+} */
 
 .layout-desktop .detailImageContainer .card {
     position: absolute !important;
@@ -1232,8 +1232,15 @@ html {
 }
 
 .layout-tv .detailImageContainer .card {
-    width: 23vw !important;
-    display: block !important;
+    width: 25vw !important;
+    display: grid !important;
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: var(--sidePadding);
+    align-content: center;
+    transform: none;
 }
 
 .layout-mobile .detailImageContainer .card {
