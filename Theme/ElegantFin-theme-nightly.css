@@ -2332,8 +2332,6 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 
 .mainDetailButtons {
     justify-content: center;
-    /* test for 10.11.0 */
-    /* margin: 0 0 1em 0; */
     margin: 0;
 }
 
@@ -2345,7 +2343,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 @media (min-width: 100em) {
     .mainDetailButtons {
         font-size: unset;
-        margin: 0 0 1em 0;
+        margin: 0;
     }
 }
 
