@@ -3780,3 +3780,29 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .remoteControlContent {
     padding: 0 var(--sidePadding) !important;
 }
+
+/* .layout-tv *,
+.layout-tv *::before,
+.layout-tv *::after {
+    transition-duration: .1s;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none;
+    text-shadow: none;
+    filter: none !important;
+    -webkit-filter: none !important;
+} */
+
+/* .layout-tv .show-focus:not(.card):focus,
+.layout-tv .show-animation:not(.card):focus {
+    transform: none !important;
+} */
+
+/* .layout-tv .blurhash-canvas {
+    display: none !important;
+} */
+
+.layout-tv .show-focus:focus,
+.layout-tv .show-animation:focus {
+    transform: none !important;
+}
