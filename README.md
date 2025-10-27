@@ -95,7 +95,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
   <summary><i>Detailed steps for server-side implementation</i></summary>
 
 1. Open Dashboard from Administration tab in Settings.
-2. Select General tab from the side bar.
+2. From the side bar, select the Branding tab if you are on Jellyfin 10.11.X OR the General tab on Jellyfin 10.10.X.
 3. Scroll down to find Custom CSS code box under Branding section.
 4. Paste the custom css in Custom CSS code box.
 5. Click save
@@ -130,8 +130,9 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/70834545-d1cd-4496-975a-4310030dedd9" />
 <img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/c3cf2d96-0db0-4acb-bc61-7b08d5445452" />
 
+- Note: this is not needed on Jellyfin 10.11.X anymore
 
-- To enable the background wallpaper on the login screen, first tick the 'Enable the splash screen' option in your Jellyfin Dashboard below the Custom CSS Box.
+- On older Jellyfin versions, to enable the background wallpaper on the login screen, first tick the 'Enable the splash screen' option in your Jellyfin Dashboard below the Custom CSS Box.
 - Second, copy and paste the following code at the end in Custom CSS box but don't save yet.
   ```
   :root{
@@ -223,25 +224,23 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 - Microsoft Edge (Chromium)
 - Jellyfin Android App v2.6.3
 
-Note: Support for v10.11.0 is a work in progress
-
 <hr>
 
 ### 🛠️ Troubleshooting 
 <details>
   <summary>1️⃣ - <i>How do I check if I am using the latest version of ElegantFin?</i></summary>
 
-- To make sure that you are using the latest version of ElegantFin, check the version number at the bottom in the Dashboard screen. 
-- It should be something like ElegantFin v25.07.XX
+- Check the version number at the bottom in the Settings screen. 
+- It should be something like `ElegantFin v25.10.XX`.
 </details>
 
 <details>
   <summary>2️⃣ - <i>I see that a newer version is available, but I have not received it yet. Why?</i></summary>
 
-- If Dashboard footer shows an old version, it means that your app is still using an old cache.
-- Once that cache is updated, the new version will be loaded. 
-- To get the latest version, you will need to clear cache. There are multiple ways to do it.
-- On web version, force a hard refresh of the page using CTRL + F5.
+- If the Settings footer shows an old version, it means that you are still using an old cache.
+- Once that cache is updated, the new version will be loaded automatically. 
+- There are multiple ways to clear the cache depending on your OS, smartphone or TV. Look online if you don't know.
+- On the web version, you can force a hard refresh of the page using CTRL + F5.
 - On apps, try signing out and back in again. OR in case of Jellyfin Media Player on windows, you might need to delete the cache folder. That should definitely pull the latest version.
 </details>
 

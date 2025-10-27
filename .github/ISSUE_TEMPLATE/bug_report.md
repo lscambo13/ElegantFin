@@ -22,13 +22,13 @@ If applicable, add screenshots to help explain your problem.
 **Jellyfin Server:**
  - Version [e.g. 10.10.7]
 
-**Desktop (please complete the following information):**
+**Desktop:**
  - OS: [e.g. iOS]
  - Browser: [e.g. chrome, safari]
  - Browser Version: [e.g. 22]
  - Screen Resolution [e.g. 1920x1080]
 
-**Smartphone or TV (please complete the following information):**
+**Smartphone or TV:**
  - Device: [e.g. iPhone6]
  - OS: [e.g. iOS8.1]
  - Browser: [e.g. stock browser, safari]
@@ -36,5 +36,7 @@ If applicable, add screenshots to help explain your problem.
  - Jellyfin App Version: 
 
 
-**Additional context**
-Add any other context about the problem here.
+**Are you using any plugins or extra CSS configuration**
+Add any third-party plugins or CSS configuration you use.
+[e.g. Media Bar, Custom Tabs etc]
+[e.g. other custom css modifications]
