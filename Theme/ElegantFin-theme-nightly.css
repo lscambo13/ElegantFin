@@ -2723,6 +2723,14 @@ div[data-role=controlgroup] a.ui-btn-active {
     grid-column: 1 / -1;
 }
 
+.collectionItems .sectionTitleContainer.padded-left {
+    padding-left: .375em;
+}
+
+.collectionItemsContainer.padded-left {
+    padding-left: 0;
+}
+
 .sliderBubble {
     border-radius: var(--largeRadius);
     border: var(--defaultBorder);
