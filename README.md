@@ -95,8 +95,8 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
   <summary><i>Detailed steps for server-side implementation</i></summary>
 
 1. Open Dashboard from Administration tab in Settings.
-2. From the side bar, select the Branding tab if you are on Jellyfin 10.11.X OR the General tab on Jellyfin 10.10.X.
-3. Scroll down to find Custom CSS code box under Branding section.
+2. From the side bar, select the Branding tab if you are on Jellyfin 10.11.X or the General tab on older version.
+3. Scroll down to find Custom CSS code box.
 4. Paste the custom css in Custom CSS code box.
 5. Click save
 </details>
@@ -130,7 +130,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/70834545-d1cd-4496-975a-4310030dedd9" />
 <img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/c3cf2d96-0db0-4acb-bc61-7b08d5445452" />
 
-- Note: this is not needed on Jellyfin 10.11.X anymore
+- Note: this customisation is not needed on Jellyfin 10.11.X anymore
 
 - On older Jellyfin versions, to enable the background wallpaper on the login screen, first tick the 'Enable the splash screen' option in your Jellyfin Dashboard below the Custom CSS Box.
 - Second, copy and paste the following code at the end in Custom CSS box but don't save yet.
@@ -139,7 +139,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
     --loginPageBgUrl: url("<YOUR-JELLYFIN-SERVER-ADDRESS>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2");
   }
   ```
-- Third, replace `<YOUR-JELLYFIN-SERVER-ADDRESS>` with your Jellyfin server address, for example, `http://192.168.0.1:8097`.
+- Third, replace `<YOUR-JELLYFIN-SERVER-ADDRESS>` with your Jellyfin server address, for example, `http://192.168.0.1:8096`.
 - Don't forget the correct http or https in your domain.
 - You can also modify the parameters, for example blur size or the resolution, according to your liking.
 - Once done, save and refresh your apps and webpages.
@@ -220,7 +220,7 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 <hr>
 
 ### 🆗 Tested on 
-- Jellyfin Server v10.10.7
+- Jellyfin Server v10.11.1
 - Microsoft Edge (Chromium)
 - Jellyfin Android App v2.6.3
 
