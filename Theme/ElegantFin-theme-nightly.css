@@ -3392,12 +3392,13 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background: var(--activeColor);
 }
 
-#homeTab .overflowBackdropCard[data-isfolder="true"] .cardPadder-overflowBackdrop {
+/* this :not() is needed to prevent affecting the mixed media libraries on the home page */
+#homeTab .overflowBackdropCard[data-isfolder="true"]:not(.groupedCard) .cardPadder-overflowBackdrop {
     padding-bottom: 50%;
 }
 
-#homeTab .overflowBackdropCard[data-isfolder="true"] .cardText-first,
-#homeTab .overflowBackdropCard[data-isfolder="true"] .cardText.cardTextCentered {
+#homeTab .overflowBackdropCard[data-isfolder="true"]:not(.groupedCard) .cardText-first,
+#homeTab .overflowBackdropCard[data-isfolder="true"]:not(.groupedCard) .cardText.cardTextCentered {
     display: var(--libraryLabelVisibility);
 }
 
