@@ -78,7 +78,7 @@
 
     --sidePadding: 3.3%;
     --itemColumnGap: 1em;
-    --primaryItemPageNegativeSpace: 12vh;
+    --primaryItemPageNegativeSpace: 14vh;
     --secondaryItemPageNegativeSpace: 35vh;
 
     --blurSmallest: blur(2px);
@@ -1072,7 +1072,7 @@ html {
 }
 
 .layout-desktop .detailRibbon {
-    height: 28vh;
+    height: 30vh;
     margin-top: unset;
 }
 
@@ -2679,7 +2679,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .layout-desktop .detailSectionContent {
     align-content: end;
-    min-height: 15vh;
+    min-height: 13vh;
 }
 
 .itemDetailsGroup {
