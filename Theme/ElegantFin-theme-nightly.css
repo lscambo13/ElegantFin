@@ -113,6 +113,10 @@
        block: makes them visible use block */
     --extraCardButtonsVisibility: none;
 
+    /* block: keeps the original (foreign) title visible if it is available [default];
+       none: always hides the original title of Movie/TV */
+    --itemOriginalTitleVisibility: block;
+
     /* none: hides the media library card labels [default]; 
        block: makes them visible */
     --libraryLabelVisibility: none;
@@ -3131,6 +3135,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding-top: .25em;
     padding-bottom: .25em;
     color: var(--dimTextColor);
+    display: var(--itemOriginalTitleVisibility);
 }
 
 .channelPrograms+.channelPrograms,
