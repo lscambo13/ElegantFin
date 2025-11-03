@@ -1317,7 +1317,8 @@ html {
     aspect-ratio: 1 / 1;
 }
 
-#childrenContent:has(.listItem[data-type="Audio"]) {
+#childrenContent:has(.listItem[data-type="Audio"]),
+.programGuideSection {
     border: var(--defaultBorder);
     border-radius: var(--largeRadius);
     padding: .5em;
@@ -2730,6 +2731,15 @@ div[data-role=controlgroup] a.ui-btn-active {
 .collectionItems,
 .programGuideSection {
     grid-column: 1 / -1;
+}
+
+.programGuideSection:not(.hide){
+    order: -1;
+    margin-top: 2em;
+}
+
+.layout-desktop .programGuide{
+    padding-right: var(--sidePadding);
 }
 
 .collectionItems .sectionTitleContainer.padded-left {
