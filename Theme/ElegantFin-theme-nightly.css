@@ -1028,6 +1028,11 @@ html {
     margin: .75em 0 -.75em 0;
 }
 
+.emby-scrollbuttons,
+[dir=ltr] .emby-scrollbuttons {
+    padding-top: 1.25em;
+}
+
 .sectionTitleContainer+.emby-scrollbuttons {
     padding-top: 0;
 }
