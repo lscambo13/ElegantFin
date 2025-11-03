@@ -125,6 +125,10 @@
        none: makes the clear logo always hidden */
     --clearLogoVisibility: block;
 
+    /* none: dynamically hides the main title of Movie/TV if its logo is available [default]; 
+       block: makes the title always visible */
+    --itemTitleVisibility: none;
+
     /* use "" to enable the card hover effect [default]; 
        use none (without quotes) to disable it */
     --cardHoverEffect: "";
@@ -1298,14 +1302,19 @@ html {
     margin-top: .5em;
 }
 
-/* this hides the main media title when the clear logo is available*/
-.detailLogo:not(.hide)~.detailPageWrapperContainer .nameContainer h1,
+/* this hides the media card when detail logo is visible */
+.detailImageContainer .card:not(.portraitCard):has(.cardImageIcon.person),
 #itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailLogo,
 #itemDetailPage:has(.detailImageContainer .cardImageIcon.album) .detailLogo,
-#itemDetailPage:has(.detailImageContainer .cardImageIcon.person) .detailLogo,
-.detailImageContainer .card:not(.portraitCard):has(.cardImageIcon.person) {
+#itemDetailPage:has(.detailImageContainer .cardImageIcon.person) .detailLogo {
     z-index: 2;
     display: none;
+}
+
+/* this hides the main media title when the clear logo is available*/
+.detailLogo:not(.hide)~.detailPageWrapperContainer .nameContainer h1 {
+    z-index: 2;
+    display: var(--itemTitleVisibility);
 }
 
 /* this shows the main media title and the poster when the clear logo is unavailable*/
