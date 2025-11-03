@@ -3186,7 +3186,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .guideProgramName {
     background-color: rgba(255, 255, 255, .05);
-    height: -webkit-fill-available;
+    height: calc(100% - .7em);
     margin: .35em 0 .35em .7em;
     border-radius: var(--smallerRadius);
 }
