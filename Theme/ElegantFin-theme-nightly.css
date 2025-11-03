@@ -3163,6 +3163,15 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding-bottom: 0ch;
 }
 
+.subtitle{
+    font-size: 2em;
+    padding-bottom: 1em;
+}
+
+.layout-mobile .subtitle {
+    font-size: 1.5em;
+}
+
 .itemName.originalTitle {
     padding-top: .25em;
     padding-bottom: .25em;
