@@ -2961,6 +2961,7 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: whitesmoke;
     box-shadow: var(--shadow);
     margin-right: var(--sidePadding);
+    color: black
 }
 
 /* this allows the skip button get focused correctly on TVs using remote navigation; needs 10.10.7*/
