@@ -2657,7 +2657,11 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .layout-desktop .detailSectionContent {
     align-content: end;
-    min-height: 13vh;
+    min-height: 16vh;
+}
+
+.detailSectionContent:has(.tagline.hide+.overview.hide) {
+    min-height: unset;
 }
 
 .itemDetailsGroup {
