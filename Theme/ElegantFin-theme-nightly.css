@@ -121,13 +121,17 @@
        block: makes them visible */
     --libraryLabelVisibility: none;
 
-    /* block: show the Movie/TV clear logo if it is available [default]; 
+    /* block: shows the Movie/TV clear logo if it is available [default]; 
        none: makes the clear logo always hidden */
     --clearLogoVisibility: block;
 
     /* none: dynamically hides the main title of Movie/TV if its logo is available [default]; 
        block: makes the title always visible */
     --itemTitleVisibility: none;
+
+    /* block: shows the mini play or three-dot button on cards only on mobile [default]; 
+    none: makes them always hidden only on mobile */
+    --miniOverlayButtonVisibility: block;
 
     /* use "" to enable the card hover effect [default]; 
        use none (without quotes) to disable it */
@@ -459,6 +463,7 @@ html {
 [dir=ltr] .layout-mobile .cardOverlayButton-br {
     bottom: .25em;
     right: .25em;
+    display: var(--miniOverlayButtonVisibility);
 }
 
 .layout-mobile .portraitCard .cardOverlayButton-br:not([data-action="menu"]),
