@@ -2727,7 +2727,8 @@ div[data-role=controlgroup] a.ui-btn-active {
 .layout-tv .itemDetailsGroup,
 .layout-tv .nextUpSection,
 .layout-tv .detailSection>#listChildrenCollapsible,
-.collectionItems {
+.collectionItems,
+.programGuideSection {
     grid-column: 1 / -1;
 }
 
