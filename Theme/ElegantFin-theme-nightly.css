@@ -886,7 +886,7 @@ html {
 .layout-desktop .detailPageWrapperContainer {
     background: transparent;
     min-height: 46vh;
-    background: linear-gradient(0deg, var(--darkerGradientPointAlpha) 70%, 85%, transparent);
+    background: linear-gradient(180deg, transparent, 17vh, var(--darkerGradientPointAlpha) 50vh);
 }
 
 .layout-tv .detailPageWrapperContainer {
