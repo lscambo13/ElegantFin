@@ -121,6 +121,10 @@
        block: makes them visible */
     --libraryLabelVisibility: none;
 
+    /* block: show the Movie/TV clear logo if it is available [default]; 
+       none: makes the clear logo always hidden */
+    --clearLogoVisibility: block;
+
     /* use "" to enable the card hover effect [default]; 
        use none (without quotes) to disable it */
     --cardHoverEffect: "";
@@ -1123,7 +1127,7 @@ html {
 }
 
 .detailLogo {
-    display: block;
+    display: var(--clearLogoVisibility);
     top: calc(100vh - 11em - var(--primaryItemPageNegativeSpace));
     left: 0;
     width: 40%;
@@ -1134,7 +1138,7 @@ html {
 }
 
 .layout-mobile .detailLogo {
-    display: block;
+    display: var(--clearLogoVisibility);
     z-index: 1;
     position: absolute;
     left: 1em;
@@ -1186,7 +1190,7 @@ html {
 }
 
 .layout-tv .detailLogo {
-    display: block;
+    display: var(--clearLogoVisibility);
     height: 20vh;
     top: 39vh;
     left: 30vw;
