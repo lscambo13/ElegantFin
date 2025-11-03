@@ -2303,7 +2303,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     flex-direction: row;
 }
 
-.btnPlay:after {
+.btnPlay:not(.formDialogFooterItem):after {
     content: attr(title);
     padding: 0 1ch;
 }
