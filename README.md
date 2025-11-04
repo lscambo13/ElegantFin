@@ -284,6 +284,12 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 - 🤷
 </details>
 
+<details>
+  <summary>8️⃣ - <i>How to fix compatibility issues with older Jellyfin servers?</i></summary>
+
+- If you're experiencing issues like unclickable menu buttons in the Android client on Jellyfin v10.10.7, use an older version of ElegantFin, such as importing the URL: `@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@25.08.08/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");`. Using an older version may resolve other similar compatibility issues.
+</details>
+
 <hr>
 
 ### 📌 Contributing
