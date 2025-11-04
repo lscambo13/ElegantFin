@@ -1094,7 +1094,8 @@ html {
 }
 
 .layout-desktop .detailRibbon {
-    height: 30vh;
+    height: 100%;
+    min-height: 30vh;
     margin-top: unset;
 }
 
