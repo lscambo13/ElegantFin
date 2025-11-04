@@ -2674,6 +2674,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .layout-desktop .detailSectionContent {
+    display: grid;
     align-content: end;
     min-height: 16vh;
 }
