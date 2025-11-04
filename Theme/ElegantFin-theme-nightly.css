@@ -210,6 +210,7 @@ html {
     font-size: .8em;
     color: var(--borderColor);
     display: inline-grid;
+    width: 100%;
     width: -webkit-fill-available;
     justify-content: center;
     font-weight: 600;
@@ -1914,6 +1915,8 @@ progress+span {
 .chapterThumbTextContainer {
     background: var(--cardFooterGradient);
     text-shadow: .1em .1em 0px black;
+    width: 100%;
+    height: 100%;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     padding: 0em 2em 2em 2em;
