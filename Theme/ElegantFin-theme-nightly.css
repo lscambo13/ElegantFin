@@ -3869,3 +3869,41 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 .layout-tv .show-animation:focus {
     transform: none !important;
 }
+
+/* basic styling for the Media Bar Plugin - start
+for extended styling, use the add-on */
+
+#slides-container {
+    top: calc(-0.5 * var(--appBarHeight));
+}
+
+.backdrop-overlay {
+    background: linear-gradient(
+        var(--lighterGradientPoint),
+        var(--gradientPointAlpha),
+        60%,
+        var(--darkerGradientPointAlpha)
+    );
+}
+
+.plot {
+    color: var(--textColor);
+    text-shadow: 1px 1px var(--lighterGradientPointAlpha);
+}
+
+.button-container {
+    align-items: center;
+}
+
+.favorite-button {
+    background: none;
+    color: var(--textColor);
+}
+
+.detail-button:hover,
+.favorite-button:hover {
+    background: var(--dimTextColor);
+    color: black;
+}
+
+/* basic styling for the Media Bar Plugin - end */

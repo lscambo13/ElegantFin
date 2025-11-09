@@ -1,20 +1,5 @@
 /* Add-on: Media Bar plugin support nightly for the ElegantFin Theme for Jellyfin by lscambo13 */
 /* this styles the media bar plugin - start */
-.button-container {
-    align-items: center;
-}
-
-.favorite-button {
-    background: none;
-    color: var(--textColor);
-}
-
-.detail-button:hover,
-.favorite-button:hover {
-    background: var(--dimTextColor);
-    color: black;
-}
-
 .play-button::before,
 .detail-button::before,
 .favorite-button::before,
@@ -53,19 +38,11 @@
 #slides-container {
     width: calc(100vw - (2 * var(--sidePadding)));
     height: 62%;
-    top: calc(1.5 * var(--appBarHeight));
+    top: var(--appBarHeight);
     border: var(--defaultBorder);
     border-radius: var(--largerRadius);
     transition: all .125s, border 0s;
     user-select: none;
-}
-
-.layout-tv #slides-container {
-    top: 0em;
-}
-
-.layout-mobile #slides-container {
-    top: 10em;
 }
 
 .logo-container {
@@ -87,10 +64,6 @@
     .button-container {
         top: calc(50% + 20vh);
         transform: translateX(-50%) scale(0.8);
-    }
-
-    .info-container {
-        /* top: calc(50% + 6vh); */
     }
 
     .tomato-rating {
