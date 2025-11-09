@@ -1221,7 +1221,7 @@ html {
 } */
 
 .layout-desktop .detailImageContainer .card {
-    position: absolute !important;
+    position: relative !important;
     width: 22vh !important;
     float: none;
     left: 0 !important;
@@ -1230,12 +1230,6 @@ html {
     margin: auto;
     margin-bottom: 0;
     place-self: center;
-    transform: translateY(-80%);
-}
-
-.layout-desktop .detailImageContainer .backdropCard,
-.layout-desktop .detailImageContainer .squareCard {
-    transform: translateY(-100%);
 }
 
 .detailImageContainer .card.backdropCard {
@@ -1362,13 +1356,14 @@ html {
     height: calc(100vh - 32vh - var(--secondaryItemPageNegativeSpace)) !important;
 }
 
-#itemDetailPage:has(.detailImageContainer .card.backdropCard),
-#itemDetailPage:has(.detailImageContainer .card .cardImageIcon.album) {
+#itemDetailPage:has(.subtitle),
+#itemDetailPage:has(.musicParentName) {
     background: linear-gradient(180deg, var(--darkerGradientPointAlpha) 80%, transparent);
 }
 
-.layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .itemBackdrop,
-.layout-mobile #itemDetailPage:has(.detailImageContainer .card .cardImageIcon.album) .itemBackdrop {
+.layout-mobile #itemDetailPage:has(.detailImageContainer .backdropCard) .itemBackdrop,
+.layout-mobile #itemDetailPage:has(.subtitle) .itemBackdrop,
+.layout-mobile #itemDetailPage:has(.musicParentName) .itemBackdrop {
     animation: animMoveDownSecondaryPage 0.5s ease-out forwards;
 }
 
