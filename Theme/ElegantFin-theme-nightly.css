@@ -1304,11 +1304,10 @@ html {
     margin-top: 0.5em;
 }
 
-/* this hides the media card when detail logo is visible */
-.detailImageContainer .card:not(.portraitCard):has(.cardImageIcon.person),
-#itemDetailPage:has(.detailImageContainer .card.backdropCard) .detailLogo,
-#itemDetailPage:has(.detailImageContainer .cardImageIcon.album) .detailLogo,
-#itemDetailPage:has(.detailImageContainer .cardImageIcon.person) .detailLogo {
+/* this hides the detail logo  when media card is visible */
+#itemDetailPage:has(.detailImageContainer .backdropCard) .detailLogo,
+#itemDetailPage:has(.detailImageContainer .album) .detailLogo,
+#itemDetailPage:has(.detailImageContainer .person) .detailLogo {
     z-index: 2;
     display: none;
 }
@@ -1345,11 +1344,14 @@ html {
     background-color: var(--lighterGradientPointAlpha);
 }
 
-/* this shows the poster in the cast, book and music pages */
-.detailImageContainer .card:has(.book, .person, .album),
-.detailImageContainer .card.backdropCard:has(.tv),
-.detailImageContainer .card.backdropCard:has(.movie),
-.detailImageContainer .card.backdropCard:has(.live_tv) {
+/* this shows the poster in the cast, book, live tv and other pages */
+.detailImageContainer > .backdropCard,
+.detailImageContainer > .squareCard,
+.detailImageContainer > .card:has(.book),
+.detailImageContainer > .card:has(.person),
+.detailImageContainer > .card:has(.album),
+.detailImageContainer > .card:has(.queue),
+.detailImageContainer > .card:has(.live_tv) {
     display: block;
 }
 
