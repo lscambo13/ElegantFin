@@ -2586,7 +2586,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
     row-gap: 1em;
     column-gap: 3em;
     max-width: unset !important;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 25% 1fr 1fr 1fr;
     margin-bottom: 1.5em;
 }
 
