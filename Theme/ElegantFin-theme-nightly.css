@@ -1,7 +1,7 @@
 /* ElegantFin Theme for Jellyfin by lscambo13 */
 
 /* Add-ons: Uncomment to enable */
-/* @import url(./assets/add-ons/extras-media-bar-nightly.css); */
+/* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
 /* @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
@@ -16,6 +16,7 @@
     --darkerGradientPointAlpha: rgba(17, 24, 39, 0.85);
     --lighterGradientPoint: #1d2635;
     --lighterGradientPointAlpha: rgba(29, 38, 53, 0.85);
+    --gradientPointAlpha: rgba(29, 38, 53, 0.3);
     --headerColor: rgba(30, 40, 54, 0.8);
     --drawerColor: rgba(30, 40, 54, 0.9);
 
@@ -171,6 +172,7 @@ html {
     --headerColorGradient: var(--headerColorGradientAlt);
     --blurLargest: blur(12px);
     --headerBlurMask: linear-gradient(180deg, white 60%, 90%, transparent);
+    --secondaryItemPageNegativeSpace: 45vh;
 }
 
 /* Material Icons Round */
@@ -936,10 +938,10 @@ html {
     background-color: transparent;
 }
 
-/* this removes the extra large left paading on 10.11.0 */
+/* this removes the extra large left padding on 10.11.0 */
 .detailPagePrimaryContainer>.detailPagePrimaryContent,
 [dir=ltr] .detailPagePrimaryContainer>.detailRibbon,
-/* this removes the extra large left paading on pre-10.11.0 */
+/* this removes the extra large left padding on pre-10.11.0 */
 [dir=ltr] .detailPagePrimaryContainer.detailRibbon {
     padding-left: var(--sidePadding);
 }
@@ -1000,6 +1002,7 @@ html {
     margin: 0 calc(-1 * var(--sidePadding));
     padding: 0 var(--sidePadding);
     padding-left: calc(var(--sidePadding) - 0.375em);
+    /* mask-image: linear-gradient(90deg, transparent, white var(--sidePadding), white calc(100vw - var(--sidePadding)), transparent); */
 }
 
 .layout-desktop .emby-scroller-container,
@@ -1094,12 +1097,6 @@ html {
     min-height: 30vh;
     margin-top: unset;
 }
-
-/* test disabled for 10.11.0 */
-/* .layout-desktop [dir=ltr] .detailPagePrimaryContainer,
-.layout-tv [dir=ltr] .detailPagePrimaryContainer {
-    padding-left: var(--sidePadding);
-} */
 
 @keyframes animMoveDown {
     from {
