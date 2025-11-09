@@ -92,7 +92,7 @@
     --sidePadding: 3.3%;
     --itemColumnGap: 1em;
     --primaryItemPageNegativeSpace: 14vh;
-    --secondaryItemPageNegativeSpace: 35vh;
+    --secondaryItemPageNegativeSpace: 60vh;
 
     --blurSmallest: blur(2px);
     --blurDefault: blur(5px);
@@ -1092,9 +1092,14 @@ html {
     content: "%";
 }
 
+.detailRibbon:has(.portraitCard .folder) {
+    min-height: 32vh;
+    align-content: flex-end;
+}
+
 .layout-desktop .detailRibbon {
     height: 100%;
-    min-height: 30vh;
+    min-height: 25vh;
     margin-top: unset;
 }
 
@@ -1134,6 +1139,60 @@ html {
     }
 }
 
+/* Theme video styling rolled back because jellyfin does not differentiate between the main video player and theme video playback nicely*/
+/* .videoPlayerContainer {
+    position: relative !important;
+    -webkit-mask: var(--themeVideoPlayerMask);
+    mask: var(--themeVideoPlayerMask);
+    height: 90vh;
+}
+
+.layout-mobile .videoPlayerContainer {
+    z-index: 1;
+    height: 35vh;
+}
+
+.videoPlayerContainer>.htmlvideoplayer {
+    width: -webkit-fill-available;
+    object-fit: cover;
+} */
+
+.itemBackdrop {
+    display: block !important;
+}
+
+.layout-desktop .itemBackdrop {
+    height: calc(100vh - 27vh - var(--primaryItemPageNegativeSpace));
+}
+
+.layout-mobile .itemBackdrop {
+    margin-top: 0;
+    position: sticky;
+    top: -30%;
+    -webkit-mask: var(--itemBackdropMask);
+    mask: var(--itemBackdropMask);
+    animation: animMoveDown 0.5s ease-out forwards;
+    height: 45vh;
+}
+
+.layout-tv .itemBackdrop {
+    height: 33vh;
+}
+
+#itemDetailPage:has(.subtitle) .itemBackdrop,
+#itemDetailPage:has(.musicParentName) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .backdropCard) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .person) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .queue) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .book) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .live_tv) .itemBackdrop {
+    height: calc(100vh - 27vh - var(--secondaryItemPageNegativeSpace));
+}
+
+#itemDetailPage:has(.detailImageContainer .cardPadder-square:not(.person)) .itemBackdrop {
+    height: calc(100vh - 27vh - var(--secondaryItemPageNegativeSpace));
+}
+
 .detailLogo {
     display: var(--clearLogoVisibility);
     top: calc(100vh - 11em - var(--primaryItemPageNegativeSpace));
@@ -1157,46 +1216,6 @@ html {
     animation: animMoveUp 1s ease-out forwards;
 }
 
-.itemBackdrop {
-    display: block !important;
-}
-
-/* Theme video styling rolled back because jellyfin does not differentiate between the main video player and theme video playback nicely*/
-/* .videoPlayerContainer {
-    position: relative !important;
-    -webkit-mask: var(--themeVideoPlayerMask);
-    mask: var(--themeVideoPlayerMask);
-    height: 90vh;
-}
-
-.layout-mobile .videoPlayerContainer {
-    z-index: 1;
-    height: 35vh;
-}
-
-.videoPlayerContainer>.htmlvideoplayer {
-    width: -webkit-fill-available;
-    object-fit: cover;
-} */
-
-.layout-desktop .itemBackdrop {
-    height: calc(100vh - 32vh - var(--primaryItemPageNegativeSpace)) !important;
-}
-
-.layout-mobile .itemBackdrop {
-    margin-top: 0;
-    position: sticky;
-    top: -30%;
-    -webkit-mask: var(--itemBackdropMask);
-    mask: var(--itemBackdropMask);
-    animation: animMoveDown 0.5s ease-out forwards;
-    height: 45vh;
-}
-
-.layout-mobile #itemDetailPage:has(.detailLogo.hide) .itemBackdrop {
-    margin-bottom: -10vh;
-}
-
 .layout-tv .detailLogo {
     display: var(--clearLogoVisibility);
     height: 20vh;
@@ -1206,19 +1225,13 @@ html {
     margin: auto 5vw;
 }
 
-.layout-tv .itemBackdrop {
-    height: 33vh;
+#itemDetailPage:has(.subtitle) .detailLogo {
+    top: calc(100vh - 6em - var(--secondaryItemPageNegativeSpace));
 }
 
-/* .detailImageContainer.padded-left {
-    padding-left: 0;
-} */
-
-/* .layout-tv .detailImageContainer .card {
-    padding-left: var(--sidePadding);
-
-    position: fixed;
-} */
+.layout-mobile #itemDetailPage:has(.subtitle) .detailLogo {
+    top: calc(100vh - 11em - var(--secondaryItemPageNegativeSpace));
+}
 
 .layout-desktop .detailImageContainer .card {
     position: relative !important;
@@ -1346,14 +1359,9 @@ html {
     display: block;
 }
 
-/* This reduces the top padding in the cast, live tv, episode, song, album and artist pages i.e. shifts up page content */
-#itemDetailPage:has(.detailImageContainer .cardImageIcon.person, .detailImageContainer .cardImageIcon.book)
-    .itemBackdrop,
-#itemDetailPage:has(.detailImageContainer .cardImageIcon.album) .itemBackdrop,
-#itemDetailPage:has(.detailImageContainer .backdropCard .cardImageIcon.tv) .itemBackdrop,
-#itemDetailPage:has(.detailImageContainer .squareCard) .itemBackdrop,
-#itemDetailPage:has(.detailImageContainer .cardImageIcon.live_tv) .itemBackdrop {
-    height: calc(100vh - 32vh - var(--secondaryItemPageNegativeSpace)) !important;
+/* this hides artist's poster */
+.detailImageContainer .squareCard:has(.person) {
+    display: none;
 }
 
 #itemDetailPage:has(.subtitle),
