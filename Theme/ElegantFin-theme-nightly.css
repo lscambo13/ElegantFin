@@ -3188,6 +3188,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 
 .layout-mobile .subtitle {
     font-size: 1.5em;
+    padding-bottom: 0.5em;
 }
 
 .itemName.originalTitle {
