@@ -91,8 +91,10 @@
 
     --sidePadding: 3.3%;
     --itemColumnGap: 1em;
+
     --primaryItemPageNegativeSpace: 14vh;
     --secondaryItemPageNegativeSpace: 60vh;
+    --clearLogoBottomSpace: 11em;
 
     --blurSmallest: blur(2px);
     --blurDefault: blur(5px);
@@ -1195,7 +1197,7 @@ html {
 
 .detailLogo {
     display: var(--clearLogoVisibility);
-    top: calc(100vh - 11em - var(--primaryItemPageNegativeSpace));
+    top: calc(100vh - var(--clearLogoBottomSpace) - var(--primaryItemPageNegativeSpace));
     left: 0;
     width: 40%;
     transform: translateY(-100%);
