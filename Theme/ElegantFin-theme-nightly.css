@@ -3141,35 +3141,41 @@ div[data-role="controlgroup"] a.ui-btn-active {
     flex-direction: row-reverse;
 }
 
-.infoWrapper h1.itemName,
-.infoWrapper h1.parentName {
+.nameContainer > h3,
+.nameContainer > h1 {
+    word-break: break-word;
+    overflow: hidden;
+}
+
+.nameContainer > h1.itemName,
+.nameContainer > h1.parentName {
     font-size: 4em;
     white-space: pre-wrap;
     padding-bottom: 0.5ch;
     color: white;
 }
 
-.infoWrapper h1.itemName,
-.infoWrapper h1.parentName,
-.infoWrapper h1.itemName a,
-.infoWrapper h1.parentName a {
+.nameContainer > h1.itemName,
+.nameContainer > h1.parentName,
+.nameContainer > h1.itemName a,
+.nameContainer > h1.parentName a {
     font-weight: 200;
 }
 
-.infoWrapper h1.itemName bdi,
-.infoWrapper h1.parentName bdi,
-.infoWrapper h1.itemName a,
-.infoWrapper h1.parentName a {
-    /* overflow: hidden; */
+.nameContainer > h1.itemName bdi,
+.nameContainer > h1.parentName bdi,
+.nameContainer > h1.itemName a,
+.nameContainer > h1.parentName a {
+    overflow: hidden;
     display: -webkit-box !important;
     -webkit-line-clamp: 3;
     line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
-.layout-mobile .infoWrapper h1.itemName,
-.layout-mobile .infoWrapper h1.parentName,
-.layout-mobile .infoWrapper h1.parentNameLast {
+.layout-mobile .nameContainer > h1.itemName,
+.layout-mobile .nameContainer > h1.parentName,
+.layout-mobile .nameContainer > h1.parentNameLast {
     font-size: 2em;
     word-wrap: break-word;
     padding-bottom: 0ch;
