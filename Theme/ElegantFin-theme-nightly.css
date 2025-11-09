@@ -3841,8 +3841,13 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     }
 }
 
+.nowPlayingPage {
+    background: linear-gradient(var(--darkerGradientPointAlpha), transparent);
+}
+
 .remoteControlContent {
     padding: 0 var(--sidePadding) !important;
+    background: linear-gradient(transparent, var(--darkerGradientPointAlpha) 20em);
 }
 
 /* .layout-tv *,
