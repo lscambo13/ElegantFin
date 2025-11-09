@@ -1069,6 +1069,7 @@ html {
     transform: translateY(-0.15em);
     font-weight: 600;
     border: var(--defaultBorder);
+    color: var(--textColor);
 }
 
 .starIcon {
@@ -2281,7 +2282,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     flex-direction: row;
 }
 
-.btnPlay:not(.formDialogFooterItem):after {
+.btnPlay:not(.formDialogFooterItem):not(.play-button):after {
     content: attr(title);
     padding: 0 1ch;
 }
