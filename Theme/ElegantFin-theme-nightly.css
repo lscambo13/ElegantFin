@@ -561,7 +561,8 @@ html {
     height: max-content;
     width: 100%;
     aspect-ratio: 16 / 9;
-    margin: 0 !important;
+    /* margin: 0 !important; */
+    box-sizing: border-box;
 }
 
 .layout-desktop .listItem-largeImage .listItemBody {
