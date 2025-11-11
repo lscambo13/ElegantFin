@@ -2462,9 +2462,19 @@ div[data-role="controlgroup"] a.ui-btn-active {
     background-color: rgba(255, 255, 255, 0.07);
 }
 
-[dir="ltr"] .listItem:not(.actionSheetMenuItem)[data-type="Episode"] .listItemBodyText:not(.secondary) {
+/* [dir="ltr"] .listItem:not(.actionSheetMenuItem)[data-type="Episode"] .listItemBodyText:not(.secondary) {
     font-size: 1.17em;
     font-weight: 600;
+} */
+
+.listItem-largeImage .listItemBodyText:not(.secondary) {
+    font-size: 1.17em;
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+.listItemBodyText.secondary {
+    color: var(--dimTextColor);
 }
 
 .listItemBody > .listItemBodyText:not(.secondary) {
@@ -3465,12 +3475,22 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 /* this :not() is needed to prevent affecting the mixed media libraries on the home page */
-#homeTab .overflowBackdropCard[data-isfolder="true"]:not(.groupedCard) .cardPadder-overflowBackdrop {
+/* #homeTab .overflowBackdropCard[data-isfolder="true"]:not(.groupedCard) .cardPadder-overflowBackdrop {
     padding-bottom: 50%;
 }
 
 #homeTab .overflowBackdropCard[data-isfolder="true"]:not(.groupedCard) .cardText-first,
 #homeTab .overflowBackdropCard[data-isfolder="true"]:not(.groupedCard) .cardText.cardTextCentered {
+    display: var(--libraryLabelVisibility);
+} */
+
+.overflowBackdropCard[data-type="CollectionFolder"] .cardPadder-overflowBackdrop,
+.overflowBackdropCard[data-type="UserView"] .cardPadder-overflowBackdrop {
+    padding-bottom: 50%;
+}
+
+.overflowBackdropCard[data-type="CollectionFolder"] .cardText-first,
+.overflowBackdropCard[data-type="UserView"] .cardText-first {
     display: var(--libraryLabelVisibility);
 }
 
