@@ -7,14 +7,14 @@
     --colorOverlayLivetvCover: rgb(17, 98, 159);
     --colorOverlayPlaylistsCover: rgb(100, 61, 216);
     --colorOverlayBoxsetsCover: rgb(219, 180, 53);
-    --colorOverlayMusicCover: rgba(216, 61, 107, 0.477);
+    --colorOverlayMusicCover: rgb(216, 61, 169);
     --colorOverlayHomevideosCover: rgb(39, 90, 185);
     --colorOverlayBooksCover: rgb(166, 68, 70);
     --colorOverlayFoldersCover: rgb(173, 60, 113);
     --urlMoviesCover: url(https://raw.githubusercontent.com/Xenopsia/OnyxFin/refs/heads/main/Theme/assets/img/library-covers/movies.webp);
     --urlTvshowsCover: url(https://raw.githubusercontent.com/Xenopsia/OnyxFin/refs/heads/main/Theme/assets/img/library-covers/tvshows.webp);
     --urlLivetvCover: url(https://raw.githubusercontent.com/Xenopsia/OnyxFin/refs/heads/main/Theme/assets/img/library-covers/livetv.webp);
-    --urlPlaylistsCover: url(https://raw.githubusercontent.com/Xenopsia/OnyxFin/refs/heads/main/Theme/assets/img/library-covers/playlists.webp?v=1);
+    --urlPlaylistsCover: url(https://raw.githubusercontent.com/Xenopsia/OnyxFin/refs/heads/main/Theme/assets/img/library-covers/playlists.webp);
     --urlBoxsetsCover: url(https://raw.githubusercontent.com/Xenopsia/OnyxFin/refs/heads/main/Theme/assets/img/library-covers/boxsets.webp);
     --urlMusicCover: url(https://raw.githubusercontent.com/Xenopsia/OnyxFin/refs/heads/main/Theme/assets/img/library-covers/music.webp);
     --urlHomevideosCover: url(https://raw.githubusercontent.com/Xenopsia/OnyxFin/refs/heads/main/Theme/assets/img/library-covers/homevideos.webp);
