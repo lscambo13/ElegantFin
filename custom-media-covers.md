@@ -1,5 +1,5 @@
-# 🧩 Add-on:  Custom media covers for ElegantFin
-This is a Jellyfin add-on that allows you to customise My Media cover arts. This is an experimental feature, so limited support will be provided.
+# 🧩 Add-on:  Custom media covers for OnyxFin (ElegantFin compatible)
+This is a Jellyfin add-on that allows you to customise My Media cover arts. This is an experimental feature, so limited support will be provided. Works with OnyxFin and ElegantFin themes.
 
 #### **Author:** [lscambo13](https://github.com/lscambo13)
 

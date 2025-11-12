@@ -1,4 +1,4 @@
-/* ElegantFin Theme for Jellyfin by lscambo13 */
+/* OnyxFin Theme for Jellyfin - Fork of ElegantFin */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -8,42 +8,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --elegantFinFooterText: "ElegantFin Nightly";
+--onyxFinFooterText: "OnyxFin Nightly";
 
     /* Base theme colors */
     color-scheme: dark;
-    --darkerGradientPoint: #111827;
-    --darkerGradientPointAlpha: rgba(17, 24, 39, 0.85);
-    --lighterGradientPoint: #1d2635;
-    --lighterGradientPointAlpha: rgba(29, 38, 53, 0.85);
-    --gradientPointAlpha: rgba(29, 38, 53, 0.3);
-    --headerColor: rgba(30, 40, 54, 0.8);
-    --drawerColor: rgba(30, 40, 54, 0.9);
+    --darkerGradientPoint: #000000;
+    --darkerGradientPointAlpha: rgba(0, 0, 0, 0.85);
+    --lighterGradientPoint: #0f0f0f;
+    --lighterGradientPointAlpha: rgba(15, 15, 15, 0.85);
+    --gradientPointAlpha: rgba(15, 15, 15, 0.3);
+    --headerColor: rgba(0, 0, 0, 0.8);
+    --drawerColor: rgba(0, 0, 0, 0.9);
 
-    --borderColor: hsl(214, 13%, 32%);
-    --darkerBorderColor: hsl(214, 13%, 22%);
+    --borderColor: rgb(40, 40, 40);
+    --darkerBorderColor: rgb(20, 20, 20);
     --lighterBorderColor: hsla(0, 0%, 100%, 0.2);
 
-    --selectorBackgroundColor: rgb(55, 65, 81);
-    --selectorBackgroundColorAlpha: rgba(55, 65, 81, 0.5);
+    --selectorBackgroundColor: rgb(30, 30, 30);
+    --selectorBackgroundColorAlpha: rgba(30, 30, 30, 0.5);
 
-    --activeColorAlpha: rgba(119, 91, 244, 0.9);
-    --activeColor: rgb(119, 91, 244);
+    --activeColorAlpha: rgba(60, 60, 60, 0.9);
+    --activeColor: rgb(60, 60, 60);
     --osdSeekBarPlayedColor: var(--textColor);
     --osdSeekBarBufferedColorAlpha: rgba(128, 128, 128, 0.5);
     --osdSeekBarThumbColor: white;
-    --tableBodyColor: rgb(31 41 55 / 1);
-    --uiAccentColor: rgb(117 111 226);
-    --btnMiniPlayColor: rgb(41 154 93);
-    --btnMiniPlayBorderColor: rgb(50, 167, 105);
+    --tableBodyColor: rgb(10, 10, 10);
+    --uiAccentColor: rgb(60, 60, 60);
+    --btnMiniPlayColor: rgb(30, 30, 30);
+    --btnMiniPlayBorderColor: rgb(50, 50, 50);
 
     /* Base component colors */
     --btnDeleteColor: rgb(169, 29, 29);
     --btnDeleteBorderColor: rgb(217, 84, 84);
-    --btnSubmitColor: rgb(61, 54, 178);
-    --btnSubmitBorderColor: rgb(117 111 226);
-    --checkboxCheckedBgColor: rgb(79, 70, 229);
-    --highlightOutlineColor: rgb(37, 99, 235);
+    --btnSubmitColor: rgb(50, 50, 50);
+    --btnSubmitBorderColor: rgb(60, 60, 60);
+    --checkboxCheckedBgColor: rgb(50, 50, 50);
+    --highlightOutlineColor: rgb(50, 50, 50);
 
     --defaultBorder: var(--borderWidth) solid var(--borderColor);
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
@@ -55,8 +55,8 @@
     /* textures */
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), 25%, var(--lighterGradientPoint));
-    --headerColorGradient: linear-gradient(180deg, rgba(30, 40, 54, 0.95) 30%, 55%, transparent 90%);
-    --headerColorGradientAlt: linear-gradient(180deg, rgba(30, 40, 54, 1), 70%, transparent);
+    --headerColorGradient: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 30%, 55%, transparent 90%);
+    --headerColorGradientAlt: linear-gradient(180deg, rgba(0, 0, 0, 1), 70%, transparent);
     --headerBlurMask: linear-gradient(180deg, white 50%, 85%, transparent);
 
     --cardFooterGradient: linear-gradient(0deg, rgb(0 0 0 / 90%), 40%, transparent);
@@ -220,7 +220,7 @@ html {
 
 #myPreferencesMenuPage > div:after,
 .dashboardFooter::after {
-    content: var(--elegantFinFooterText);
+    content: var(--onyxFinFooterText);
     font-size: 0.8em;
     color: var(--borderColor);
     display: inline-grid;
@@ -2477,7 +2477,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .listItemIcon.schedule:not(.listItemIcon-transparent),
 .listItemIcon.person:not(.listItemIcon-transparent),
 .listItemIcon.live_tv:not(.listItemIcon-transparent) {
-    background-color: rgb(41, 49, 83) !important;
+    background-color: rgb(20, 20, 20) !important;
     border: var(--defaultBorder);
 }
 
@@ -3453,7 +3453,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 
 #loginPage .padded-left.padded-right.padded-bottom-page {
     width: 28em;
-    background: rgba(30, 40, 54, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     padding: 2em 2em 1em 2em !important;
     border-radius: var(--largerRadius);
     backdrop-filter: var(--blurDefault);
