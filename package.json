@@ -1,0 +1,28 @@
+{
+  "name": "onyxfin",
+  "version": "1.0.0",
+  "description": "<!-- Banner Image --> <img src=\"https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390\" alt=\"OnyxFin Theme for Jellyfin - Banner\">",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cleancss -o Theme/OnyxFin-jellyfin-theme-build-latest-minified.css Theme/OnyxFin-theme-nightly.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xenopsia/OnyxFin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Xenopsia/OnyxFin/issues"
+  },
+  "homepage": "https://github.com/Xenopsia/OnyxFin#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3"
+  }
+}

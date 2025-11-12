@@ -1,0 +1,51 @@
+{
+  "name": "clean-css-cli",
+  "version": "5.6.3",
+  "description": "A command-line interface to clean-css CSS optimization library",
+  "scripts": {
+    "check": "jshint ./bin/cleancss .",
+    "prepublish": "npm run check",
+    "test": "vows"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clean-css/clean-css-cli.git"
+  },
+  "keywords": [
+    "css",
+    "optimizer",
+    "minifier"
+  ],
+  "bin": {
+    "cleancss": "./bin/cleancss"
+  },
+  "author": "Jakub Pawlowicz <contact@jakubpawlowicz.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clean-css/clean-css-cli/issues"
+  },
+  "main": "index.js",
+  "files": [
+    "bin",
+    "History.md",
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "homepage": "https://github.com/clean-css/clean-css-cli#readme",
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "clean-css": "^5.3.3",
+    "commander": "7.x",
+    "glob": "^7.1.6"
+  },
+  "devDependencies": {
+    "http-proxy": "1.x",
+    "jshint": "^2.13.0",
+    "source-map": "0.5.x",
+    "vows": "^0.8.3"
+  },
+  "engines": {
+    "node": ">= 10.12.0"
+  }
+}

@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var cleanCssCli = require('../index');
+return cleanCssCli(process);
