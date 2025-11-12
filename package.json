@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cleancss -o Theme/OnyxFin-jellyfin-theme-build-latest-minified.css Theme/OnyxFin-theme-nightly.css"
+    "build": "cleancss -o Theme/OnyxFin-jellyfin-theme-build-latest-minified.css Theme/OnyxFin-theme-nightly.css && tr -d '\\n' < Theme/OnyxFin-jellyfin-theme-build-latest-minified.css > Theme/OnyxFin-jellyfin-theme-build-latest-minified.css.tmp && mv Theme/OnyxFin-jellyfin-theme-build-latest-minified.css.tmp Theme/OnyxFin-jellyfin-theme-build-latest-minified.css"
   },
   "repository": {
     "type": "git",
