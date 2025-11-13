@@ -144,38 +144,6 @@ div[data-collectiontype="playlists"] .cardImageContainer.cardContent {
     background-image: var(--urlPlaylistsCover) !important;
 }
 
-div[data-collectiontype="movies"] .cardImageContainer.cardContent::before {
-    content: "Movies";
-}
-
-div[data-collectiontype="tvshows"] .cardImageContainer.cardContent::before {
-    content: "TV Shows";
-}
-
-div[data-collectiontype="livetv"] .cardImageContainer.cardContent::before {
-    content: "Live TV";
-}
-
-div[data-collectiontype="music"] .cardImageContainer.cardContent::before {
-    content: "Music";
-}
-
-div[data-collectiontype="homevideos"] .cardImageContainer.cardContent::before {
-    content: "Home Videos";
-}
-
-div[data-collectiontype="books"] .cardImageContainer.cardContent::before {
-    content: "Books";
-}
-
-div[data-collectiontype="boxsets"] .cardImageContainer.cardContent::before {
-    content: "Collections";
-}
-
-div[data-collectiontype="folders"] .cardImageContainer.cardContent::before {
-    content: "Folders";
-}
-
-div[data-collectiontype="playlists"] .cardImageContainer.cardContent::before {
-    content: "Playlists";
+div[data-type="CollectionFolder"] .cardImageContainer.cardContent::before {
+    content: attr(aria-label);
 }
