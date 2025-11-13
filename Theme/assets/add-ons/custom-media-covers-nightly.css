@@ -53,94 +53,94 @@
 /* These show up when no image is set */
 
 /* div[data-collectiontype="movies"] .cardImageContainer.defaultCardBackground {
-    background: var(--colorOverlayMoviesCover) !important;
+    background-color: var(--colorOverlayMoviesCover) !important;
     background-image: var(--urlMoviesCover) !important;
 }
 
 div[data-collectiontype="tvshows"] .cardImageContainer.defaultCardBackground {
-    background: var(--colorOverlayTvshowsCover) !important;
+    background-color: var(--colorOverlayTvshowsCover) !important;
     background-image: var(--urlTvshowsCover) !important;
 }
 
 div[data-collectiontype="livetv"] .cardImageContainer.defaultCardBackground {
-    background: var(--colorOverlayLivetvCover) !important;
+    background-color: var(--colorOverlayLivetvCover) !important;
     background-image: var(--urlLivetvCover) !important;
 }
 
 div[data-collectiontype="music"] .cardImageContainer.defaultCardBackground {
-    background: var(--colorOverlayMusicCover) !important;
+    background-color: var(--colorOverlayMusicCover) !important;
     background-image: var(--urlMusicCover) !important;
 }
 
 div[data-collectiontype="homevideos"] .cardImageContainer.defaultCardBackground {
-    background: var(--colorOverlayHomevideosCover) !important;
+    background-color: var(--colorOverlayHomevideosCover) !important;
     background-image: var(--urlHomevideosCover) !important;
 }
 
 div[data-collectiontype="books"] .cardImageContainer.defaultCardBackground {
-    background: var(--colorOverlayBooksCover) !important;
+    background-color: var(--colorOverlayBooksCover) !important;
     background-image: var(--urlBooksCover) !important;
 }
 
 div[data-collectiontype="boxsets"] .cardImageContainer.defaultCardBackground {
-    background: var(--colorOverlayBoxsetsCover) !important;
+    background-color: var(--colorOverlayBoxsetsCover) !important;
     background-image: var(--urlBoxsetsCover) !important;
 }
 
 div[data-collectiontype="folders"] .cardImageContainer.defaultCardBackground {
-    background: var(--colorOverlayFoldersCover) !important;
+    background-color: var(--colorOverlayFoldersCover) !important;
     background-image: var(--urlFoldersCover) !important;
 }
 
 div[data-collectiontype="playlists"] .cardImageContainer.defaultCardBackground {
-    background: var(--colorOverlayPlaylistsCover) !important;
+    background-color: var(--colorOverlayPlaylistsCover) !important;
     background-image: var(--urlPlaylistsCover) !important;
 } */
 
 /* These are the front facing images */
 
 div[data-collectiontype="movies"] .cardImageContainer.cardContent {
-    background: var(--colorOverlayMoviesCover) !important;
+    background-color: var(--colorOverlayMoviesCover) !important;
     background-image: var(--urlMoviesCover) !important;
 }
 
 div[data-collectiontype="tvshows"] .cardImageContainer.cardContent {
-    background: var(--colorOverlayTvshowsCover) !important;
+    background-color: var(--colorOverlayTvshowsCover) !important;
     background-image: var(--urlTvshowsCover) !important;
 }
 
 div[data-collectiontype="livetv"] .cardImageContainer.cardContent {
-    background: var(--colorOverlayLivetvCover) !important;
+    background-color: var(--colorOverlayLivetvCover) !important;
     background-image: var(--urlLivetvCover) !important;
 }
 
 div[data-collectiontype="music"] .cardImageContainer.cardContent {
-    background: var(--colorOverlayMusicCover) !important;
+    background-color: var(--colorOverlayMusicCover) !important;
     background-image: var(--urlMusicCover) !important;
 }
 
 div[data-collectiontype="homevideos"] .cardImageContainer.cardContent {
-    background: var(--colorOverlayHomevideosCover) !important;
+    background-color: var(--colorOverlayHomevideosCover) !important;
     background-image: var(--urlHomevideosCover) !important;
 }
 
 div[data-collectiontype="books"] .cardImageContainer.cardContent {
-    background: var(--colorOverlayBooksCover) !important;
+    background-color: var(--colorOverlayBooksCover) !important;
     background-image: var(--urlBooksCover) !important;
 }
 
 div[data-collectiontype="boxsets"] .cardImageContainer.cardContent {
-    background: var(--colorOverlayBoxsetsCover) !important;
+    background-color: var(--colorOverlayBoxsetsCover) !important;
     background-image: var(--urlBoxsetsCover) !important;
 }
 
 div[data-collectiontype="folders"] .cardImageContainer.cardContent {
-    background: var(--colorOverlayFoldersCover) !important;
+    background-color: var(--colorOverlayFoldersCover) !important;
     background-image: var(--urlFoldersCover) !important;
 }
 
 div[data-collectiontype="playlists"] .cardImageContainer.cardContent {
-    background: var(--colorOverlayPlaylistsCover) !important;
+    background-color: var(--colorOverlayPlaylistsCover) !important;
     background-image: var(--urlPlaylistsCover) !important;
 }
 
