@@ -29,6 +29,13 @@
     background-blend-mode: multiply;
 }
 
+.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.cardContent {
+    filter: contrast(0.85);
+    background-size: cover !important;
+    background-position: 50% !important;
+    background-blend-mode: multiply;
+}
+
 .card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.cardContent::before {
     position: absolute;
     font-size: clamp(1em, max(2.5vh, 2vw), 2.5em);
@@ -137,13 +144,6 @@ div[data-collectiontype="playlists"] .cardImageContainer.cardContent {
     background-image: var(--urlPlaylistsCover) !important;
 }
 
-.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.cardContent {
-    filter: contrast(0.85);
-    background-size: cover !important;
-    background-position: 50% !important;
-    background-blend-mode: multiply;
-}
-
 div[data-collectiontype="movies"] .cardImageContainer.cardContent::before {
     content: "Movies";
 }
@@ -178,11 +178,4 @@ div[data-collectiontype="folders"] .cardImageContainer.cardContent::before {
 
 div[data-collectiontype="playlists"] .cardImageContainer.cardContent::before {
     content: "Playlists";
-}
-
-.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.defaultCardBackground {
-    filter: contrast(0.85);
-    background-size: cover !important;
-    background-position: 50% !important;
-    background-blend-mode: multiply;
 }
