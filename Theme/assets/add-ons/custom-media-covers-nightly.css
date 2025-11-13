@@ -22,14 +22,14 @@
     --urlFoldersCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
 }
 
-.card-withuserdata[data-isfolder="true"] .cardImageContainer.defaultCardBackground {
+.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.defaultCardBackground {
     filter: contrast(0.85);
     background-size: cover !important;
     background-position: 50% !important;
     background-blend-mode: multiply;
 }
 
-.card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"], [data-type="Season"], [data-type="Playlist"]) .cardImageContainer.cardContent::before {
+.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.cardContent::before {
     position: absolute;
     font-size: clamp(1em, max(2.5vh, 2vw), 2.5em);
     margin-bottom: .175em;
@@ -39,7 +39,7 @@
     text-align: center;
 }
 
-.card-withuserdata[data-isfolder="true"]:not([data-type="PhotoAlbum"], [data-type="Series"], [data-type="Folder"]) .cardImageIcon.material-icons:not(.quiz)::before {
+.card-withuserdata[data-type="CollectionFolder"] .cardImageIcon.material-icons:not(.quiz)::before {
     display: none;
 }
 
@@ -137,7 +137,7 @@ div[data-collectiontype="playlists"] .cardImageContainer.cardContent {
     background-image: var(--urlPlaylistsCover) !important;
 }
 
-.card-withuserdata[data-isfolder="true"] .cardImageContainer.cardContent {
+.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.cardContent {
     filter: contrast(0.85);
     background-size: cover !important;
     background-position: 50% !important;
@@ -180,7 +180,7 @@ div[data-collectiontype="playlists"] .cardImageContainer.cardContent::before {
     content: "Playlists";
 }
 
-.card-withuserdata[data-isfolder="true"] .cardImageContainer.cardContent {
+.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.defaultCardBackground {
     filter: contrast(0.85);
     background-size: cover !important;
     background-position: 50% !important;
