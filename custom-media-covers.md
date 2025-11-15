@@ -1,11 +1,12 @@
-# 🧩 Add-on:  Custom media covers for ElegantFin
+# 🧩 Add-on: Custom media covers for ElegantFin
+
 This is a Jellyfin add-on that allows you to customise My Media cover arts. This is an experimental feature, so limited support will be provided.
 
 #### **Author:** [lscambo13](https://github.com/lscambo13)
 
 <hr>
 
-### 🖼️ Presets with previews: Modify these styles according to your own liking 
+### 🖼️ Presets with previews: Modify these styles according to your own liking
 
 <details>
   <summary><i>This is how the covers look without this add-on.</i></summary>
@@ -50,6 +51,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --colorOverlayHomevideosCover: transparent;
     --colorOverlayBooksCover: transparent;
     --colorOverlayFoldersCover: transparent;
+    --colorOverlayMixedCover: transparent;
+    --colorOverlayRecordedmoviesCover: transparent;
+    --colorOverlayRecordedtvCover: transparent;
     --urlMoviesCover: transparent;
     --urlTvshowsCover: transparent;
     --urlLivetvCover: transparent;
@@ -59,6 +63,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --urlHomevideosCover: transparent;
     --urlBooksCover: transparent;
     --urlFoldersCover: transparent;
+    --urlMixedCover: transparent;
+    --urlRecordedmoviesCover: transparent;
+    --urlRecordedtvCover: transparent;
 }
 ```
 
@@ -79,6 +86,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --colorOverlayHomevideosCover: transparent;
     --colorOverlayBooksCover: transparent;
     --colorOverlayFoldersCover: transparent;
+    --colorOverlayMixedCover: transparent;
+    --colorOverlayRecordedmoviesCover: transparent;
+    --colorOverlayRecordedtvCover: transparent;
     --urlMoviesCover: var(--cardBackgroundGradient);
     --urlTvshowsCover: var(--cardBackgroundGradient);
     --urlLivetvCover: var(--cardBackgroundGradient);
@@ -88,6 +98,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --urlHomevideosCover: var(--cardBackgroundGradient);
     --urlBooksCover: var(--cardBackgroundGradient);
     --urlFoldersCover: var(--cardBackgroundGradient);
+    --urlMixedCover: var(--cardBackgroundGradient);
+    --urlRecordedmoviesCover: var(--cardBackgroundGradient);
+    --urlRecordedtvCover: var(--cardBackgroundGradient);
 }
 ```
 
@@ -97,7 +110,6 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
   <summary><i>Need something in between?</i></summary>
 
 ![image](https://github.com/user-attachments/assets/6975a5ef-4824-4807-9afa-434fc3ebaf6f)
-
 
 ```
 @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css");
@@ -112,6 +124,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --colorOverlayHomevideosCover: rgb(39, 90, 185);
     --colorOverlayBooksCover: rgb(166, 68, 70);
     --colorOverlayFoldersCover: rgb(173, 60, 113);
+    --colorOverlayMixedCover: rgb(194, 58, 58);
+    --colorOverlayRecordedmoviesCover: rgb(52, 52, 52);
+    --colorOverlayRecordedtvCover: rgb(120, 100, 28);
     --urlMoviesCover: linear-gradient(0deg, #313131, #585858 25%);
     --urlTvshowsCover: linear-gradient(0deg, #313131, #585858 25%);
     --urlLivetvCover: linear-gradient(0deg, #313131, #585858 25%);
@@ -121,6 +136,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --urlHomevideosCover: linear-gradient(0deg, #313131, #585858 25%);
     --urlBooksCover: linear-gradient(0deg, #313131, #585858 25%);
     --urlFoldersCover: linear-gradient(0deg, #313131, #585858 25%);
+    --urlMixedCover: linear-gradient(0deg, #313131, #585858 25%);
+    --urlRecordedmoviesCover: linear-gradient(0deg, #313131, #585858 25%);
+    --urlRecordedtvCover: linear-gradient(0deg, #313131, #585858 25%);
 }
 ```
 
@@ -128,9 +146,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 
 <hr>
 
-### 👇 How to enable this add-on? 
+### 👇 How to enable this add-on?
 
-- Paste the following at the end in Custom CSS code box:
+-   Paste the following at the end in Custom CSS code box:
 
 ```
 @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css");
@@ -138,11 +156,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 
 <hr>
 
-### ⚙️ How to configure this add-on? 
+### ⚙️ How to configure this add-on?
 
-- Remember, you do not need to configure anything if you're happy with the default set of images.
-
-
+-   Remember, you do not need to configure anything if you're happy with the default set of images.
 
 <details>
   <summary><i>Click here to reveal.</i></summary>
@@ -168,6 +184,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --colorOverlayHomevideosCover: rgb();
     --colorOverlayBooksCover: rgb();
     --colorOverlayFoldersCover: rgb();
+    --colorOverlayMixedCover: rgb();
+    --colorOverlayRecordedmoviesCover: rgb();
+    --colorOverlayRecordedtvCover: rgb();
 
     <!-- cover images; input the url pointing to an image. -->
 
@@ -179,8 +198,12 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --urlHomevideosCover: url();
     --urlBooksCover: url();
     --urlFoldersCover: url();
+    --urlMixedCover: url();
+    --urlRecordedmoviesCover: url();
+    --urlRecordedtvCover: url();
 
 }
+
 ```
 </details>
 
@@ -191,11 +214,12 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 Suppose you want to modify the Live TV cover art. You'll have to modify the variables named `--colorOverlayLivetvCover` and `--urlLivetvCover`, so that your final configuration will look something like this:
 
 ```
+
 @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css");
 
 :root{
-    --colorOverlayLivetvCover: rgb(39, 68, 185);
-    --urlLivetvCover: url(https://artworks.thetvdb.com/banners/fanart/original/71663-33.jpg);
+--colorOverlayLivetvCover: rgb(39, 68, 185);
+--urlLivetvCover: url(https://artworks.thetvdb.com/banners/fanart/original/71663-33.jpg);
 }
 
 ```
@@ -224,3 +248,4 @@ Suppose you want to modify the Live TV cover art. You'll have to modify the vari
 
 <hr>
 
+```
