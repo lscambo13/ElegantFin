@@ -95,6 +95,7 @@
     --primaryItemPageNegativeSpace: 14vh;
     --secondaryItemPageNegativeSpace: 60vh;
     --clearLogoBottomSpace: 11em;
+    --minEpisodeCardWidth: 26em;
 
     --blurSmallest: blur(2px);
     --blurDefault: blur(5px);
@@ -511,18 +512,11 @@ html {
 .layout-desktop .detailSection > #listChildrenCollapsible .vertical-list,
 .layout-desktop .detailPageContent > #childrenCollapsible .vertical-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--minEpisodeCardWidth), 100%), 1fr));
     gap: var(--itemColumnGap);
 }
 
-@media (max-width: 100em) {
-    .layout-desktop .detailSection > #listChildrenCollapsible .vertical-list,
-    .layout-desktop .detailPageContent > #childrenCollapsible .vertical-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 64em) {
+/* @media (max-width: 64em) {
     .layout-desktop .listItemImage-large {
         width: 100%;
     }
@@ -530,14 +524,7 @@ html {
     .layout-desktop .detailPageContent > #childrenCollapsible .vertical-list {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-@media (max-width: 40em) {
-    .layout-desktop .detailSection > #listChildrenCollapsible .vertical-list,
-    .layout-desktop .detailPageContent > #childrenCollapsible .vertical-list {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
+} */
 
 .layout-desktop .listItem-largeImage {
     display: grid;
