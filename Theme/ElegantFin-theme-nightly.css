@@ -547,6 +547,7 @@ html {
     order: 1;
     grid-column: 1 / -1;
     height: max-content;
+    min-height: 15em;
     width: 100%;
     aspect-ratio: 16 / 9;
     /* margin: 0 !important; */
