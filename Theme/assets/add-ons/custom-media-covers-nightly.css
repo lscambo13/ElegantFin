@@ -22,21 +22,18 @@
     --urlFoldersCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
 }
 
-.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.defaultCardBackground {
+[data-type="CollectionFolder"] .defaultCardBackground,
+[data-type="UserView"] .defaultCardBackground,
+[data-type="CollectionFolder"] .cardContent,
+[data-type="UserView"] .cardContent {
     filter: contrast(0.85);
     background-size: cover !important;
     background-position: 50% !important;
     background-blend-mode: multiply;
 }
 
-.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.cardContent {
-    filter: contrast(0.85);
-    background-size: cover !important;
-    background-position: 50% !important;
-    background-blend-mode: multiply;
-}
-
-.card-withuserdata[data-type="CollectionFolder"] .cardImageContainer.cardContent::before {
+[data-type="CollectionFolder"] .cardContent::before,
+[data-type="UserView"] .cardContent::before {
     position: absolute;
     font-size: clamp(1em, max(2.5vh, 2vw), 2.5em);
     margin-bottom: .175em;
@@ -46,7 +43,8 @@
     text-align: center;
 }
 
-.card-withuserdata[data-type="CollectionFolder"] .cardImageIcon.material-icons:not(.quiz)::before {
+[data-type="CollectionFolder"] .cardImageIcon:not(.quiz)::before,
+[data-type="UserView"] .cardImageIcon:not(.quiz)::before {
     display: none;
 }
 
