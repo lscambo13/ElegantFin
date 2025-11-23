@@ -1258,7 +1258,7 @@ html {
 }
 
 #itemDetailPage:has(.detailImageContainer .cardPadder-square:not(.person)) .itemBackdrop {
-    height: calc(100vh - 27vh - var(--secondaryItemPageNegativeSpace));
+    height: calc(100vh - 20vh - var(--secondaryItemPageNegativeSpace));
 }
 
 .detailLogo {
