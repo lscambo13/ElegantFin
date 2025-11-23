@@ -205,7 +205,7 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 </details>
 
 <details>
-  <summary><i>7. Enable experimental support for the Media Bar plugin</i></summary>
+  <summary><i>7. Enable alternative style for the Media Bar plugin</i></summary>
 
   <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/3e88e270-40f9-48ba-8173-f65b94344f8d" />
 
@@ -213,6 +213,23 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 - ElegantFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
 ```
 	@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
+```
+- To undo this change, simply remove this code block.
+</details>
+
+<details>
+  <summary><i>8. Switch between different app bar styles</i></summary>
+
+  https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
+
+- You can switch between these using `--appBarHeight`.
+- Use 5em to enable the fading app bar (seamless) (default);
+- Or, use 4.6em to get the solid app bar (cleaner with border)
+```
+:root{
+  /* example */
+  --appBarHeight: 4.6em;
+}
 ```
 - To undo this change, simply remove this code block.
 </details>
@@ -231,7 +248,10 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
   <summary>1️⃣ - <i>How do I check if I am using the latest version of ElegantFin?</i></summary>
 
 - Check the version number at the bottom in the Settings screen. 
-- It should be something like `ElegantFin v25.10.XX`.
+- It should be something like `ElegantFin v25.XX.XX`.
+
+  <img width="380" height="300" alt="image" src="https://github.com/user-attachments/assets/aecca6f5-7bd3-4057-9131-aa60b3becbaf" />
+
 </details>
 
 <details>
@@ -241,7 +261,7 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 - Once that cache is updated, the new version will be loaded automatically. 
 - There are multiple ways to clear the cache depending on your OS, smartphone or TV. Look online if you don't know.
 - On the web version, you can force a hard refresh of the page using CTRL + F5.
-- On apps, try signing out and back in again. OR in case of Jellyfin Media Player on windows, you might need to delete the cache folder. That should definitely pull the latest version.
+- On apps, try signing out and back in again. OR in case of Jellyfin Media Player on windows, you might need to delete the cache folder.
 </details>
 
 <details>
