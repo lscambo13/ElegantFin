@@ -40,14 +40,33 @@
 
 [data-type="CollectionFolder"] .cardContent::before,
 [data-type="UserView"] .cardContent::before {
+    content: attr(aria-label);
     position: absolute;
-    font-size: clamp(1em, max(2.5vh, 2vw), 2.5em);
+    font-size: clamp(1em, max(2.5vh, 2vw), 2em);
     font-weight: 800;
     color: white;
     font-family: "Noto Sans";
     text-align: center;
     width: 94%;
     white-space: normal;
+}
+
+.layout-tv [data-type="CollectionFolder"]::before,
+.layout-tv [data-type="UserView"]::before {
+    content: attr(aria-label);
+    position: absolute;
+    display: grid;
+    align-content: center;
+    top: 0;
+    bottom: 0;
+    font-size: clamp(1em, max(2.5vh, 2vw), 2em);
+    font-weight: 800;
+    color: white;
+    font-family: "Noto Sans";
+    text-align: center;
+    width: 94%;
+    white-space: normal;
+    z-index: 1;
 }
 
 [data-type="CollectionFolder"] .cardImageIcon:not(.quiz)::before,
@@ -113,9 +132,4 @@
 [data-prefix="REC"] .cardContent {
     background-color: var(--colorOverlayRecordedtvCover) !important;
     background-image: var(--urlRecordedtvCover) !important;
-}
-
-[data-type="CollectionFolder"] .cardContent::before,
-[data-type="UserView"] .cardContent::before {
-    content: attr(aria-label);
 }
