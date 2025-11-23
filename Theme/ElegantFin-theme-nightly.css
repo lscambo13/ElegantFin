@@ -154,9 +154,9 @@
        use 4.6em to get the solid app bar (cleaner with border) */
     --appBarHeight: 5em;
 
-    /* use 50% to crop the top of the backdrop image slightly (recommended) [default]; 
-       use 0% to prevent the cropping from top, or choose between 0% and 100% according to your preference */
-    --backdropPositionY: 50%;
+    /* use 10% to crop the top 10% of a backdrop image on a 16:9 screen (recommended) [default]; 
+       use a figure between 0% and 20% according to your liking */
+    --backdropTrimFromTop: 10%;
 }
 
 html {
@@ -1509,7 +1509,7 @@ html,
 }
 
 .backdropImage {
-    background-position-y: var(--backdropPositionY);
+    background-position-y: clamp(0%, calc(var(--backdropTrimFromTop) * 5), 100%);
 }
 
 .backdropImage:after,
