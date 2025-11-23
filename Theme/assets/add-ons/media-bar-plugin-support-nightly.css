@@ -84,4 +84,20 @@
     }
 }
 
+@media only screen and (max-height: 767px) and (orientation: landscape) {
+    #slides-container {
+        height: 57%;
+    }
+
+    .logo-container {
+        top: 3%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    .logo-container {
+        top: 50%;
+    }
+}
+
 /* this styles the media bar plugin - end */
