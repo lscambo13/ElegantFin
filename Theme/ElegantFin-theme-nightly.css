@@ -92,9 +92,6 @@
     --sidePadding: 3.3%;
     --itemColumnGap: 1em;
 
-    --primaryItemPageNegativeSpace: 14vh;
-    --secondaryItemPageNegativeSpace: 60vh;
-    --clearLogoBottomSpace: 11em;
     --minEpisodeCardWidth: 26em;
 
     --blurSmallest: blur(2px);
@@ -163,11 +160,20 @@
 }
 
 html {
+    --primaryItemPageNegativeSpace: 14vh;
+    --secondaryItemPageNegativeSpace: 60vh;
+    --clearLogoBottomSpace: 11em;
+
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 425;
     font-style: normal;
     -webkit-tap-highlight-color: transparent !important;
+}
+
+.layout-desktop:has(.nowPlayingBar:not(.hide)) {
+    --primaryItemPageNegativeSpace: calc(14vh + 5em);
+    --secondaryItemPageNegativeSpace: calc(60vh + 5em);
 }
 
 .layout-mobile {
