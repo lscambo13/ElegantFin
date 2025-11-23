@@ -2183,10 +2183,6 @@ progress + span {
     }
 }
 
-.layout-tv .emby-checkbox:focus + span + .checkboxOutline {
-    transform: scale(1.75);
-}
-
 .cardIndicators {
     -webkit-align-items: center;
     align-items: center;
@@ -3940,6 +3936,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     background: linear-gradient(transparent, var(--darkerGradientPointAlpha) 20em);
 }
 
+/* performance improvements fot low-end TVs - start */
+
 /* .layout-tv *,
 .layout-tv *::before,
 .layout-tv *::after {
@@ -3961,10 +3959,27 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     display: none !important;
 } */
 
+/* .layout-tv .emby-checkbox:focus + span + .checkboxOutline {
+    transform: scale(1.75);
+} */
+
 .layout-tv .show-focus:focus,
-.layout-tv .show-animation:focus {
+.layout-tv .show-animation:focus,
+.emby-select-focusscale:focus {
     transform: none !important;
 }
+
+.layout-tv .focuscontainer,
+.layout-tv .backdropImage {
+    animation-duration: 0s !important;
+    backdrop-filter: none;
+}
+
+.card.show-animation .cardBox {
+    transition: transform 0.05s ease-out, -webkit-transform 0.05s ease-out;
+}
+
+/* performance improvements fot low-end TVs - end */
 
 /* basic styling for the Media Bar Plugin - start
 for extended styling, use the add-on */
