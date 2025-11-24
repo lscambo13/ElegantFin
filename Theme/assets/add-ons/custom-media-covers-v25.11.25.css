@@ -1,0 +1,135 @@
+/* Add-on: Custom media covers v25.11.25 for the ElegantFin Theme for Jellyfin by lscambo13 */
+
+:root {
+    /* my media library default covers customizations */
+    --colorOverlayMoviesCover: rgb(193, 103, 104);
+    --colorOverlayTvshowsCover: rgb(140, 149, 43);
+    --colorOverlayLivetvCover: rgb(17, 98, 159);
+    --colorOverlayPlaylistsCover: rgb(118, 61, 216);
+    --colorOverlayBoxsetsCover: rgb(219, 180, 53);
+    --colorOverlayMusicCover: rgb(11, 93, 72);
+    --colorOverlayHomevideosCover: rgb(39, 90, 185);
+    --colorOverlayBooksCover: rgb(166, 68, 70);
+    --colorOverlayFoldersCover: rgb(173, 60, 113);
+    --colorOverlayMixedCover: rgb(194, 58, 58);
+    --colorOverlayRecordedmoviesCover: rgb(52, 52, 52);
+    --colorOverlayRecordedtvCover: rgb(120, 100, 28);
+    --urlMoviesCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/movies.webp);
+    --urlTvshowsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/tvshows.webp);
+    --urlLivetvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/livetv.webp);
+    --urlPlaylistsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/playlists.webp);
+    --urlBoxsetsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/boxsets.webp);
+    --urlMusicCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/music.webp);
+    --urlHomevideosCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/homevideos.webp);
+    --urlBooksCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/books.webp);
+    --urlFoldersCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
+    --urlMixedCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/mixed.webp);
+    --urlRecordedmoviesCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/recordedmovies.webp);
+    --urlRecordedtvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/recordedtv.webp);
+}
+
+[data-type="CollectionFolder"] .defaultCardBackground,
+[data-type="UserView"] .defaultCardBackground,
+[data-type="CollectionFolder"] .cardContent,
+[data-type="UserView"] .cardContent {
+    filter: contrast(0.85);
+    background-size: cover !important;
+    background-position: 50% !important;
+    background-blend-mode: multiply;
+}
+
+[data-type="CollectionFolder"] .cardContent::before,
+[data-type="UserView"] .cardContent::before {
+    content: attr(aria-label);
+    position: absolute;
+    font-size: clamp(1em, max(2.5vh, 2vw), 2em);
+    font-weight: 800;
+    color: white;
+    font-family: "Noto Sans";
+    text-align: center;
+    width: 94%;
+    white-space: normal;
+}
+
+.layout-tv [data-type="CollectionFolder"]::before,
+.layout-tv [data-type="UserView"]::before {
+    content: attr(aria-label);
+    position: absolute;
+    display: grid;
+    align-content: center;
+    top: 0;
+    bottom: 0;
+    font-size: clamp(1em, max(2.5vh, 2vw), 2em);
+    font-weight: 800;
+    color: white;
+    font-family: "Noto Sans";
+    text-align: center;
+    width: 94%;
+    white-space: normal;
+    z-index: 1;
+}
+
+[data-type="CollectionFolder"] .cardImageIcon:not(.quiz)::before,
+[data-type="UserView"] .cardImageIcon:not(.quiz)::before {
+    display: none;
+}
+
+[data-collectiontype="movies"] .cardContent {
+    background-color: var(--colorOverlayMoviesCover) !important;
+    background-image: var(--urlMoviesCover) !important;
+}
+
+[data-collectiontype="tvshows"] .cardContent {
+    background-color: var(--colorOverlayTvshowsCover) !important;
+    background-image: var(--urlTvshowsCover) !important;
+}
+
+[data-collectiontype="livetv"] .cardContent {
+    background-color: var(--colorOverlayLivetvCover) !important;
+    background-image: var(--urlLivetvCover) !important;
+}
+
+[data-collectiontype="music"] .cardContent {
+    background-color: var(--colorOverlayMusicCover) !important;
+    background-image: var(--urlMusicCover) !important;
+}
+
+[data-collectiontype="homevideos"] .cardContent {
+    background-color: var(--colorOverlayHomevideosCover) !important;
+    background-image: var(--urlHomevideosCover) !important;
+}
+
+[data-collectiontype="books"] .cardContent {
+    background-color: var(--colorOverlayBooksCover) !important;
+    background-image: var(--urlBooksCover) !important;
+}
+
+[data-collectiontype="boxsets"] .cardContent {
+    background-color: var(--colorOverlayBoxsetsCover) !important;
+    background-image: var(--urlBoxsetsCover) !important;
+}
+
+[data-collectiontype="folders"] .cardContent {
+    background-color: var(--colorOverlayFoldersCover) !important;
+    background-image: var(--urlFoldersCover) !important;
+}
+
+[data-collectiontype="playlists"] .cardContent {
+    background-color: var(--colorOverlayPlaylistsCover) !important;
+    background-image: var(--urlPlaylistsCover) !important;
+}
+
+[data-prefix="MIX"] .cardContent {
+    background-color: var(--colorOverlayMixedCover) !important;
+    background-image: var(--urlMixedCover) !important;
+}
+
+[data-collectiontype="movies"][data-prefix="REC"] .cardContent {
+    background-color: var(--colorOverlayRecordedmoviesCover) !important;
+    background-image: var(--urlRecordedmoviesCover) !important;
+}
+
+[data-prefix="REC"] .cardContent {
+    background-color: var(--colorOverlayRecordedtvCover) !important;
+    background-image: var(--urlRecordedtvCover) !important;
+}
