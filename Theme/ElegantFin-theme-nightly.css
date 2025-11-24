@@ -160,10 +160,6 @@
 }
 
 html {
-    --primaryItemPageNegativeSpace: 14vh;
-    --secondaryItemPageNegativeSpace: 60vh;
-    --clearLogoBottomSpace: 11em;
-
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 425;
@@ -171,7 +167,13 @@ html {
     -webkit-tap-highlight-color: transparent !important;
 }
 
-.layout-desktop:has(.nowPlayingBar:not(.hide)) {
+body {
+    --primaryItemPageNegativeSpace: 14vh;
+    --secondaryItemPageNegativeSpace: 60vh;
+    --clearLogoBottomSpace: 11em;
+}
+
+.layout-desktop > body:has(> audio[src]) {
     --primaryItemPageNegativeSpace: calc(14vh + 5em);
     --secondaryItemPageNegativeSpace: calc(60vh + 5em);
 }
@@ -181,6 +183,9 @@ html {
     --headerColorGradient: var(--headerColorGradientAlt);
     --blurLargest: blur(12px);
     --headerBlurMask: linear-gradient(180deg, white 60%, 90%, transparent);
+}
+
+.layout-mobile > body {
     --secondaryItemPageNegativeSpace: 45vh;
 }
 
@@ -398,7 +403,7 @@ html {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.card-hoverable .cardOverlayContainer:after {
+.cardOverlayContainer:after {
     content: var(--cardHoverEffect);
     transition: 0.5s;
     position: absolute;
@@ -500,7 +505,7 @@ html {
     color: white;
 }
 
-.cardOverlayContainer:has(.cardOverlayButton:hover) {
+.cardOverlayContainer:has(> button:hover) {
     backdrop-filter: var(--blurDefault);
 }
 
@@ -3880,7 +3885,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 /* this allows switching between the header styles easily */
-#reactRoot > div:nth-of-type(3) {
+#reactRoot > div:nth-child(3) {
     container-name: skinHeader;
     container-type: size;
     height: var(--appBarHeight);
