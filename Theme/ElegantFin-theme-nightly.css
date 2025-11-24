@@ -2886,9 +2886,9 @@ div[data-role="controlgroup"] a.ui-btn-active {
     padding-right: var(--sidePadding) !important;
 }
 
-.paddded-left {
+/* .padded-left {
     padding-left: var(--sidePadding) !important;
-}
+} */
 
 .layout-mobile .padded-right-withalphapicker {
     padding-left: 4.5%;
