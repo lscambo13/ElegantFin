@@ -1319,7 +1319,7 @@ body {
 
 .layout-tv .detailImageContainer .card {
     width: 25vw !important;
-    display: grid !important;
+    display: block !important;
     position: fixed !important;
     top: 0;
     bottom: 0;
