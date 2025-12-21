@@ -521,7 +521,7 @@ body {
 /* episode grid start */
 
 @supports (display: revert) {
-    .vertical-list:has(.listItem-largeImage) {
+    .layout-desktop .vertical-list:has(.listItem-largeImage) {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(var(--minEpisodeCardWidth), 100%), 1fr));
         gap: var(--itemColumnGap);
