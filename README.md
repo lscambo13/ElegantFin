@@ -8,7 +8,7 @@
       alt="jsDelivr Requests"
     />
   </a>
-  
+  <br>
   <a href="https://github.com/lscambo13/ElegantFin/stargazers">
     <img
       src="https://img.shields.io/github/stars/lscambo13/ElegantFin?style=flat&logo=github&logoColor=%231f2328&label=GitHub%20Stars&labelColor=white&color=%231f2328"
