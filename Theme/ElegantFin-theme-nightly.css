@@ -3750,7 +3750,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 .sectionTabs {
-    display: grid;
+    display: inline-grid;
     height: var(--appBarHeight);
 }
 
