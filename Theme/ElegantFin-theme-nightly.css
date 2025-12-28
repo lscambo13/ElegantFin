@@ -3849,14 +3849,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     background-color: var(--textColor);
 }
 
-.layout-mobile .headerTabs.sectionTabs .emby-tab-button:first-child {
-    margin-left: var(--sidePadding);
-}
-
-.layout-mobile .headerTabs.sectionTabs .emby-tab-button:last-child {
-    margin-right: var(--sidePadding);
-}
-
 @media (min-width: 75em) {
     .sectionTabs {
         -webkit-align-items: center;
@@ -3880,6 +3872,17 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     /* this makes the font size consistent */
     .sectionTabs {
         font-size: 100%;
+    }
+}
+
+@media (max-width: 75em) {
+    /* these margins are applied only on phones, not tablets*/
+    .layout-mobile .sectionTabs .emby-tab-button:first-child {
+        margin-left: var(--sidePadding);
+    }
+
+    .layout-mobile .sectionTabs .emby-tab-button:last-child {
+        margin-right: var(--sidePadding);
     }
 }
 
