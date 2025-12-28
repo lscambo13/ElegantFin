@@ -3866,6 +3866,12 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     .libraryPage:not(.noSecondaryNavPage):not(.layout-tv .libraryPage) {
         padding-top: 6.8em !important;
     }
+
+    /* this fixes the header like on desktop on larger tablet screens */
+    .headroom--unpinned {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 100em) {
