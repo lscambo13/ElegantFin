@@ -9,5 +9,9 @@
         "editor.formatOnSave": true,
         "prettier.useTabs": false,
         "prettier.printWidth": 120,
+        "cSpell.words": [
+            "Jellyfin",
+            "Jellyseerr"
+        ],
     }
 }
