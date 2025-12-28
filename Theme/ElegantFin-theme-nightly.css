@@ -3749,12 +3749,12 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     padding: 0;
 }
 
-.headerTabs.sectionTabs {
+.sectionTabs {
     display: grid;
     height: var(--appBarHeight);
 }
 
-.layout-mobile .headerTabs.sectionTabs {
+.layout-mobile .sectionTabs {
     align-content: center;
 }
 
@@ -3800,7 +3800,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     padding: 0 0.5em;
 }
 
-/* this prevents the section tabs from hiding all the way up */
+/* this prevents the section tabs from hiding all the way up on phones (not-tablets)*/
 .headroom--unpinned {
     -webkit-transform: translateY(calc(-1 * var(--appBarHeight) - var(--borderWidth)));
     transform: translateY(calc(-1 * var(--appBarHeight) - var(--borderWidth)));
@@ -3832,7 +3832,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     margin-right: 2em;
 }
 
-.headerTabs.sectionTabs .emby-tab-button {
+.sectionTabs .emby-tab-button {
     display: inline-flex;
     margin: 0.25em 0.5em;
     padding: 0 1.25em;
@@ -3843,7 +3843,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     background-color: var(--darkerGradientPointAlpha);
 }
 
-.headerTabs.sectionTabs .emby-tab-button-active {
+.sectionTabs .emby-tab-button-active {
     margin: 0.25em 0.5em;
     color: black;
     background-color: var(--textColor);
@@ -3928,21 +3928,12 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
         z-index: -1;
     }
 
-    .layout-mobile .headerTop {
-        height: calc(var(--appBarHeight) - 1em);
-    }
-
-    .headerTabs.sectionTabs {
+    .sectionTabs {
         padding-bottom: 1.5em;
     }
 
-    .layout-mobile .headerTabs.sectionTabs {
+    .layout-mobile .sectionTabs {
         align-content: center;
-    }
-
-    .headroom--unpinned {
-        -webkit-transform: translateY(calc(-0.75 * var(--appBarHeight) - var(--borderWidth)));
-        transform: translateY(calc(-0.75 * var(--appBarHeight) - var(--borderWidth)));
     }
 }
 
