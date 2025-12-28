@@ -1063,7 +1063,6 @@ body {
 #itemDetailPage .emby-scroller,
 #itemDetailPage .scrollX {
     margin: 0 calc(-1 * var(--sidePadding));
-    padding: 0 var(--sidePadding);
     padding-left: calc(var(--sidePadding) - 0.375em);
     /* mask-image: linear-gradient(90deg, transparent, white var(--sidePadding), white calc(100vw - var(--sidePadding)), transparent); */
 }
@@ -1075,8 +1074,12 @@ body {
 }
 
 .emby-scroller,
-.hiddenScrollX.scrollX {
+.scrollX {
     padding-left: calc(var(--sidePadding) - 0.375em);
+}
+
+.sectionTabs .scrollX {
+    padding-left: 0;
 }
 
 .itemsContainer:not(.editorsChoiceItemsContainer) {
