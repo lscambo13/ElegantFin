@@ -1,7 +1,7 @@
 <!-- Banner Image -->
 <img src="https://github.com/lscambo13/ElegantFin/blob/main/Theme/assets/img/banner.png?raw=true" alt="ElegantFin Theme for Jellyfin - Banner">
 
-# ⭐ ElegantFin Theme
+## ⭐ ElegantFin Theme
 This is a Jellyfin theme inspired from Jellyseerr to improve the overall look and experience with various fixes to the UI/UX. It gives Jellyfin a fresh, modern look, and it aims to work on mobile, desktop, and TV, with just one import.
 
 
