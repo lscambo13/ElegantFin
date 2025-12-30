@@ -3825,13 +3825,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     overflow: visible !important;
 }
 
-.layout-tv .sectionTabs {
-    /* this prevents the section tabs from being off-center in the music library
-     after I set the overflow to visible to fix visual glitches */
-    width: 70%;
-    margin-right: 2em;
-}
-
 .sectionTabs .emby-tab-button {
     display: inline-flex;
     margin: 0.25em 0.5em;
@@ -3849,6 +3842,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     background-color: var(--textColor);
 }
 
+/* this increases page top padding when section tabs are expanded */
+.libraryPage:not(.noSecondaryNavPage) {
+    padding-top: calc(var(--appBarHeight) * 2 + 0.5em) !important;
+}
+
 @media (min-width: 75em) {
     .sectionTabs {
         -webkit-align-items: center;
@@ -3857,14 +3855,15 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
         align-self: center;
         -webkit-justify-content: center;
         justify-content: center;
+        /* this collapses the section tabs expanded earlier than the default 100em max-width */
         margin-top: calc(-1 * var(--appBarHeight));
         position: relative;
         width: auto;
     }
 
-    /* this reduces top page padding when section tabs are minimised */
-    .libraryPage:not(.noSecondaryNavPage):not(.layout-tv .libraryPage) {
-        padding-top: 6.8em !important;
+    /* this reduces page top padding when section tabs are collapsed */
+    .libraryPage:not(.noSecondaryNavPage) {
+        padding-top: calc(var(--appBarHeight) + 0.5em) !important;
     }
 
     /* this fixes the header like on desktop on larger tablet screens */
@@ -3874,10 +3873,27 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     }
 }
 
+@media (min-width: 100em) {
+    /* this reduces top padding when section tabs are collapsed on TVs */
+    .layout-tv .libraryPage:not(.noSecondaryNavPage) {
+        padding-top: calc(var(--appBarHeight) + 0.5em) !important;
+    }
+}
+
 @media (max-width: 100em) {
     /* this makes the font size consistent */
     .sectionTabs {
         font-size: 100%;
+    }
+
+    /* this keeps the section tabs expanded on TVs under 100em width */
+    .layout-tv .sectionTabs {
+        margin-top: unset;
+    }
+
+    /* this increases page top padding when section tabs are expanded on TVs*/
+    .layout-tv .libraryPage:not(.noSecondaryNavPage) {
+        padding-top: calc(var(--appBarHeight) * 2 + 0.5em) !important;
     }
 }
 
@@ -3890,16 +3906,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     .layout-mobile .sectionTabs .emby-tab-button:last-child {
         margin-right: var(--sidePadding);
     }
-}
-
-/* this increased top page padding when section tabs are maximised */
-.libraryPage:not(.noSecondaryNavPage) {
-    padding-top: 9.5em !important;
-}
-
-/* this limits top page padding when section tabs always on TVs */
-.layout-tv .libraryPage:not(.noSecondaryNavPage) {
-    padding-top: 6em !important;
 }
 
 .layout-tv .headerLeft {
