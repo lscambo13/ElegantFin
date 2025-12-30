@@ -1096,11 +1096,6 @@ body {
     margin: 0.75em 0 -0.75em 0;
 }
 
-.layout-mobile :not(.sectionTitleContainer-cards) > .sectionTitle-cards {
-    text-align: left;
-    margin: 0.75em 0 -0.75em 0;
-}
-
 .emby-scrollbuttons,
 [dir="ltr"] .emby-scrollbuttons {
     padding-top: 1.25em;
@@ -2976,8 +2971,13 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .sectionTitleTextButton > * {
-    padding: 0.3em 0 !important;
-    margin: 0 0 !important;
+    text-align: left;
+    padding: 0.3em 0;
+    /* margin: 0 0 !important; */
+    /* this prevents long library names from breaking into another line */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .dashboardSection .sectionTitleTextButton > .material-icons,
