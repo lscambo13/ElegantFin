@@ -1,0 +1,147 @@
+/* Add-on: Media Bar plugin support 25.12.31 for the ElegantFin Theme for Jellyfin by lscambo13 */
+/* this styles the media bar plugin - start */
+.play-button::before,
+.detail-button::before,
+.favorite-button::before,
+.favorite-button.favorited::before {
+    font-weight: 400;
+}
+
+.play-button {
+    font-family: "Inter";
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.backdrop,
+.backdrop-container,
+.backdrop-overlay {
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), 70%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), 70%, rgba(0, 0, 0, 0));
+    background-color: transparent;
+}
+
+.backdrop {
+    transform-origin: center left;
+}
+
+.rating-value {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.age-rating {
+    font-size: 0.8em;
+    font-family: "Archivo Narrow", sans-serif;
+    color: unset;
+}
+
+#slides-container {
+    width: calc(100vw - (2 * var(--sidePadding)));
+    height: 62%;
+    top: calc(var(--appBarHeight) * 2 + 1.25em);
+    border: var(--defaultBorder);
+    border-radius: var(--largerRadius);
+    transition: all 0.125s, border 0s;
+    user-select: none;
+    position: absolute;
+    left: var(--sidePadding);
+}
+
+.logo-container {
+    top: 10vh;
+}
+
+.backdrop,
+.backdrop-container,
+.backdrop-overlay {
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+.backdrop-overlay {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), 40%, transparent);
+}
+
+.pause-button {
+    top: 1em !important;
+}
+
+.separator-icon {
+    font-size: 5px;
+    color: var(--dimTextColor);
+}
+
+.dot {
+    border-radius: 0.25em;
+    width: 0.375em;
+    height: 0.375em;
+    transition: width 0.5s;
+    opacity: 0.5;
+    background-color: var(--textColor) !important;
+}
+
+.dot.active {
+    width: 2em;
+    transform: none;
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    .button-container {
+        bottom: 3em;
+    }
+
+    .tomato-rating,
+    .genre {
+        display: none;
+    }
+
+    .dots-container {
+        bottom: 6em;
+    }
+
+    .info-container {
+        bottom: 5em;
+    }
+
+    .logo-container {
+        top: calc(100% - 15em);
+    }
+
+    .backdrop {
+        transform-origin: center;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        display: none !important;
+    }
+}
+
+@media (min-width: 75em) {
+    #slides-container {
+        top: calc(var(--appBarHeight) + 1.25em);
+    }
+
+    .layout-tv #slides-container {
+        top: calc(var(--appBarHeight) * 2 + 1.25em);
+    }
+}
+
+@media (min-width: 100em) {
+    .layout-tv #slides-container {
+        top: calc(var(--appBarHeight) + 1.25em);
+    }
+}
+
+@media only screen and (max-height: 767px) and (orientation: landscape) {
+    #slides-container {
+        height: 57%;
+    }
+
+    .logo-container {
+        top: 3%;
+    }
+}
+
+/* this styles the media bar plugin - end */
