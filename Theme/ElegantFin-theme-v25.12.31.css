@@ -2983,8 +2983,8 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 /* this is needed for alignment of non-clickable section headings on phones */
-.layout-mobile div > .sectionTitle-cards {
-    margin: 0.75em 0 -0.75em 0 !important;
+.layout-mobile :not(.sectionTitleContainer-cards) > .sectionTitle-cards {
+    margin: 0.75em 0 -0.75em 0;
 }
 
 .dashboardSection .sectionTitleTextButton > .material-icons,
