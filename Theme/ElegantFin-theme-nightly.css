@@ -1091,11 +1091,6 @@ body {
     font-size: 1.5rem !important;
 }
 
-.sectionTitleContainer-cards {
-    padding-top: 0;
-    margin: 0.75em 0 -0.75em 0;
-}
-
 .emby-scrollbuttons,
 [dir="ltr"] .emby-scrollbuttons {
     padding-top: 1.25em;
@@ -2970,14 +2965,26 @@ div[data-role="controlgroup"] a.ui-btn-active {
     color: white !important;
 }
 
+.sectionTitleContainer-cards {
+    padding-top: 0;
+    margin: 0.75em 0 -0.75em 0;
+}
+
 .sectionTitleTextButton > * {
     text-align: left;
-    padding: 0.3em 0;
-    /* margin: 0 0 !important; */
+    /* !important are needed for proper alignment on phones */
+    padding: 0.3em 0 !important;
+    margin: 0 0 !important;
     /* this prevents long library names from breaking into another line */
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    max-width: 88vw;
+}
+
+/* this is needed for alignment of non-clickable section headings on phones */
+.layout-mobile div > .sectionTitle-cards {
+    margin: 0.75em 0 -0.75em 0 !important;
 }
 
 .dashboardSection .sectionTitleTextButton > .material-icons,
