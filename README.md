@@ -338,9 +338,7 @@ Please read the [Contributor Guidelines](./CONTRIBUTING.md) before opening pull 
 
 This is a hobby project. If it helped you, your support really means a lot.
 
-<a href="https://www.buymeacoffee.com/lscambo13">
-  <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=lscambo13&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=d28456" />
-</a>
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=lscambo13&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/lscambo13)
 
 <hr>
 
