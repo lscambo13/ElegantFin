@@ -336,6 +336,14 @@ https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
 
 Please read the [Contributor Guidelines](./CONTRIBUTING.md) before opening pull requests.
 
+This is a hobby project. If it helped you, your support really means a lot.
+
+<a href="https://www.buymeacoffee.com/lscambo13">
+  <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=lscambo13&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=d28456" />
+</a>
+
+<hr>
+
 ### 🙏 Feedback Appreciated
 
 Please use the right template when creating an [issue](https://github.com/lscambo13/ElegantFin/issues/new/choose) to [report bugs](https://github.com/lscambo13/ElegantFin/issues/new?template=bug_report.md) or [provide suggestions](https://github.com/lscambo13/ElegantFin/issues/new?template=feature_request.md).
