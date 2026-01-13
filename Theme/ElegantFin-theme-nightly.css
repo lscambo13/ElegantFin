@@ -2100,7 +2100,7 @@ progress + span {
 }
 
 .cardText-first + .itemSelectionPanel > .checkboxContainer {
-    height: calc(100% - 1.75em);
+    height: calc(100% - -0.25em);
 }
 
 .overflowBackdropCard .cardText-first + .itemSelectionPanel > .checkboxContainer {
