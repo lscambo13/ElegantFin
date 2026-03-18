@@ -2381,7 +2381,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     flex-direction: row;
 }
 
-.btnPlay:not(.formDialogFooterItem):not(.play-button):after {
+.mainDetailButtons > .btnPlay:after {
     content: attr(title);
     padding-right: 1ch;
 }
