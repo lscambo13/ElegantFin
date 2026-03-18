@@ -2014,6 +2014,10 @@ progress + span {
     width: unset;
 }
 
+.noItemsMessage {
+    width: 90%;
+}
+
 .dialog {
     backdrop-filter: var(--blurDefault);
     background-color: var(--drawerColor);
