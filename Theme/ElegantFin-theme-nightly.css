@@ -3972,6 +3972,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     container-name: skinHeader;
     container-type: size;
     height: var(--appBarHeight);
+    max-height: var(--appBarHeight);
 }
 
 @container skinHeader (min-height: 4.9em) {
