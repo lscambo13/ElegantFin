@@ -63,7 +63,7 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), 40%, transparent);
 }
 
-.pause-button {
+.pause-button, .volume-toggle {
     top: 1em !important;
 }
 
