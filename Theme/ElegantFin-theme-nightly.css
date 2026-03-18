@@ -317,6 +317,10 @@ body {
     border: var(--defaultLighterBorder);
 }
 
+.layout-mobile .countIndicator {
+    font-size: 70%;
+}
+
 .cardScalable {
     border-radius: var(--largeRadius);
     border: var(--darkerBorderColor) solid var(--borderWidthDouble) !important;
@@ -2003,7 +2007,7 @@ progress + span {
 }
 
 .layout-mobile .innerCardFooter {
-    padding: 5em 1.5em 1.5em 1.5em;
+    padding: 5em 1em 1.25em 1em;
 }
 
 .layout-mobile .chapterCardImageContainer + .innerCardFooter {
@@ -2210,8 +2214,8 @@ progress + span {
 }
 
 .layout-mobile .cardIndicators {
-    top: 0.2em;
-    right: 0.2em;
+    top: 0.45em;
+    right: 0.5em;
 }
 
 .indicator {
