@@ -296,8 +296,18 @@ body {
     }
 }
 
-.vertical-wrap:not(.centered) {
+.vertical-wrap:not(.centered),
+.vertical-wrap.padded-right-withalphapicker,
+.padded-right-withalphapicker > .vertical-wrap {
     justify-content: flex-start !important;
+}
+
+#episodesTab > .vertical-wrap,
+#studiosTab > .vertical-wrap,
+#channelsTab > .vertical-wrap,
+#recordingsTab > .vertical-wrap,
+#genresTab > .vertical-wrap {
+    justify-content: center !important;
 }
 
 .countIndicator,
