@@ -217,12 +217,20 @@ body {
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "liga";
-    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 48;
 }
 
 .material-icons.info_outline:before {
     content: "\e88e";
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 48;
 }
 
 .dashboardFooter {
@@ -2318,16 +2326,28 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 }
 
 .detailButton-icon {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 48;
 }
 
 .cardScalable .material-icons.check:before {
-    font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 20;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 700,
+        "GRAD" 0,
+        "opsz" 20;
     transform: scale(1.25);
 }
 
 .emby-button[title="Favorite"] .material-icons.favorite:before {
-    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 20;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 20;
 }
 
 .detailButton:not(.btnPlay) {
@@ -3475,8 +3495,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     min-height: 100vh;
     padding: 1em;
     overflow-y: auto;
-    background: linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)),
-        var(--loginPageBgUrl);
+    background:
+        linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)), var(--loginPageBgUrl);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -4034,7 +4054,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 .card.show-animation .cardBox {
-    transition: transform 0.05s ease-out, -webkit-transform 0.05s ease-out;
+    transition:
+        transform 0.05s ease-out,
+        -webkit-transform 0.05s ease-out;
 }
 
 /* performance improvements fot low-end TVs - end */
