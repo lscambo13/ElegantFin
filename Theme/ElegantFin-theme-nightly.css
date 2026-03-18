@@ -3088,13 +3088,14 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .skip-button-container {
-    bottom: 25%;
+    bottom: 9rem;
 }
 
 .skip-button {
-    background-color: whitesmoke;
+    background-color: var(--textColor);
     box-shadow: var(--shadow);
     margin-right: var(--sidePadding);
+    border-radius: 3em;
     color: black;
 }
 
