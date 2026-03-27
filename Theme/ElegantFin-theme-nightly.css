@@ -157,6 +157,10 @@
     /* use 10% to crop the top 10% of a backdrop image on a 16:9 screen (recommended) [default]; 
        use a figure between 0% and 20% according to your liking */
     --backdropTrimFromTop: 10%;
+
+    /* use numbers greater than 1.0 to increase the size of 'Continue Watching' cards [default: 1.25];
+       use 1.0 to disable this effect */
+    --resumeCardScale: 1.25;
 }
 
 html {
@@ -954,6 +958,12 @@ body {
     .layout-mobile .card {
         --effectiveWidth: calc((65vw - (var(--sidePadding) * 2)));
     }
+}
+
+#homeTab .overflowBackdropCard[data-positionticks],
+.nextUpItems > .card,
+#resumableItems > .card {
+    width: calc(var(--cardWidth) * var(--resumeCardScale)) !important;
 }
 
 .detailPageWrapperContainer {
@@ -2682,7 +2692,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
     row-gap: 1em;
     column-gap: 3em;
     max-width: unset !important;
-    grid-template-columns: 25% 1fr 1fr 1fr;
+    grid-template-columns: 1.3fr 0.7fr 1fr 1fr;
     margin-bottom: 1.5em;
 }
 
