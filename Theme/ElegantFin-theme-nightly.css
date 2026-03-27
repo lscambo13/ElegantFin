@@ -325,7 +325,7 @@ body {
     border: var(--defaultLighterBorder);
 }
 
-.layout-mobile .countIndicator {
+.layout-mobile .indicator {
     font-size: 70%;
 }
 
