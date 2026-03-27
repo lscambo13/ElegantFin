@@ -2858,6 +2858,10 @@ div[data-role="controlgroup"] a.ui-btn-active {
     grid-column: 1 / -1;
 }
 
+.collectionItems {
+    order: 2;
+}
+
 .programGuideSection:not(.hide) {
     order: -1;
     margin-top: 2em;
