@@ -11,6 +11,12 @@
     font-family: "Inter";
     font-size: 1em;
     font-weight: 500;
+    order: 1;
+}
+
+.detail-button,
+.favorite-button {
+    order: 2;
 }
 
 .backdrop,
@@ -115,6 +121,10 @@
     .left-arrow,
     .right-arrow {
         display: none !important;
+    }
+
+    .play-button {
+        order: 2;
     }
 }
 
