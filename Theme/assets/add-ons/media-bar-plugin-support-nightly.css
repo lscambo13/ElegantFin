@@ -46,12 +46,17 @@
     width: calc(100vw - (2 * var(--sidePadding)));
     height: 62%;
     top: calc(var(--appBarHeight) * 2 + 1.25em);
-    border: var(--defaultBorder);
-    border-radius: var(--largerRadius);
-    transition: all 0.125s, border 0s;
     user-select: none;
     position: absolute;
     left: var(--sidePadding);
+    overflow: visible;
+}
+
+.slide {
+    border: var(--defaultBorder);
+    border-radius: var(--largerRadius);
+    overflow: hidden;
+    transition: border 0s;
 }
 
 .logo-container {
