@@ -1451,15 +1451,16 @@ body {
     font-size: 3.5em;
 }
 
-@media (max-width: 50em) {
-    .homeLibraryButton {
-        width: 45.6% !important;
-    }
+.homeLibraryButton {
+    width: min(45%, 12rem);
+    min-width: 15%;
+    margin: 0 !important;
 }
 
-.homeLibraryButton {
-    padding-inline-start: 0.25em;
-    min-width: 15%;
+@media (max-width: 50em) {
+    .homeLibraryButton {
+        width: 47.6% !important;
+    }
 }
 
 @media (orientation: portrait) and (max-width: 40em) {
