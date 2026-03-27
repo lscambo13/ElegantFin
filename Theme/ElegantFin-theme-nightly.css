@@ -1793,6 +1793,10 @@ progress + span {
     padding-bottom: 5vh;
 }
 
+.mainDrawer-scrollContainer > div:first-child {
+    margin-bottom: 1em;
+}
+
 .btnHeaderSave.button-flat {
     color: var(--uiAccentColor) !important;
     gap: 0.3em;
