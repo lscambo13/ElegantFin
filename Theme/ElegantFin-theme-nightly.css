@@ -183,7 +183,6 @@ body {
 }
 
 .layout-mobile {
-    --itemColumnGap: 0;
     --headerColorGradient: var(--headerColorGradientAlt);
     --blurLargest: blur(12px);
     --headerBlurMask: linear-gradient(180deg, white 60%, 90%, transparent);
@@ -930,7 +929,11 @@ body {
 }
 
 .layout-mobile .card {
-    --sidePadding: 5%;
+    padding: 0;
+}
+
+.cardBox {
+    margin-top: 0;
 }
 
 .card {
@@ -950,7 +953,13 @@ body {
 }
 
 .layout-mobile .card {
+    --effectiveWidth: calc((91vw - (var(--sidePadding) * 2)));
     --cardWidth: calc(var(--effectiveWidth) / var(--cardCount));
+}
+
+.layout-mobile .backdropCard,
+.layout-mobile .overflowBackdropCard {
+    --effectiveWidth: calc((94vw - (var(--sidePadding) * 2)));
 }
 
 /* this makes the card sizes smaller when phone is in landscape mode */
@@ -1069,16 +1078,11 @@ body {
     font-size: 1.25em;
 }
 
-.verticalSection.emby-scroller-container > h2.sectionTitle.sectionTitle-cards {
-    padding-top: 1.25em !important;
-    margin: 0 0 -0.5em 0;
-}
-
 #itemDetailPage .emby-scroller-container,
 #itemDetailPage .emby-scroller,
 #itemDetailPage .scrollX {
     margin: 0 calc(-1 * var(--sidePadding));
-    padding-left: calc(var(--sidePadding) - 0.375em);
+    padding-left: calc(var(--sidePadding));
     /* mask-image: linear-gradient(90deg, transparent, white var(--sidePadding), white calc(100vw - var(--sidePadding)), transparent); */
 }
 
@@ -1090,7 +1094,7 @@ body {
 
 .emby-scroller,
 .scrollX {
-    padding-left: calc(var(--sidePadding) - 0.375em);
+    padding-left: calc(var(--sidePadding));
 }
 
 .sectionTabs .scrollX {
@@ -1099,6 +1103,7 @@ body {
 
 .itemsContainer:not(.editorsChoiceItemsContainer) {
     column-gap: var(--itemColumnGap);
+    row-gap: 1em;
 }
 
 .layout-desktop .sectionTitle,
@@ -1108,10 +1113,6 @@ body {
 
 .emby-scrollbuttons,
 [dir="ltr"] .emby-scrollbuttons {
-    padding-top: 1.25em;
-}
-
-.sectionTitleContainer + .emby-scrollbuttons {
     padding-top: 0;
 }
 
@@ -2910,6 +2911,10 @@ div[data-role="controlgroup"] a.ui-btn-active {
     height: 70%;
 }
 
+.layout-mobile .alphaPicker-vertical {
+    right: 0 !important;
+}
+
 .alphaPicker {
     justify-content: center;
 }
@@ -2926,20 +2931,6 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .padded-right {
     padding-right: var(--sidePadding) !important;
 }
-
-/* .padded-left {
-    padding-left: var(--sidePadding) !important;
-} */
-
-.layout-mobile .padded-right-withalphapicker {
-    padding-left: 4.5%;
-    padding-right: 6.5%;
-}
-
-/* test disabled for 10.11.0 */
-/* .detailPagePrimaryContent.padded-right {
-    padding-right: 0 !important;
-} */
 
 [dir="ltr"] .detailPageContent,
 .content-primary {
@@ -2996,6 +2987,11 @@ div[data-role="controlgroup"] a.ui-btn-active {
     background: var(--selectorBackgroundColor) !important;
 }
 
+.verticalSection {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
 .sectionTitleTextButton {
     padding: 0 0.5em;
 }
@@ -3010,7 +3006,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 
 .sectionTitleContainer-cards {
     padding-top: 0;
-    margin: 0.75em 0 -0.75em 0;
+    padding-bottom: 0.2em;
 }
 
 .sectionTitleTextButton > * {
@@ -3023,11 +3019,6 @@ div[data-role="controlgroup"] a.ui-btn-active {
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 88vw;
-}
-
-/* this is needed for alignment of non-clickable section headings on phones */
-.layout-mobile :not(.sectionTitleContainer-cards) > .sectionTitle-cards {
-    margin: 0.75em 0 -0.75em 0;
 }
 
 .dashboardSection .sectionTitleTextButton > .material-icons,
