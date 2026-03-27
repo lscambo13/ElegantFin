@@ -2687,7 +2687,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .layout-mobile .detailSection {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
 }
 
 .detailPageContent {
