@@ -707,7 +707,7 @@ body {
     }
 }
 
-/* 12 posters, 9 thumbs, 4K*/
+/* 12 posters, 9 thumbs, 2160p*/
 @media (max-width: 220em) {
     .portraitCard,
     .squareCard {
@@ -723,12 +723,9 @@ body {
         --cardCount: 9;
     }
 
-    .backdropCard {
-        --cardCount: 9;
-    }
-
+    .backdropCard,
     .overflowBackdropCard {
-        --cardCount: 8;
+        --cardCount: 7;
     }
 }
 
@@ -748,16 +745,13 @@ body {
         --cardCount: 9;
     }
 
-    .backdropCard {
-        --cardCount: 9;
-    }
-
+    /* .backdropCard,
     .overflowBackdropCard {
-        --cardCount: 8;
-    }
+        --cardCount: 7;
+    } */
 }
 
-/* 10 posters, 8 thumbs */
+/* 10 posters, 8 thumbs, 1440p */
 @media (max-width: 170em) {
     .portraitCard,
     .squareCard {
@@ -773,12 +767,9 @@ body {
         --cardCount: 9;
     }
 
-    .backdropCard {
-        --cardCount: 8;
-    }
-
+    .backdropCard,
     .overflowBackdropCard {
-        --cardCount: 7;
+        --cardCount: 6;
     }
 }
 
@@ -798,12 +789,9 @@ body {
         --cardCount: 7;
     }
 
-    .backdropCard {
-        --cardCount: 7;
-    }
-
+    .backdropCard,
     .overflowBackdropCard {
-        --cardCount: 6;
+        --cardCount: 5;
     }
 }
 
@@ -819,28 +807,22 @@ body {
         --cardCount: 7;
     }
 
-    .layout-tv .portraitCard,
-    .layout-tv .squareCard,
-    .layout-tv .overflowPortraitCard,
-    .layout-tv .overflowSquareCard {
-        --cardCount: 6;
-    }
-
     .squareCard:has(.cardFooter) {
         --cardCount: 6;
     }
 
-    .backdropCard {
-        --cardCount: 6;
-    }
-
+    .backdropCard,
+    .layout-tv .portraitCard,
+    .layout-tv .squareCard,
+    .layout-tv .overflowPortraitCard,
+    .layout-tv .overflowSquareCard,
     .overflowBackdropCard {
         --cardCount: 5;
     }
 
     .layout-tv .backdropCard,
     .layout-tv .overflowBackdropCard {
-        --cardCount: 4;
+        --cardCount: 3;
     }
 }
 
@@ -857,12 +839,9 @@ body {
         --cardCount: 6;
     }
 
-    .backdropCard {
-        --cardCount: 6;
-    }
-
+    .backdropCard,
     .overflowBackdropCard {
-        --cardCount: 5;
+        --cardCount: 4;
     }
 }
 
