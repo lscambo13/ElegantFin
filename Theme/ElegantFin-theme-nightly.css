@@ -190,6 +190,7 @@ select {
     --headerColorGradient: var(--headerColorGradientAlt);
     --blurLargest: blur(12px);
     --headerBlurMask: linear-gradient(180deg, white 60%, 90%, transparent);
+    --itemColumnGap: 0.5em;
 }
 
 .layout-mobile > body {
@@ -932,19 +933,16 @@ select {
     }
 }
 
-.layout-mobile .card {
-    padding: 0;
-}
-
 .cardBox {
     margin-top: 0;
 }
 
 .card {
-    --effectiveWidth: calc((99vw - (var(--sidePadding) * 2)));
+    --padding: 0.375em;
+    --effectiveWidth: calc(((100vw - (var(--padding) * 2)) - (var(--sidePadding) * 2)));
     --cardWidth: calc(var(--effectiveWidth) / var(--cardCount) - var(--itemColumnGap));
     width: var(--cardWidth) !important;
-    padding: 0.375em;
+    padding: var(--padding);
     transition: width 0.5s;
     box-sizing: content-box;
 }
@@ -957,13 +955,7 @@ select {
 }
 
 .layout-mobile .card {
-    --effectiveWidth: calc((91vw - (var(--sidePadding) * 2)));
-    --cardWidth: calc(var(--effectiveWidth) / var(--cardCount));
-}
-
-.layout-mobile .backdropCard,
-.layout-mobile .overflowBackdropCard {
-    --effectiveWidth: calc((94vw - (var(--sidePadding) * 2)));
+    --padding: 1px;
 }
 
 /* this makes the card sizes smaller when phone is in landscape mode */
