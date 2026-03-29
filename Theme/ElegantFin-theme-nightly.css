@@ -4098,6 +4098,7 @@ for extended styling, use the add-on */
 /* basic styling for the Media Bar Plugin - end */
 
 /* Showing Artists Logos instead of Title text - start */
+
 /* 1. Only trigger if it's an Artist (usually square) vs an Actor (usually portrait) */
 /* This specifically protects Actor portrait cards from being hidden */
 html:not(.layout-mobile) 
@@ -4113,13 +4114,14 @@ html:not(.layout-mobile)
     background-position: bottom;
 }
 
-/* 2. Hide Title text ONLY for Artists */
+/* 2. Hide Title text if there is a logo - ONLY for Artists */
 #itemDetailPage:has(.detailImageContainer .cardPadder-square .person) .detailLogo:not(.hide) ~ .detailPageWrapperContainer .nameContainer .itemName,
 #itemDetailPage:has(.detailImageContainer .cardPadder-square .person) .detailLogo:not(.hide) ~ .detailPageWrapperContainer .nameContainer .parentNameLast {
     display: none !important;
 }
 
-/* 3. Layout Cleanup - ONLY for Artists */
+/* 3. Hide Image Container - ONLY for Artists */
 #itemDetailPage:has(.detailImageContainer .cardPadder-square .person) .detailImageContainer {
     display: none ; 
 }
+/* Showing Artists Logos instead of Title text - end */
