@@ -74,7 +74,8 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), 40%, transparent);
 }
 
-.pause-button, .volume-toggle {
+.pause-button,
+.volume-toggle {
     top: 1em !important;
 }
 
@@ -95,6 +96,49 @@
 .dot.active {
     width: 2em;
     transform: none;
+}
+
+@media only screen and (orientation: landscape) {
+    .button-container,
+    .dots-container,
+    .plot-container,
+    .genre,
+    .info-container {
+        top: unset;
+    }
+
+    .button-container {
+        bottom: 3em;
+    }
+
+    .dots-container {
+        bottom: 4.5em;
+    }
+
+    .plot-container {
+        height: 4em;
+        bottom: 7em;
+    }
+
+    .genre {
+        bottom: 12em;
+    }
+
+    .info-container {
+        bottom: 14em;
+    }
+
+    .logo-container {
+        top: 30%;
+        align-items: flex-end;
+        max-width: 35vw;
+    }
+
+    .gradient-overlay {
+        mask: none;
+        -webkit-mask: none;
+        background: linear-gradient(37deg, rgb(0 0 0 / 20%) 32%, rgb(29 29 29 / 7%) 47%, rgb(29 29 29 / 0%) 100%);
+    }
 }
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
