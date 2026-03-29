@@ -177,6 +177,10 @@ body {
     --clearLogoBottomSpace: 11em;
 }
 
+select {
+    text-overflow: ellipsis;
+}
+
 .layout-desktop > body:has(> audio[src]) {
     --primaryItemPageNegativeSpace: calc(14vh + 5em);
     --secondaryItemPageNegativeSpace: calc(60vh + 5em);
