@@ -1270,7 +1270,7 @@ html.layout-mobile
 html:not(.layout-mobile) 
 #itemDetailPage:has(.detailImageContainer .cardPadder-square:not(.person)) 
 .itemBackdrop {
-    height: calc(100vh - 27vh - var(--primaryItemPageNegativeSpace));
+    height: calc(100vh - 20vh - var(--secondaryItemPageNegativeSpace));
 }
 
 .detailLogo {
@@ -4107,9 +4107,9 @@ html:not(.layout-mobile)
 	display: var(--clearLogoVisibility);
     top: calc(100vh - var(--clearLogoBottomSpace) - var(--primaryItemPageNegativeSpace));
     left: 0;
-    width: 40%;
-    transform: translateY(-100%);
-    margin: auto 30%;
+    width: 20%;
+    transform: translateY(-225%);
+    margin: auto 40%;
     height: 25vh;
     background-position: bottom;
 }
