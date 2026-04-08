@@ -1,23 +1,23 @@
-# 🧩 Add-on: Custom media covers for ElegantFin
+# 🧩 Add-on : Couvertures personnalisées pour ElegantFin
 
-This is a Jellyfin add-on that allows you to customise My Media cover arts. This is an experimental feature, so limited support will be provided.
+Un add-on Jellyfin qui vous permet de personnaliser les couvertures de vos bibliothèques médias (« Mes médias »). Il s'agit d'une fonctionnalité expérimentale, donc le support sera limité.
 
-#### **Author:** [lscambo13](https://github.com/lscambo13)
+#### **Auteur :** [lscambo13](https://github.com/lscambo13)
 
 <hr>
 
-### 🖼️ Presets with previews: Modify these styles according to your own liking
+### 🖼️ Préréglages avec aperçus : Modifiez ces styles selon vos préférences
 
 <details>
-  <summary><i>This is how the covers look without this add-on.</i></summary>
+  <summary><i>Voici à quoi ressemblent les couvertures sans cet add-on.</i></summary>
 
 ![Screenshot 2025-01-19 191836](https://github.com/user-attachments/assets/49425368-cfe3-4c3b-9533-eb18b64c84d6)
 
 </details>
 
 <details>
-  <summary><i>This is how they look with this add-on, by default.</i></summary>
-	
+  <summary><i>Voici à quoi elles ressemblent avec cet add-on, par défaut.</i></summary>
+
 ![image](https://github.com/user-attachments/assets/5284af32-3b2e-4150-938c-f6d0fdfddf06)
 
 ```
@@ -27,14 +27,14 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 </details>
 
 <details>
-  <summary><i>You can also change these covers.</i></summary>
-	
+  <summary><i>Vous pouvez aussi changer ces couvertures.</i></summary>
+
 ![Screenshot 2025-01-19 192015](https://github.com/user-attachments/assets/11719ef1-36ca-46e9-8030-b464a5ae5b79)
 
 </details>
 
 <details>
-  <summary><i>You can achieve a minimal design too.</i></summary>
+  <summary><i>Vous pouvez obtenir un design minimaliste aussi.</i></summary>
 
 ![Screenshot 2025-01-19 192133](https://github.com/user-attachments/assets/daaefe74-d3a9-4bb4-8389-9605a4364372)
 
@@ -107,7 +107,7 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 </details>
 
 <details>
-  <summary><i>Need something in between?</i></summary>
+  <summary><i>Besoin de quelque chose entre les deux ?</i></summary>
 
 ![image](https://github.com/user-attachments/assets/6975a5ef-4824-4807-9afa-434fc3ebaf6f)
 
@@ -146,9 +146,9 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 
 <hr>
 
-### 👇 How to enable this add-on?
+### 👇 Comment activer cet add-on ?
 
--   Paste the following at the end in Custom CSS code box:
+-   Collez le code suivant à la fin du champ CSS personnalisé :
 
 ```
 @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css");
@@ -156,24 +156,24 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 
 <hr>
 
-### ⚙️ How to configure this add-on?
+### ⚙️ Comment configurer cet add-on ?
 
--   Remember, you do not need to configure anything if you're happy with the default set of images.
+-   Rappel : vous n'avez rien à configurer si vous êtes satisfait des images par défaut.
 
 <details>
-  <summary><i>Click here to reveal.</i></summary>
-	
-- To configure your theme to use the custom images, you'll need to input a URL pointing to an image in variables starting with '--url' and an overlay color in variables starting with '--color'.
-	
-- The ideal Jellyfin cover sizes are `960px x 540px`, and the colors can be in rgb format i.e. `rbg(128, 128, 128)`.
-  
-- Below are all the configurable variables, but you should remove the entries you do not intend to modify:
- 
+  <summary><i>Cliquez ici pour afficher les détails.</i></summary>
+
+- Pour configurer votre thème avec des images personnalisées, vous devrez saisir une URL pointant vers une image dans les variables commençant par '--url' et une couleur de superposition dans les variables commençant par '--color'.
+
+- Les tailles idéales pour les couvertures Jellyfin sont `960px x 540px`, et les couleurs peuvent être au format rgb, c'est-à-dire `rgb(128, 128, 128)`.
+
+- Voici toutes les variables configurables, mais vous devriez supprimer les entrées que vous ne souhaitez pas modifier :
+
 ```
 
 :root{
 
-    <!-- overlay colors; change according to your image. -->
+    <!-- couleurs de superposition ; adaptez selon votre image. -->
 
     --colorOverlayMoviesCover: rgb();
     --colorOverlayTvshowsCover: rgb();
@@ -188,7 +188,7 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --colorOverlayRecordedmoviesCover: rgb();
     --colorOverlayRecordedtvCover: rgb();
 
-    <!-- cover images; input the url pointing to an image. -->
+    <!-- images de couverture ; saisissez l'URL pointant vers une image. -->
 
     --urlMoviesCover: url();
     --urlTvshowsCover: url();
@@ -210,8 +210,8 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 <hr>
 
 
-### 🆗 Read this example:
-Suppose you want to modify the Live TV cover art. You'll have to modify the variables named `--colorOverlayLivetvCover` and `--urlLivetvCover`, so that your final configuration will look something like this:
+### 🆗 Lisez cet exemple :
+Supposons que vous souhaitez modifier la couverture de la TV en direct. Vous devrez modifier les variables nommées `--colorOverlayLivetvCover` et `--urlLivetvCover`, de sorte que votre configuration finale ressemble à ceci :
 
 ```
 
@@ -227,25 +227,27 @@ Suppose you want to modify the Live TV cover art. You'll have to modify the vari
 <hr>
 
 <details>
-  <summary><i>Detailed steps for server-side implementation</i></summary>
+  <summary><i>Étapes détaillées pour l'installation côté serveur</i></summary>
 
-1. Open Dashboard from Administration tab in Settings.
-2. Select General tab from the side bar.
-3. Scroll down to find Custom CSS code box under Branding section.
-4. Paste the custom css in Custom CSS code box.
-5. Click save
+1. Ouvrez le Tableau de bord depuis l'onglet Administration dans les Paramètres.
+2. Sélectionnez l'onglet Général dans la barre latérale.
+3. Descendez pour trouver le champ CSS personnalisé dans la section Marque (Branding).
+4. Collez le CSS personnalisé dans ce champ.
+5. Cliquez sur Enregistrer.
 </details>
 
 <details>
-  <summary><i>Detailed steps for client-side implementation</i></summary>
+  <summary><i>Étapes détaillées pour l'installation côté client</i></summary>
 
-1. Open Display tab in Settings.
-2. Scroll down to find Custom CSS code box.
-3. Paste the custom css in Custom CSS code box.
-4. Click save.
+1. Ouvrez l'onglet Affichage dans les Paramètres.
+2. Descendez pour trouver le champ CSS personnalisé.
+3. Collez le CSS personnalisé dans ce champ.
+4. Cliquez sur Enregistrer.
 </details>
 
 
 <hr>
+
+```
 
 ```

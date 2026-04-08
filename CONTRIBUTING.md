@@ -1,52 +1,52 @@
-# Contributing to ElegantFin
+# Contribuer à ElegantFin
 
-Thank you for your interest in contributing to **ElegantFin**, a custom theme for the Jellyfin Web UI. To keep the project clean, maintainable, and compatible across devices, please follow these guidelines when contributing.
-
----
-
-## 🧩 Pull Request Guidelines
-
-- **Keep PRs focused.** Each pull request should address a single feature, bugfix, or improvement. Avoid bundling unrelated changes.
-
-- **Write clear PR descriptions.** Explain what you changed and why. This helps reviewers and future contributors understand the purpose and reasoning behind the change.
-
-- **Provide screenshots.** Include before/after screenshots for any visual changes, along with a short description of what each image shows.
-
-- **Comment your code.** If you’re adding new CSS rules or modifying complex ones, include inline comments where needed to describe intent.
-
-- **Don't forget responsiveness.** ElegantFin runs on phones, tablets, TVs, and desktops. Ensure your changes are tested across viewports and don't break layouts or interactions on other platforms.
-
-- **Use consistent units.** Follow the theme’s existing use of relative units such as `em` instead of absolute units like `px`.
-
-- **Avoid `!important`.** Only use it when it is absolutely necessary and no alternative exists.
-
-- **Minimize media queries.** Only add new media queries if there is no simpler or existing solution that achieves the same result.
+Merci de votre intérêt pour contribuer à **ElegantFin**, un thème personnalisé pour l'interface web de Jellyfin. Afin de garder le projet propre, maintenable et compatible sur tous les appareils, veuillez suivre ces directives lors de vos contributions.
 
 ---
 
-## 💬 Propose First for Major Changes
+## 🧩 Directives pour les Pull Requests
 
-If you are planning to:
-- change the overall layout or structure of key components,
-- modify the core color scheme,
-- or introduce new UI behavioral patterns,
+- **Gardez vos PR ciblées.** Chaque pull request doit traiter une seule fonctionnalité, correction de bug ou amélioration. Évitez de regrouper des changements non liés.
 
-Please open a GitHub issue first to discuss the proposal with maintainers before submitting a PR. This helps avoid duplicate work and ensures alignment with the project's goals.
+- **Rédigez des descriptions claires.** Expliquez ce que vous avez modifié et pourquoi. Cela aide les relecteurs et futurs contributeurs à comprendre l'objectif et le raisonnement derrière le changement.
+
+- **Fournissez des captures d'écran.** Incluez des captures avant/après pour tout changement visuel, accompagnées d'une courte description de ce que chaque image montre.
+
+- **Commentez votre code.** Si vous ajoutez de nouvelles règles CSS ou modifiez des règles complexes, incluez des commentaires en ligne si nécessaire pour décrire l'intention.
+
+- **N'oubliez pas la réactivité.** ElegantFin fonctionne sur téléphones, tablettes, TV et ordinateurs. Assurez-vous que vos modifications sont testées sur différentes tailles d'écran et ne cassent pas les mises en page ou interactions sur d'autres plateformes.
+
+- **Utilisez des unités cohérentes.** Suivez l'utilisation existante d'unités relatives comme `em` au lieu d'unités absolues comme `px`.
+
+- **Évitez `!important`.** Utilisez-le uniquement quand c'est absolument nécessaire et qu'aucune alternative n'existe.
+
+- **Minimisez les media queries.** N'ajoutez de nouvelles media queries que s'il n'existe pas de solution plus simple ou déjà existante pour obtenir le même résultat.
 
 ---
 
-## 📁 File Structure and Naming
+## 💬 Proposez d'abord pour les changements majeurs
 
-- Follow the existing CSS naming conventions and structure.
-- When adding new sections, group related styles logically and use comments to identify the purpose of the block.
+Si vous prévoyez de :
+- modifier la mise en page générale ou la structure de composants clés,
+- modifier le schéma de couleurs principal,
+- ou introduire de nouveaux comportements d'interface,
+
+Veuillez d'abord ouvrir une issue GitHub pour discuter de la proposition avec les mainteneurs avant de soumettre une PR. Cela évite le travail en double et assure l'alignement avec les objectifs du projet.
+
+---
+
+## 📁 Structure et nommage des fichiers
+
+- Suivez les conventions de nommage CSS et la structure existantes.
+- Lorsque vous ajoutez de nouvelles sections, regroupez les styles liés de manière logique et utilisez des commentaires pour identifier l'objectif du bloc.
 
 ---
 
 ## 🤝 Communication
 
-- Be respectful, constructive, and collaborative.
-- Be open to feedback and willing to revise your work if needed.
+- Soyez respectueux, constructif et collaboratif.
+- Soyez ouvert aux retours et prêt à réviser votre travail si nécessaire.
 
 ---
 
-We appreciate your help in making ElegantFin better for everyone. Thanks for contributing! 🙌
+Nous apprécions votre aide pour rendre ElegantFin meilleur pour tous. Merci de contribuer !

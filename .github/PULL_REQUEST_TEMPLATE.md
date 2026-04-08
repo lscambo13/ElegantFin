@@ -1,36 +1,36 @@
 # Pull Request
 
-Thanks for contributing to ElegantFin! Please review the **contributor guidelines** before submitting.
+Merci de contribuer à ElegantFin ! Veuillez consulter les **directives de contribution** avant de soumettre.
 
-## Type of Change
+## Type de modification
 
-- [ ] Bug fix  
-- [ ] New feature
+- [ ] Correction de bug
+- [ ] Nouvelle fonctionnalité
 
 ## Description
 
-Explain what you changed and why. Include your reasoning and goals.
+Expliquez ce que vous avez modifié et pourquoi. Incluez votre raisonnement et vos objectifs.
 
-## Screenshots
+## Captures d'écran
 
-If applicable, provide before/after images and explain what each shows.
+Si applicable, fournissez des images avant/après et expliquez ce que chacune montre.
 
-## Cross-platform Testing
+## Tests multi-plateformes
 
-Describe how you verified your changes on different devices (desktop, mobile, TV, etc.).
+Décrivez comment vous avez vérifié vos modifications sur différents appareils (ordinateur, mobile, TV, etc.).
 
-## Test Configuration
+## Configuration de test
 
-- Jellyfin server version:  
-- Jellyfin client:  
-- Client browser name and version:  
-- Device:
-- Other info:
+- Version du serveur Jellyfin :
+- Client Jellyfin :
+- Nom et version du navigateur :
+- Appareil :
+- Autres infos :
 
-## Checklist
+## Liste de vérification
 
-- [ ] I performed a self-review of my own code  
-- [ ] I followed the style conventions (`em` units, minimal media queries).
-- [ ] I avoided unnecessary use of `!important`.
-- [ ] I commented my code where applicable.
-- [ ] I tested my changes on multiple devices, layouts and viewport sizes.
+- [ ] J'ai effectué une auto-relecture de mon propre code
+- [ ] J'ai suivi les conventions de style (unités `em`, media queries minimales).
+- [ ] J'ai évité l'utilisation inutile de `!important`.
+- [ ] J'ai commenté mon code lorsque nécessaire.
+- [ ] J'ai testé mes modifications sur plusieurs appareils, mises en page et tailles d'écran.

@@ -1,47 +1,47 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Rapport de bug
+about: Créer un rapport pour nous aider à améliorer le projet
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**Checklist**
-- [ ] I have read the README.md 
-- [ ] I have searched through the other open and closed issues using the GitHub search bar
-- [ ] I have made sure that my issue is not a duplicate
+**Liste de vérification**
+- [ ] J'ai lu le README.md
+- [ ] J'ai cherché parmi les autres issues ouvertes et fermées via la barre de recherche GitHub
+- [ ] Je me suis assuré(e) que mon problème n'est pas un doublon
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Décrivez le bug**
+Une description claire et concise du bug rencontré.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**Comportement attendu**
+Une description claire et concise de ce que vous attendiez.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Captures d'écran**
+Si applicable, ajoutez des captures d'écran pour illustrer votre problème.
 
-**ElegantFin:**
- - Version [e.g. 24.12.01]
+**ElegantFin :**
+ - Version [ex. 26.04.07]
 
-**Jellyfin Server:**
- - Version [e.g. 10.10.3]
+**Serveur Jellyfin :**
+ - Version [ex. 10.11.5]
 
-**Desktop:**
- - OS: [e.g. Windows]
- - Browser: [e.g. chrome, safari]
- - Browser Version: [e.g. 22]
- - Screen Resolution [e.g. 1920x1080]
+**Ordinateur :**
+ - OS : [ex. Windows]
+ - Navigateur : [ex. Chrome, Safari]
+ - Version du navigateur : [ex. 22]
+ - Résolution d'écran : [ex. 1920x1080]
 
-**Smartphone or TV:**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser: [e.g. stock browser, safari]
- - Browser Version: [e.g. 22]
- - Jellyfin App Version: 
+**Smartphone ou TV :**
+ - Appareil : [ex. iPhone 14]
+ - OS : [ex. iOS 17]
+ - Navigateur : [ex. navigateur par défaut, Safari]
+ - Version du navigateur : [ex. 22]
+ - Version de l'app Jellyfin :
 
 
-**Are you using any plugins or extra CSS configuration**
-- Add any third-party plugins or CSS configuration you use.
-- [e.g. Media Bar, Custom Tabs etc]
-- [e.g. other custom css modifications]
+**Utilisez-vous des plugins ou une configuration CSS supplémentaire ?**
+- Indiquez les plugins tiers ou configurations CSS que vous utilisez.
+- [ex. Media Bar, Custom Tabs, etc.]
+- [ex. autres modifications CSS personnalisées]
