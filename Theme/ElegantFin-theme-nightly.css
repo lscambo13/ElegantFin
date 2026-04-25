@@ -1102,6 +1102,12 @@ select {
     row-gap: 1em;
 }
 
+/* this is a workaround to add a gap between the last child and the edge of the screen on phones */
+.layout-mobile .itemsContainer:not(.editorsChoiceItemsContainer, .vertical-wrap)::after {
+    content: "13";
+    color: transparent;
+}
+
 .layout-desktop .sectionTitle,
 .layout-tv .sectionTitle {
     font-size: 1.5rem !important;
