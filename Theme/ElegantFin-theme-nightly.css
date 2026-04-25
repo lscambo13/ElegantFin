@@ -971,6 +971,10 @@ select {
     width: calc(var(--cardWidth) * var(--resumeCardScale)) !important;
 }
 
+.card .cardTextCentered {
+    text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.8);
+}
+
 .detailPageWrapperContainer {
     padding-top: unset;
     margin-top: unset;
