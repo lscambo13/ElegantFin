@@ -1175,6 +1175,11 @@ select {
     align-content: flex-end;
 }
 
+.layout-desktop .detailRibbon:has(.person) {
+    min-height: 15vh;
+    align-content: flex-end;
+}
+
 .layout-desktop .detailRibbon {
     height: 100%;
     min-height: 25vh;
