@@ -1272,7 +1272,15 @@ select {
     height: calc(100vh - 27vh - var(--secondaryItemPageNegativeSpace));
 }
 
-#itemDetailPage:has(.detailImageContainer .cardPadder-square:not(.person)) .itemBackdrop {
+html.layout-mobile 
+#itemDetailPage:has(.detailImageContainer .cardPadder-square:not(.person)) 
+.itemBackdrop {
+    height: 45vh;
+}
+
+html:not(.layout-mobile) 
+#itemDetailPage:has(.detailImageContainer .cardPadder-square:not(.person)) 
+.itemBackdrop {
     height: calc(100vh - 20vh - var(--secondaryItemPageNegativeSpace));
 }
 
@@ -1393,8 +1401,7 @@ select {
 
 /* this hides the detail logo  when media card is visible */
 #itemDetailPage:has(.detailImageContainer .backdropCard) .detailLogo,
-#itemDetailPage:has(.detailImageContainer .album) .detailLogo,
-#itemDetailPage:has(.detailImageContainer .person) .detailLogo {
+#itemDetailPage:has(.detailImageContainer .album) .detailLogo {
     z-index: 2;
     display: none;
 }
@@ -4100,3 +4107,32 @@ for extended styling, use the add-on */
 }
 
 /* basic styling for the Media Bar Plugin - end */
+
+/* Showing Artists Logos instead of Title text - start */
+
+/* 1. Only trigger if it's an Artist (usually square) vs an Actor (usually portrait) */
+/* This specifically protects Actor portrait cards from being hidden */
+html:not(.layout-mobile) 
+#itemDetailPage:has(.detailImageContainer .cardPadder-square .person) 
+.detailLogo {
+	display: var(--clearLogoVisibility);
+    top: calc(100vh - var(--clearLogoBottomSpace) - var(--primaryItemPageNegativeSpace));
+    left: 0;
+    width: 20%;
+    transform: translateY(-225%);
+    margin: auto 40%;
+    height: 25vh;
+    background-position: bottom;
+}
+
+/* 2. Hide Title text if there is a logo - ONLY for Artists */
+#itemDetailPage:has(.detailImageContainer .cardPadder-square .person) .detailLogo:not(.hide) ~ .detailPageWrapperContainer .nameContainer .itemName,
+#itemDetailPage:has(.detailImageContainer .cardPadder-square .person) .detailLogo:not(.hide) ~ .detailPageWrapperContainer .nameContainer .parentNameLast {
+    display: none !important;
+}
+
+/* 3. Hide Image Container - ONLY for Artists */
+#itemDetailPage:has(.detailImageContainer .cardPadder-square .person) .detailImageContainer {
+    display: none ; 
+}
+/* Showing Artists Logos instead of Title text - end */
