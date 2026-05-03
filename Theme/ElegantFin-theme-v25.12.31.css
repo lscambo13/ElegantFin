@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --elegantFinFooterText: "ElegantFin v25.12.31";
+    --elegantFinFooterText: "ElegantFin v25.12.31 (fix-livetv-logo-bug)";
 
     /* Base theme colors */
     color-scheme: dark;
@@ -355,6 +355,22 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Bug fix: REC-prefixed channel cards (last item in Live TV list) have no image;
+   give them a subtle distinct background so they don't show a broken placeholder */
+.card.squareCard[data-prefix="REC"] .cardImageContainer.cardContent {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Bug fix: hide the "?" default text on REC-prefixed channel cards entirely */
+.card.squareCard[data-prefix="REC"] .cardDefaultText {
+    display: none;
+}
+
+/* Bug fix: show the channel name text as fallback on REC cards instead of "?" */
+.card.squareCard[data-prefix="REC"] .cardText {
+    opacity: 1;
+}
+
 .cardImageContainer > .cardDefaultText {
     font-size: 2em;
     padding-top: 1.5em;
@@ -365,6 +381,17 @@ body {
 .cardImageContainer > .cardDefaultText::before {
     content: "?\A";
     color: var(--borderColor);
+}
+
+/* Bug fix: channel detail page - ensure the channel primary image (logo) is visible
+   in the detail image container; the TvChannel background was obscuring the image */
+.detailImageContainer .card.squareCard[data-type="TvChannel"] .cardImageContainer.cardContent {
+    background-color: transparent;
+}
+
+/* Bug fix: ensure channel logo/image in detail page isn't clipped or hidden */
+.detailImageContainer .card.squareCard[data-type="TvChannel"] .cardImageContainer {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .card-hoverable:hover .cardScalable,

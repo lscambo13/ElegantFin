@@ -129,7 +129,8 @@
     background-image: var(--urlRecordedmoviesCover) !important;
 }
 
-[data-prefix="REC"] .cardContent {
+[data-type="CollectionFolder"][data-prefix="REC"] .cardContent,
+[data-type="TvChannel"][data-prefix="REC"] .cardContent {
     background-color: var(--colorOverlayRecordedtvCover) !important;
     background-image: var(--urlRecordedtvCover) !important;
 }
