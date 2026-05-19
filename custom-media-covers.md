@@ -148,7 +148,7 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
 
 ### 👇 How to enable this add-on?
 
--   Paste the following at the end in Custom CSS code box:
+-   Paste the following right after the main ElegantFin import in the Custom CSS code box:
 
 ```
 @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css");
