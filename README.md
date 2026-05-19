@@ -187,11 +187,11 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 </details>
 
 <details>
-  <summary><i>5. Disable the card hover effect on desktop</i></summary>
+  <summary><i>5. Disable the card shinning effect on hover on desktop</i></summary>
 
 https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 
--   To disable the reflection on cards that shows when hovering over them on desktop, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+-   To disable the shine on cards that shows when hovering over them on desktop, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
 
 ```
   :root{
@@ -223,7 +223,7 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 
   <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/3e88e270-40f9-48ba-8173-f65b94344f8d" />
 
--   ElegantFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+-   ElegantFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code right after the main import in Custom CSS box, click save and finally refresh your app/webpage.
 
 ```
 	@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
