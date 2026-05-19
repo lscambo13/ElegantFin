@@ -4049,4 +4049,30 @@ for extended styling, use the add-on */
     color: black;
 }
 
+/* Fix: Series episodes section - season selector full-width + expanded grid layout */
+.series-episodes-section .sectionTitleContainer {
+  width: 100%;
+  box-sizing: border-box;
+}
+.series-episodes-section .sectionTitle-link.sectionTitleTextButton {
+  flex: 1;
+  min-width: 0;
+}
+.series-episodes-section .itemsContainer.vertical-wrap,
+.series-episodes-section .scrollSlider.vertical-wrap {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  white-space: normal !important;
+  transform: none !important;
+  width: 100% !important;
+}
+.series-episodes-section .itemsContainer.vertical-wrap .card,
+.series-episodes-section .scrollSlider.vertical-wrap .card {
+  flex: 0 0 var(--cardWidth) !important;
+  width: var(--cardWidth) !important;
+}
+.series-episodes-section.emby-scroller-container {
+  overflow: visible !important;
+}
+
 /* basic styling for the Media Bar Plugin - end */
