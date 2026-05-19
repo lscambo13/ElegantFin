@@ -295,7 +295,8 @@ https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
 <details>
   <summary>3️⃣ - <i>Why do I notice visual bugs and inconsistencies on Jellyfin Media Player?</i></summary>
 
--   As of version 1.12.0, JMP is based on Qt 5.x which uses a very outdated web engine, so it does not support many new CSS features. Once a new version based on Qt 6.x is released, most issues should automatically be resolved. Until then, JMP is unsupported and I recommend using the web app instead.
+-   JMP is based on Qt 5.x which uses a very outdated web engine. It does not support many new CSS features, so it is unsupported.
+-   [Jellyfin Desktop](https://github.com/jellyfin/jellyfin-desktop) is the new official client moving forward. It seems to be in testing right now. Use it for better compatibility or use the web app instead.
 </details>
 
 <details>
