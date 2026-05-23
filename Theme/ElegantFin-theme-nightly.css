@@ -55,6 +55,7 @@
     /* textures */
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), 25%, var(--lighterGradientPoint));
+    --backgroundAlphaOverlay: linear-gradient(180deg, var(--darkerGradientPointAlpha) 80%, transparent);
     --headerColorGradient: linear-gradient(180deg, rgba(30, 40, 54, 0.95) 30%, 55%, transparent 90%);
     --headerColorGradientAlt: linear-gradient(180deg, rgba(30, 40, 54, 1), 70%, transparent);
     --headerBlurMask: linear-gradient(180deg, white 50%, 85%, transparent);
@@ -142,6 +143,18 @@
     /* none: dynamically hides the main title of Movie/TV if its logo is available [default]; 
        block: makes the title always visible */
     --itemTitleVisibility: none;
+
+    /* none: makes the music artist clear logo always hidden [default]; 
+       block: shows the music artist clear logo if it is available */
+    --artistClearLogoVisibility: block;
+
+    /* block: shows the text-based music artist title [default];
+       none: makes the music artist title always hidden */
+    --artistTitleVisibility: none;
+
+    /* none: makes the music artist page background fully visible [default]; 
+       unset: makes the background dim for better clear logo visibility on desktops */
+    --artistPageBackground: unset;
 
     /* block: shows the mini play or three-dot button on cards only on mobile [default]; 
     none: makes them always hidden only on mobile */
@@ -1274,6 +1287,7 @@ select {
 #itemDetailPage:has(.subtitle) .itemBackdrop,
 #itemDetailPage:has(.musicParentName) .itemBackdrop,
 #itemDetailPage:has(.detailImageContainer .backdropCard) .itemBackdrop,
+#itemDetailPage:has(.detailImageContainer .squareCard) .itemBackdrop,
 #itemDetailPage:has(.detailImageContainer .person) .itemBackdrop,
 #itemDetailPage:has(.detailImageContainer .queue) .itemBackdrop,
 #itemDetailPage:has(.detailImageContainer .book) .itemBackdrop,
@@ -1281,8 +1295,8 @@ select {
     height: calc(100vh - 27vh - var(--secondaryItemPageNegativeSpace));
 }
 
-#itemDetailPage:has(.detailImageContainer .cardPadder-square:not(.person)) .itemBackdrop {
-    height: calc(100vh - 20vh - var(--secondaryItemPageNegativeSpace));
+#itemDetailPage:has(.detailImageContainer .cardPadder-square > .person) .itemBackdrop {
+    height: calc(100vh - 8vh - var(--secondaryItemPageNegativeSpace));
 }
 
 .detailLogo {
@@ -1319,6 +1333,10 @@ select {
 
 #itemDetailPage:has(.subtitle) .detailLogo {
     top: calc(100vh - 6em - var(--secondaryItemPageNegativeSpace));
+}
+
+.layout-desktop #itemDetailPage:has(.detailImageContainer .person) .detailLogo {
+    top: calc(100vh - 1px - var(--secondaryItemPageNegativeSpace));
 }
 
 .layout-mobile #itemDetailPage:has(.subtitle) .detailLogo {
@@ -1402,10 +1420,14 @@ select {
 
 /* this hides the detail logo  when media card is visible */
 #itemDetailPage:has(.detailImageContainer .backdropCard) .detailLogo,
-#itemDetailPage:has(.detailImageContainer .album) .detailLogo,
-#itemDetailPage:has(.detailImageContainer .person) .detailLogo {
+#itemDetailPage:has(.detailImageContainer .album) .detailLogo {
     z-index: 2;
     display: none;
+}
+
+#itemDetailPage:has(.detailImageContainer .person) .detailLogo {
+    z-index: 2;
+    display: var(--artistClearLogoVisibility);
 }
 
 /* this hides the main media title when the clear logo is available*/
@@ -1414,13 +1436,17 @@ select {
     display: var(--itemTitleVisibility);
 }
 
+.detailImageContainer:has(.squareCard .person) ~ .nameContainer h1 {
+    display: var(--artistTitleVisibility);
+}
+
 /* this shows the main media title and the poster when the clear logo is unavailable*/
 .detailLogo.hide ~ .detailPageWrapperContainer .nameContainer h1 {
     display: block !important;
 }
 
-.detailImageContainer:has(.backdropCard, .squareCard) ~ .nameContainer h1,
-.detailImageContainer:has(.cardImageIcon.person) ~ .nameContainer h1 {
+.detailImageContainer:has(.backdropCard) ~ .nameContainer h1,
+.detailImageContainer:has(.album) ~ .nameContainer h1 {
     display: block !important;
 }
 
@@ -1458,7 +1484,11 @@ select {
 
 #itemDetailPage:has(.subtitle),
 #itemDetailPage:has(.musicParentName) {
-    background: linear-gradient(180deg, var(--darkerGradientPointAlpha) 80%, transparent);
+    background: var(--backgroundAlphaOverlay);
+}
+
+#itemDetailPage:has(.detailImageContainer .cardPadder-square > .person) {
+    background: var(--artistPageBackground, var(--backgroundAlphaOverlay));
 }
 
 .layout-mobile #itemDetailPage:has(.detailImageContainer .backdropCard) .itemBackdrop,
