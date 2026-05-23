@@ -520,22 +520,25 @@ select {
     color: white;
 }
 
-.cardOverlayButton-br .cardOverlayButton-hover[data-action="menu"],
-.layout-desktop .listItemButton[data-action="menu"] {
-    display: none;
-}
-
 .layout-desktop .cardOverlayButton-br,
 [dir="ltr"].layout-desktop .cardOverlayButton-br {
-    bottom: 0.75em;
-    right: 0.5em;
-    display: var(--extraCardButtonsVisibility);
+    bottom: 1.2em;
+    right: 0.7em;
     z-index: 1;
+    font-size: 0.8em;
 }
 
-.layout-desktop .cardOverlayButton-br button {
+.layout-desktop .cardOverlayButton-br > button {
     color: white;
+    display: var(--extraCardButtonsVisibility);
     text-shadow: var(--shadow);
+}
+
+/* this keeps the three-dot menu button always visible on desktop because 
+Jellyfin disabled right-click functionality on newer versions */
+.cardOverlayButton-br .cardOverlayButton-hover[data-action="menu"],
+.layout-desktop .listItemButton[data-action="menu"] {
+    display: block;
 }
 
 .layout-mobile .cardOverlayButton {
