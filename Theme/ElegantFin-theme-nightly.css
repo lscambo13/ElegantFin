@@ -118,9 +118,10 @@
        use 50% to place it at the center of a card */
     --overlayPlayButtonPosition: 2.8em;
 
-    /* use 'Material Icons Round' for the new icons [default]; 
-       use 'Material Icons' to revert to old icons */
-    --iconPack: "Material Symbols Rounded", Material Icons;
+    /* use 'Material Symbols Rounded' for the new icons (~5mb) [default]; 
+       use 'Material Symbols Rounded Minimal' to reduce bandwidth usage (~115kb) (may break compatibility with plugins);
+       use 'Material Icons' to revert to stock Jellyfin icons */
+    --iconPack: "Material Symbols Rounded";
 
     /* none: hides the watched and mark favorite buttons on hover [default];
        block: makes them visible use block */
@@ -197,30 +198,47 @@ select {
     --secondaryItemPageNegativeSpace: 45vh;
 }
 
-/* Material Icons Round */
+/* Material Symbols Rounded - Minimal */
 /* https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add,airplay,album,arrow_back,arrow_forward,arrow_upward,audiotrack,autorenew,backspace,book,brightness_high,call_split,cast,check,chevron_left,chevron_right,clear,close,closed_caption,cloud_download,content_copy,dashboard,delete,devices_other,download,drag_handle,dvr,exit_to_app,expand_more,explore,fast_forward,fast_rewind,favorite,fiber_manual_record,fiber_smart_record,file_download,filter_alt,folder,folder_open,forward_30,fullscreen,get_app,groups,home,image,info,info_outline,keyboard,keyboard_arrow_down,keyboard_arrow_left,keyboard_arrow_right,keyboard_arrow_up,keyboard_return,library_add_check,live_tv,local_movies,lock,lyrics,menu,mode_edit,more_vert,movie,music_note,music_video,navigate_before,navigate_next,pause,pause_circle_filled,pause_circle_outline,person,phonelink_lock,photo,photo_album,picture_in_picture_alt,play,play_arrow,play_circle_filled,play_circle_outline,playlist_add,preview,queue,queue_music,quiz,redo,refresh,remove_circle,remove_red_eye,repeat,repeat_one,replay,replay_10,save,schedule,search,settings,shuffle,skip_next,skip_previous,sort_by_alpha,space_bar,star,stop,storage,subtitles,sync,text_decrease,text_increase,theaters,toc,tv,undo,update,video_library,videocam,view_comfy,volume_off,volume_up */
 @font-face {
-  font-family: 'Material Symbols Rounded';
-  font-style: normal;
-  font-weight: 100 700;
-  src: url(https://fonts.gstatic.com/l/font?kit=sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjzarESMdAUY9qjb3u1M7e05tMSFFiwiIx7ihGnzWmz-lkbsBJUso54WUKiEWtV5-yu0mchXaMnO1vqpcxiqEd46a1XUtwWncyNNmxYr8hocRsPBG56BqeEkny0qMU_aSz_M2MYR8p9qc8uUfT0rnccAg__qWWJGuzJMRCBsajdQcef&skey=70ddea8fe54d532e&v=v338) format('woff2');
+    font-family: "Material Symbols Rounded Minimal";
+    font-style: normal;
+    font-weight: 100 700;
+    src: url(https://fonts.gstatic.com/l/font?kit=sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjzarESMdAUY9qjb3u1M7e05tMSFFiwiIx7ihGnzWmz-lkbsBJUso54WUKiEWtV5-yu0mchXaMnO1vqpcxiqEd46a1XUtwWncyNNmxYr8hocRsPBG56BqeEkny0qMU_aSz_M2MYR8p9qc8uUfT0rnccAg__qWWJGuzJMRCBsajdQcef&skey=70ddea8fe54d532e&v=v341)
+        format("woff2");
+}
+
+/* Material Symbols Rounded - Full */
+/* https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200 */
+@font-face {
+    font-family: "Material Symbols Rounded";
+    font-style: normal;
+    font-weight: 100 700;
+    src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v341/sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190Fjzag.woff2)
+        format("woff2");
 }
 
 .material-icons {
-  font-family: var(--iconPack) !important;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+    font-family:
+        var(--iconPack),
+        Material Icons !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 48;
 }
 
 .material-icons.info_outline:before {
