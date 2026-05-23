@@ -454,7 +454,7 @@ select {
     bottom: 0;
     left: 0;
     right: 0;
-    transform: translateY(-50%) translateX(0);
+    transform: translateY(-100%) translateX(0);
     background: var(--hoverGradientV);
 }
 
@@ -465,7 +465,7 @@ select {
 
 .backdropCard.card-hoverable .cardOverlayContainer:after,
 .overflowBackdropCard.card-hoverable .cardOverlayContainer:after {
-    transform: translateY(0) translateX(-50%);
+    transform: translateY(0) translateX(-100%);
     background: var(--hoverGradientH);
 }
 
