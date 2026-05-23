@@ -2754,9 +2754,9 @@ div[data-role="controlgroup"] a.ui-btn-active {
     margin-bottom: 1.5em;
 }
 
-.layout-mobile .detailSection {
+/* .layout-mobile .detailSection {
     grid-template-columns: 1fr !important;
-}
+} */
 
 .detailPageContent {
     gap: 1em;
