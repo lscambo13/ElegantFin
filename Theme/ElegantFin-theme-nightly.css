@@ -157,7 +157,7 @@
     --artistPageBackground: unset;
 
     /* block: shows the mini play or three-dot button on cards only on mobile [default]; 
-    none: makes them always hidden only on mobile */
+       none: makes them always hidden only on mobile */
     --miniOverlayButtonVisibility: block;
 
     /* use "" to enable the card hover effect [default]; 
@@ -999,6 +999,7 @@ Jellyfin disabled right-click functionality on newer versions */
 }
 
 .card .cardTextCentered {
+    /* text-align-last: left; */
     text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.8);
 }
 
@@ -2793,6 +2794,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .trackSelections .selectContainer {
     max-width: unset !important;
     align-items: baseline;
+    /* margin: 0.25em !important; */
 }
 
 .selectArrowContainer {

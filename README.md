@@ -27,14 +27,14 @@ This is a Jellyfin theme inspired from Jellyseerr to improve the overall look an
 
 ### ✨ Key Features
 
--   modern layouts and color tones
--   new and improved animations on most elements
--   rounded corners and even spacing everywhere
--   stylish borders, hover effects and shadows
--   neat layout that puts important stuff up front
--   reduced unnecessary clutter
--   various fixes to improve the user experience
--   same clean design across phone, desktop, and TV
+- modern layouts and color tones
+- new and improved animations on most elements
+- rounded corners and even spacing everywhere
+- stylish borders, hover effects and shadows
+- neat layout that puts important stuff up front
+- reduced unnecessary clutter
+- various fixes to improve the user experience
+- same clean design across phone, desktop, and TV
 
 <hr>
 
@@ -133,7 +133,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/05eb7cb6-3ac9-444b-8988-9776e0815664" />
 
--   Read more about this experimental add-on [here](https://github.com/lscambo13/ElegantFin/blob/main/custom-media-covers.md)
+- Read more about this experimental add-on [here](https://github.com/lscambo13/ElegantFin/blob/main/custom-media-covers.md)
 
 </details>
 
@@ -143,55 +143,55 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/70834545-d1cd-4496-975a-4310030dedd9" />
 <img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/c3cf2d96-0db0-4acb-bc61-7b08d5445452" />
 
--   Note: this customisation is not needed on Jellyfin 10.11.X anymore
+- Note: this customisation is not needed on Jellyfin 10.11.X anymore
 
--   On older Jellyfin versions, to enable the background wallpaper on the login screen, first tick the 'Enable the splash screen' option in your Jellyfin Dashboard below the Custom CSS Box.
--   Second, copy and paste the following code at the end in Custom CSS box but don't save yet.
+- On older Jellyfin versions, to enable the background wallpaper on the login screen, first tick the 'Enable the splash screen' option in your Jellyfin Dashboard below the Custom CSS Box.
+- Second, copy and paste the following code at the end in Custom CSS box but don't save yet.
     ```
     :root{
       --loginPageBgUrl: url("<YOUR-JELLYFIN-SERVER-ADDRESS>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2");
     }
     ```
--   Third, replace `<YOUR-JELLYFIN-SERVER-ADDRESS>` with your Jellyfin server address, for example, `http://192.168.0.1:8096`.
--   Don't forget the correct http or https in your domain.
--   You can also modify the parameters, for example blur size or the resolution, according to your liking.
--   Once done, save and refresh your apps and webpages.
-</details>
+- Third, replace `<YOUR-JELLYFIN-SERVER-ADDRESS>` with your Jellyfin server address, for example, `http://192.168.0.1:8096`.
+- Don't forget the correct http or https in your domain.
+- You can also modify the parameters, for example blur size or the resolution, according to your liking.
+- Once done, save and refresh your apps and webpages.
+      </details>
 
 <details>
   <summary><i>3. Enable extra overlay buttons on cards on desktop</i></summary>
 
   <img width="400" height="auto" alt="image" src="https://github.com/user-attachments/assets/cb8479c2-c577-4d54-a567-697f54291a3b" />
 
--   To enable 'Mark Played' and 'Add to Favorites' buttons that show up at the bottom right corner of cards while hovering, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+- To enable 'Mark Played' and 'Add to Favorites' buttons that show up at the bottom right corner of cards while hovering, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
     ```
     :root{
       --extraCardButtonsVisibility: block;
     }
     ```
--   To hide them again, simply remove this code block or replace `block` with `none`.
-</details>
+- To hide them again, simply remove this code block or replace `block` with `none`.
+      </details>
 
 <details>
   <summary><i>4. Place the overlay play button at the center of cards on desktop</i></summary>
 
   <img width="400" height="auto" alt="image" src="https://github.com/user-attachments/assets/ebde9db6-cd2f-47b5-bdb9-cee1e9852e2e" />
 
--   To bring the mini play button to the center of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+- To bring the mini play button to the center of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
     ```
     :root{
       --overlayPlayButtonPosition: 50%;
     }
     ```
--   To undo this change, simply remove this code block or replace `50%` with `2.8em`.
-</details>
+- To undo this change, simply remove this code block or replace `50%` with `2.8em`.
+      </details>
 
 <details>
   <summary><i>5. Disable the card shinning effect on hover on desktop</i></summary>
 
 https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
 
--   To disable the shine on cards that shows when hovering over them on desktop, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+- To disable the shine on cards that shows when hovering over them on desktop, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
 
 ```
   :root{
@@ -199,15 +199,15 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
   }
 ```
 
--   To undo this change, simply remove this code block or replace `none` with `""`.
-</details>
+- To undo this change, simply remove this code block or replace `none` with `""`.
+      </details>
 
 <details>
   <summary><i>6. Enable labels below library cards</i></summary>
 
   <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/5999a5de-5134-4b02-94aa-6306768a251c" />
 
--   To enable text labels under the media library cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+- To enable text labels under the media library cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
 
 ```
   :root{
@@ -215,31 +215,31 @@ https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
   }
 ```
 
--   To undo this change, simply remove this code block or replace `block` with `none`.
-</details>
+- To undo this change, simply remove this code block or replace `block` with `none`.
+      </details>
 
 <details>
   <summary><i>7. Enable alternative style for the Media Bar plugin</i></summary>
 
   <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/3e88e270-40f9-48ba-8173-f65b94344f8d" />
 
--   ElegantFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code right after the main import in Custom CSS box, click save and finally refresh your app/webpage.
+- ElegantFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code right after the main import in Custom CSS box, click save and finally refresh your app/webpage.
 
 ```
 	@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
 ```
 
--   To undo this change, simply remove this code block.
-</details>
+- To undo this change, simply remove this code block.
+      </details>
 
 <details>
   <summary><i>8. Switch between different app bar styles</i></summary>
 
 https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
 
--   You can switch between these using `--appBarHeight`.
--   Use 5em to enable the fading app bar (seamless) (default);
--   Or, use 4.6em to get the solid app bar (cleaner with border)
+- You can switch between these using `--appBarHeight`.
+- Use 5em to enable the fading app bar (seamless) (default);
+- Or, use 4.6em to get the solid app bar (cleaner with border)
 
 ```
 :root{
@@ -248,25 +248,25 @@ https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
 }
 ```
 
--   To undo this change, simply remove this code block.
-</details>
+- To undo this change, simply remove this code block.
+      </details>
 
 <details>
   <summary><i>9. Change to alternative color themes</i></summary>
 
   <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/0cab75aa-8fcd-4174-b0db-cc533b724bca" />
 
--   Check out the [the theme Playground page](https://github.com/lscambo13/ElegantFin/discussions/221) for different color themes.
--   You can also experiment and share your own take there if you wish.
-</details>
+- Check out the [the theme Playground page](https://github.com/lscambo13/ElegantFin/discussions/221) for different color themes.
+- You can also experiment and share your own take there if you wish.
+      </details>
 
 <hr>
 
 ### 🆗 Tested on
 
--   Jellyfin Server v10.11.5
--   Microsoft Edge (Chromium)
--   Jellyfin Android App v2.6.3
+- Jellyfin Server v10.11.5
+- Microsoft Edge (Chromium)
+- Jellyfin Android App v2.6.3
 
 <hr>
 
@@ -275,61 +275,61 @@ https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
 <details>
   <summary>1️⃣ - <i>How do I check if I am using the latest version of ElegantFin?</i></summary>
 
--   Check the version number at the bottom in the Settings screen.
--   It should be something like `ElegantFin v25.XX.XX`.
+- Check the version number at the bottom in the Settings screen.
+- It should be something like `ElegantFin v25.XX.XX`.
 
-    <img width="380" height="300" alt="image" src="https://github.com/user-attachments/assets/aecca6f5-7bd3-4057-9131-aa60b3becbaf" />
+        <img width="380" height="300" alt="image" src="https://github.com/user-attachments/assets/aecca6f5-7bd3-4057-9131-aa60b3becbaf" />
 
 </details>
 
 <details>
   <summary>2️⃣ - <i>I see that a newer version is available, but I have not received it yet. Why?</i></summary>
 
--   If the Settings footer shows an old version, it means that you are still using an old cache.
--   Once that cache is updated, the new version will be loaded automatically.
--   There are multiple ways to clear the cache depending on your OS, smartphone or TV. Look online if you don't know.
--   On the web version, you can force a hard refresh of the page using CTRL + F5.
--   On apps, try signing out and back in again. OR in case of Jellyfin Media Player on windows, you might need to delete the cache folder.
-</details>
+- If the Settings footer shows an old version, it means that you are still using an old cache.
+- Once that cache is updated, the new version will be loaded automatically.
+- There are multiple ways to clear the cache depending on your OS, smartphone or TV. Look online if you don't know.
+- On the web version, you can force a hard refresh of the page using CTRL + F5.
+- On apps, try signing out and back in again. OR in case of Jellyfin Media Player on windows, you might need to delete the cache folder.
+      </details>
 
 <details>
   <summary>3️⃣ - <i>Why do I notice visual bugs and inconsistencies on Jellyfin Media Player?</i></summary>
 
--   JMP is based on Qt 5.x which uses a very outdated web engine. It does not support many new CSS features, so it is unsupported.
--   [Jellyfin Desktop](https://github.com/jellyfin/jellyfin-desktop) is the new official client moving forward. It seems to be in testing right now. Use it for better compatibility or use the web app instead.
-</details>
+- JMP is based on Qt 5.x which uses a very outdated web engine. It does not support many new CSS features, so it is unsupported.
+- [Jellyfin Desktop](https://github.com/jellyfin/jellyfin-desktop) is the new official client moving forward. It seems to be in testing right now. Use it for better compatibility or use the web app instead.
+  </details>
 
 <details>
   <summary>4️⃣ - <i>Does it work on the AndroidTV version of the Jellyfin app?</i></summary>
 
--   As of version 0.18.11, the official Jellyfin app on the AndroidTVs does not support css themes, but the Android mobile phone app supports them. The WebOS version of the app seems to be based on the mobile phone version, so it supports the theme just fine.
-</details>
+- As of version 0.18.11, the official Jellyfin app on the AndroidTVs does not support css themes, but the Android mobile phone app supports them. The WebOS version of the app seems to be based on the mobile phone version, so it supports the theme just fine.
+      </details>
 
 <details>
   <summary>5️⃣ - <i>All the icons on my LG TV seem to be broken. How to fix them?</i></summary>
 
--   It seems that modern Material Icons which this theme uses are [not compatible on some WebOS TVs](https://github.com/lscambo13/ElegantFin/issues/39). There is a [huge similar thread](https://www.reddit.com/r/youtubetv/comments/e27go3/chinese_symbols_instead_of_icons_on_lg_tv/) about this.
--   This bug can be fixed by using the older icons, so I have implemented the following workaround to bring back older, supported icons.
--   Simply add the following code at the end in Custom CSS box and save, then refresh your apps and webpages:
+- It seems that modern Material Icons which this theme uses are [not compatible on some WebOS TVs](https://github.com/lscambo13/ElegantFin/issues/39). There is a [huge similar thread](https://www.reddit.com/r/youtubetv/comments/e27go3/chinese_symbols_instead_of_icons_on_lg_tv/) about this.
+- This bug can be fixed by using the older icons, so I have implemented the following workaround to bring back older, supported icons.
+- Simply add the following code at the end in Custom CSS box and save, then refresh your apps and webpages:
     ```
     :root{
       --iconPack: 'Material Icons';
     }
     ```
-    </details>
+        </details>
 
 <details>
   <summary>6️⃣ - <i>How do I report bugs/issues?</i></summary>
 
--   First check [here](https://github.com/lscambo13/ElegantFin/issues?q=) whether a similar issue has been reported already. If it exists, upvote and comment there to let me know.
--   Alternatively, create a new issue [here](https://github.com/lscambo13/ElegantFin/issues/new/choose).
+- First check [here](https://github.com/lscambo13/ElegantFin/issues?q=) whether a similar issue has been reported already. If it exists, upvote and comment there to let me know.
+- Alternatively, create a new issue [here](https://github.com/lscambo13/ElegantFin/issues/new/choose).
 
 </details>
 <details>
   <summary>7️⃣ - <i>When can I expect another update?</i></summary>
 
--   🤷
-</details>
+- 🤷
+      </details>
 
 <hr>
 
