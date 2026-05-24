@@ -1791,9 +1791,9 @@ progress + span {
 
 .mdl-slider::-webkit-slider-thumb {
     background: var(--osdSeekBarThumbColor);
-    width: 4px !important;
+    width: 0.4em !important;
     height: 0.4em !important;
-    border-radius: 0em;
+    border-radius: 0.4em;
 }
 
 .sliderContainer:hover .mdl-slider::-webkit-slider-thumb {
@@ -1811,8 +1811,27 @@ progress + span {
     transform: scale(1) scaleY(1.25);
 }
 
+/* These Firefox thumb styles are separate because combining them breaks the effect from chrome */
 .mdl-slider::-moz-range-thumb {
     background: var(--osdSeekBarThumbColor);
+    width: 0.4em !important;
+    height: 0.4em !important;
+    border-radius: 0.4em;
+}
+
+.sliderContainer:hover .mdl-slider::-moz-range-thumb {
+    width: 0.2em !important;
+    height: 0.8em !important;
+    border-radius: 0.2em;
+    transform: scale(1);
+}
+
+.sliderContainer:active .mdl-slider::-moz-range-thumb,
+.mdl-slider.show-focus:focus::-moz-range-thumb {
+    width: 0.2em !important;
+    height: 0.8em !important;
+    border-radius: 0.2em;
+    transform: scale(1) scaleY(1.25);
 }
 
 .sliderMarkerContainer {
