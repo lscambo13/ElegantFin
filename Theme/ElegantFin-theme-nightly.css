@@ -1129,7 +1129,7 @@ Jellyfin disabled right-click functionality on newer versions */
     padding-left: 0;
 }
 
-.itemsContainer:not(.editorsChoiceItemsContainer) {
+.itemsContainer:not(.editorsChoiceItemsContainer, .vertical-list) {
     column-gap: var(--itemColumnGap);
     row-gap: 1em;
 }
