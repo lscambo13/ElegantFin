@@ -67,15 +67,15 @@
     --hoverGradientV: linear-gradient(
         0deg,
         transparent,
-        rgb(255 255 255 / 100%) 45%,
-        rgb(255 255 255 / 100%) 55%,
+        rgb(255 255 255 / 35%) 45%,
+        rgb(255 255 255 / 35%) 55%,
         transparent
     );
     --hoverGradientH: linear-gradient(
         90deg,
         transparent,
-        rgb(255 255 255 / 100%) 45%,
-        rgb(255 255 255 / 100%) 55%,
+        rgb(255 255 255 / 35%) 45%,
+        rgb(255 255 255 / 35%) 55%,
         transparent
     );
 
@@ -463,7 +463,7 @@ select {
 
 .cardOverlayContainer:after {
     content: var(--cardHoverEffect);
-    transition: 0.5s;
+    transition: 0.65s;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -474,8 +474,7 @@ select {
 }
 
 .card-hoverable:hover .cardOverlayContainer:after {
-    transform: translateY(50%) translateX(0);
-    opacity: 0;
+    transform: translateY(100%) translateX(0);
 }
 
 .backdropCard.card-hoverable .cardOverlayContainer:after,
@@ -486,8 +485,7 @@ select {
 
 .backdropCard.card-hoverable:hover .cardOverlayContainer:after,
 .overflowBackdropCard.card-hoverable:hover .cardOverlayContainer:after {
-    transform: translateY(0) translateX(50%);
-    opacity: 0;
+    transform: translateY(0) translateX(100%);
 }
 
 .cardBox:not(.visualCardBox) .cardPadder {
