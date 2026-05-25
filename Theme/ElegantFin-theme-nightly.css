@@ -2023,7 +2023,9 @@ progress + span {
 
 .overview-expand.emby-button:after {
     content: "keyboard_arrow_down";
-    font-family: var(--iconPack);
+    font-family:
+        var(--iconPack),
+        Material Icons;
     font-feature-settings: "liga";
     background: var(--selectorBackgroundColor);
     border-radius: 50%;
@@ -3935,7 +3937,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 .noHomeButtonHeader .emby-tab-button:before {
-    font-family: var(--iconPack);
+    font-family:
+        var(--iconPack),
+        Material Icons;
     font-feature-settings: "liga";
     /* padding-inline-end: 0.5ch; */
     font-size: 1.2em;
