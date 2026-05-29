@@ -264,7 +264,7 @@ https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
 
 ### 🆗 Tested on
 
-- Jellyfin Server v10.11.5
+- Jellyfin Server v10.11.10
 - Microsoft Edge (Chromium)
 - Jellyfin Android App v2.6.3
 
@@ -316,7 +316,7 @@ https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
       --iconPack: 'Material Icons';
     }
     ```
-        </details>
+  </details>
 
 <details>
   <summary>6️⃣ - <i>How do I report bugs/issues?</i></summary>
