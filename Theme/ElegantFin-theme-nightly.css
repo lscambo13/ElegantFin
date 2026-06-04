@@ -125,8 +125,12 @@
     --iconPack: "Material Symbols Rounded";
 
     /* none: hides the watched and mark favorite buttons on hover [default];
-       block: makes them visible use block */
+       block: makes them visible */
     --extraCardButtonsVisibility: none;
+
+    /* block: makes the three-dot menu button visible [default];
+       none: hides the three-dot menu button on hover */
+    --menuButtonVisibility: block;
 
     /* block: keeps the original (foreign) title visible if it is available [default];
        none: always hides the original title of Movie/TV */
@@ -531,12 +535,9 @@ select {
     display: var(--extraCardButtonsVisibility);
     text-shadow: var(--shadow);
 }
-
-/* this keeps the three-dot menu button always visible on desktop because 
-Jellyfin disabled right-click functionality on newer versions */
 .cardOverlayButton-br .cardOverlayButton-hover[data-action="menu"],
 .layout-desktop .listItemButton[data-action="menu"] {
-    display: block;
+    display: var(--menuButtonVisibility);
 }
 
 .layout-mobile .cardOverlayButton {
