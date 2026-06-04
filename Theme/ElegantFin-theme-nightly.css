@@ -4076,6 +4076,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     }
 }
 
+.skinHeader {
+    /* this is for testing a fix for iOS  */
+    padding-top: max(env(safe-area-inset-top), var(--safe-area-inset-top)) !important;
+}
+
 .nowPlayingPage {
     background: linear-gradient(var(--darkerGradientPointAlpha), transparent);
 }
