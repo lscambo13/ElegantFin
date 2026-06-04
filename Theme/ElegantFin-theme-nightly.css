@@ -148,16 +148,16 @@
        block: makes the title always visible */
     --itemTitleVisibility: none;
 
-    /* none: makes the music artist clear logo always hidden [default]; 
-       block: shows the music artist clear logo if it is available */
+    /* block: shows the music artist clear logo if it is available [default];
+       none: makes the music artist clear logo always hidden */
     --artistClearLogoVisibility: block;
 
-    /* block: shows the text-based music artist title [default];
-       none: makes the music artist title always hidden */
+    /* none: makes the music artist title always hidden [default];
+       block: shows the text-based music artist title */
     --artistTitleVisibility: none;
 
-    /* none: makes the music artist page background fully visible [default]; 
-       unset: makes the background dim for better clear logo visibility on desktops */
+    /* unset: makes the artist background dim for better clear logo visibility on desktops [default]; 
+       none: makes the music artist page background fully visible */
     --artistPageBackground: unset;
 
     /* block: shows the mini play or three-dot button on cards only on mobile [default]; 
