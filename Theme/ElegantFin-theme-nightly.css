@@ -176,9 +176,9 @@
        use a figure between 0% and 20% according to your liking */
     --backdropTrimFromTop: 10%;
 
-    /* use numbers greater than 1.0 to increase the size of 'Continue Watching' cards [default: 1.25];
-       use 1.0 to disable this effect */
-    --resumeCardScale: 1.25;
+    /* use 1 to keep the size 'Continue Watching' cards normal [default]; 
+       use numbers greater than 1.0 to increase their size (example: 1.25) */
+    --resumeCardScale: 1;
 }
 
 html {
