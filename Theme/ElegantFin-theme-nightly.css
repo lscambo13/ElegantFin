@@ -1906,14 +1906,6 @@ progress + span {
     font-size: 2em;
 }
 
-.nowPlayingBar .playPauseButton {
-    font-size: 2em;
-}
-
-.nowPlayingInfoContainer .btnPlayPause {
-    font-size: 3em;
-}
-
 .osdControls {
     display: flex;
     flex-direction: column-reverse;
@@ -3750,6 +3742,14 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     border-radius: var(--smallRadius);
     object-fit: cover;
     aspect-ratio: 1 / 1;
+}
+
+.nowPlayingBar .playPauseButton {
+    font-size: 2em;
+}
+
+.nowPlayingInfoContainer .btnPlayPause {
+    font-size: 3em;
 }
 
 .nowPlayingBar .nowPlayingImage {
