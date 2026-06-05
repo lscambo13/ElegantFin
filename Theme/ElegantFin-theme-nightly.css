@@ -3022,6 +3022,10 @@ div[data-role="controlgroup"] a.ui-btn-active {
     padding-right: 0 !important;
 }
 
+.vertical-list > .listGroupHeader {
+    padding-left: 0.5ch;
+}
+
 .listPaging > span {
     padding: 0 0.5em;
 }
