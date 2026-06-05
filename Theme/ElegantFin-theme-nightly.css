@@ -2153,6 +2153,8 @@ progress + span {
     background: var(--lighterGradientPoint);
     border-bottom: var(--defaultBorder);
     backdrop-filter: var(--blurLarge);
+    height: 3.5em;
+    padding-top: max(env(safe-area-inset-top), var(--safe-area-inset-top));
 }
 
 .selectionCommandsPanel > h1 {
