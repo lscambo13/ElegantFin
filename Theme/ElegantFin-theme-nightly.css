@@ -981,7 +981,7 @@ select {
 }
 
 .layout-mobile .card {
-    --padding: 0px;
+    --padding: 1px;
 }
 
 /* this makes the card sizes smaller when phone is in landscape mode */
