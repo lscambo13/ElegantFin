@@ -1,4 +1,4 @@
-# 🧩 Add-on: Custom media covers for ElegantFin
+# 🧩 Add-on: Custom Media Covers for ElegantFin
 
 This is a Jellyfin add-on that allows you to customise My Media cover arts. This is an experimental feature, so limited support will be provided.
 
@@ -54,6 +54,8 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --colorOverlayMixedCover: transparent;
     --colorOverlayRecordedmoviesCover: transparent;
     --colorOverlayRecordedtvCover: transparent;
+    --colorOverlayAnimeCover: transparent;
+    --colorOverlaySportsCover: transparent;
     --urlMoviesCover: transparent;
     --urlTvshowsCover: transparent;
     --urlLivetvCover: transparent;
@@ -66,6 +68,8 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --urlMixedCover: transparent;
     --urlRecordedmoviesCover: transparent;
     --urlRecordedtvCover: transparent;
+    --urlAnimeCover: transparent;
+    --urlSportsCover: transparent;
 }
 ```
 
@@ -89,6 +93,8 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --colorOverlayMixedCover: transparent;
     --colorOverlayRecordedmoviesCover: transparent;
     --colorOverlayRecordedtvCover: transparent;
+    --colorOverlayAnimeCover: transparent;
+    --colorOverlaySportsCover: transparent;
     --urlMoviesCover: var(--cardBackgroundGradient);
     --urlTvshowsCover: var(--cardBackgroundGradient);
     --urlLivetvCover: var(--cardBackgroundGradient);
@@ -101,6 +107,8 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --urlMixedCover: var(--cardBackgroundGradient);
     --urlRecordedmoviesCover: var(--cardBackgroundGradient);
     --urlRecordedtvCover: var(--cardBackgroundGradient);
+    --urlAnimeCover: var(--cardBackgroundGradient);
+    --urlSportsCover: var(--cardBackgroundGradient);
 }
 ```
 
@@ -127,6 +135,8 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --colorOverlayMixedCover: rgb(194, 58, 58);
     --colorOverlayRecordedmoviesCover: rgb(52, 52, 52);
     --colorOverlayRecordedtvCover: rgb(120, 100, 28);
+    --colorOverlayAnimeCover: rgb(189, 203, 99);
+    --colorOverlaySportsCover: rgb(233, 126, 60);
     --urlMoviesCover: linear-gradient(0deg, #313131, #585858 25%);
     --urlTvshowsCover: linear-gradient(0deg, #313131, #585858 25%);
     --urlLivetvCover: linear-gradient(0deg, #313131, #585858 25%);
@@ -139,6 +149,8 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --urlMixedCover: linear-gradient(0deg, #313131, #585858 25%);
     --urlRecordedmoviesCover: linear-gradient(0deg, #313131, #585858 25%);
     --urlRecordedtvCover: linear-gradient(0deg, #313131, #585858 25%);
+    --urlAnimeCover: linear-gradient(0deg, #313131, #585858 25%);
+    --urlSportsCover: linear-gradient(0deg, #313131, #585858 25%);
 }
 ```
 
@@ -187,6 +199,8 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --colorOverlayMixedCover: rgb();
     --colorOverlayRecordedmoviesCover: rgb();
     --colorOverlayRecordedtvCover: rgb();
+    --colorOverlayAnimeCover: rgb();
+    --colorOverlaySportsCover: rgb();
 
     <!-- cover images; input the url pointing to an image. -->
 
@@ -201,6 +215,8 @@ This is a Jellyfin add-on that allows you to customise My Media cover arts. This
     --urlMixedCover: url();
     --urlRecordedmoviesCover: url();
     --urlRecordedtvCover: url();
+    --urlAnimeCover: url();
+    --urlSportsCover: url();
 
 }
 
@@ -245,7 +261,3 @@ Suppose you want to modify the Live TV cover art. You'll have to modify the vari
 4. Click save.
 </details>
 
-
-<hr>
-
-```
