@@ -159,7 +159,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
       </details>
 
 <details>
-  <summary><i>3. Enable extra overlay buttons on cards on desktop</i></summary>
+  <summary><i>3. Enable or disable extra overlay buttons on cards on desktop</i></summary>
 
   <img width="400" height="auto" alt="image" src="https://github.com/user-attachments/assets/cb8479c2-c577-4d54-a567-697f54291a3b" />
 
@@ -169,7 +169,8 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
       --extraCardButtonsVisibility: block;
     }
     ```
-- To hide them again, simply remove this code block or replace `block` with `none`.
+- To hide the three-dot button that shows up next to these buttons, also include `--menuButtonVisibility: none;` in `:root{}`
+- To undo these changes, simply remove this code block or switch between `block` and `none`.
       </details>
 
 <details>
@@ -260,6 +261,23 @@ https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
 - You can also experiment and share your own take there if you wish.
       </details>
 
+<details>
+  <summary><i>10. Increase the size of Continue Watching cards so that they stand out</i></summary>
+
+<img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/2222d5b1-00d8-4859-90fb-eeb14d488bbd" />
+
+- You can adjust their scaling `--resumeCardScale`.
+- Use any values over 1.0 to make them bigger.
+
+```
+:root{
+  --resumeCardScale: 1.25;
+}
+```
+
+- To undo this change, simply remove this code block or set the value back to `1`.
+      </details>
+
 <hr>
 
 ### 🆗 Tested on
@@ -273,12 +291,13 @@ https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
 ### 🛠️ Troubleshooting
 
 <details>
-  <summary>1️⃣ - <i>How do I check if I am using the latest version of ElegantFin?</i></summary>
+  <summary>1️⃣ - <i>How do I check which version of ElegantFin I am using?</i></summary>
 
 - Check the version number at the bottom in the Settings screen.
-- It should be something like `ElegantFin v25.XX.XX`.
+- It should be something like `ElegantFin v26.YY.ZZ`.
 
-        <img width="380" height="300" alt="image" src="https://github.com/user-attachments/assets/aecca6f5-7bd3-4057-9131-aa60b3becbaf" />
+<img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/c697f508-16db-4b1a-bfac-123decd943fa" />
+
 
 </details>
 
