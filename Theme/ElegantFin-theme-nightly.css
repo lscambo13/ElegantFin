@@ -1982,6 +1982,30 @@ progress + span {
     color: var(--textColor) !important;
 }
 
+.layout-desktop .itemExternalLinks.focuscontainer-x > a[href*="letterboxd.com"]:hover,
+.itemExternalLinks.focuscontainer-x > a[href*="letterboxd.com"]:active {
+    background-color: rgb(0, 0, 0) !important;
+    color: var(--textColor) !important;
+}
+
+.layout-desktop .itemExternalLinks.focuscontainer-x > a[title*="Radarr"]:hover,
+.itemExternalLinks.focuscontainer-x > a[title*="Radarr"]:active {
+    background-color: rgb(255, 194, 48) !important;
+    color: var(--textColor) !important;
+}
+
+.layout-desktop .itemExternalLinks.focuscontainer-x > a[title*="Sonarr"]:hover,
+.itemExternalLinks.focuscontainer-x > a[title*="Sonarr"]:active {
+    background-color: rgb(7, 186, 233) !important;
+    color: var(--textColor) !important;
+}
+
+.layout-desktop .itemExternalLinks.focuscontainer-x > a[title*="Bazarr"]:hover,
+.itemExternalLinks.focuscontainer-x > a[title*="Bazarr"]:active {
+    background-color: rgb(0, 0, 0) !important;
+    color: var(--textColor) !important;
+}
+
 .itemTags,
 .itemTags > a {
     display: none;
