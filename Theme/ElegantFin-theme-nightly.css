@@ -1930,6 +1930,7 @@ progress + span {
 
 .itemExternalLinks.focuscontainer-x > .button-link {
     color: var(--textColor);
+    background-color: var(--selectorBackgroundColor);
     padding: 0.125em 0.5em;
     border-radius: var(--smallerRadius);
     margin-bottom: 0.5em;
