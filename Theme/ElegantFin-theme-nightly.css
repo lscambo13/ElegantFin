@@ -1921,14 +1921,10 @@ progress + span {
 }
 
 .itemExternalLinks {
-    color: var(--textColor);
-}
-
-.itemExternalLinks.focuscontainer-x {
     color: transparent;
 }
 
-.itemExternalLinks.focuscontainer-x > .button-link {
+.itemExternalLinks > .button-link {
     color: var(--textColor);
     background-color: var(--selectorBackgroundColor);
     padding: 0.125em 0.5em;
@@ -1936,74 +1932,74 @@ progress + span {
     margin-bottom: 0.5em;
 }
 
-.layout-mobile .itemExternalLinks.focuscontainer-x > .button-link:hover:not(:active) {
+.layout-mobile .itemExternalLinks > .button-link:hover:not(:active) {
     color: var(--textColor) !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a:hover,
-.itemExternalLinks.focuscontainer-x > a:active {
+.layout-desktop .itemExternalLinks > a:hover,
+.itemExternalLinks > a:active {
     background-color: var(--activeColor) !important;
     color: white !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[href*="themoviedb.org"]:hover,
-.itemExternalLinks.focuscontainer-x > a[href*="themoviedb.org"]:active {
+.layout-desktop .itemExternalLinks > a[href*="themoviedb.org"]:hover,
+.itemExternalLinks > a[href*="themoviedb.org"]:active {
     background-color: rgb(26, 183, 216) !important;
     color: black !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[href*="imdb.com"]:hover,
-.itemExternalLinks.focuscontainer-x > a[href*="imdb.com"]:active {
+.layout-desktop .itemExternalLinks > a[href*="imdb.com"]:hover,
+.itemExternalLinks > a[href*="imdb.com"]:active {
     background-color: rgb(226, 182, 22) !important;
     color: black !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[href*="thetvdb.com"]:hover,
-.itemExternalLinks.focuscontainer-x > a[href*="thetvdb.com"]:active {
+.layout-desktop .itemExternalLinks > a[href*="thetvdb.com"]:hover,
+.itemExternalLinks > a[href*="thetvdb.com"]:active {
     background-color: rgb(108, 213, 145) !important;
     color: black !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[href*="trakt.tv"]:hover,
-.itemExternalLinks.focuscontainer-x > a[href*="trakt.tv"]:active {
+.layout-desktop .itemExternalLinks > a[href*="trakt.tv"]:hover,
+.itemExternalLinks > a[href*="trakt.tv"]:active {
     background-color: rgb(171, 58, 173) !important;
     color: var(--textColor) !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[href*="theaudiodb.com"]:hover,
-.itemExternalLinks.focuscontainer-x > a[href*="theaudiodb.com"]:active {
+.layout-desktop .itemExternalLinks > a[href*="theaudiodb.com"]:hover,
+.itemExternalLinks > a[href*="theaudiodb.com"]:active {
     background-color: rgb(99, 153, 204) !important;
     color: rgb(15, 22, 28) !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[href*="musicbrainz.org"]:hover,
-.itemExternalLinks.focuscontainer-x > a[href*="musicbrainz.org"]:active {
+.layout-desktop .itemExternalLinks > a[href*="musicbrainz.org"]:hover,
+.itemExternalLinks > a[href*="musicbrainz.org"]:active {
     background-color: rgb(186, 71, 143) !important;
     color: var(--textColor) !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[href*="letterboxd.com"]:hover,
-.itemExternalLinks.focuscontainer-x > a[href*="letterboxd.com"]:active {
-    background-color: rgb(0, 0, 0) !important;
+.layout-desktop .itemExternalLinks > a[href*="letterboxd.com"]:hover,
+.itemExternalLinks > a[href*="letterboxd.com"]:active {
+    background-color: rgb(20, 24, 28) !important;
     color: var(--textColor) !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[title*="Radarr"]:hover,
-.itemExternalLinks.focuscontainer-x > a[title*="Radarr"]:active {
+.layout-desktop .itemExternalLinks > a[title*="Radarr"]:hover,
+.itemExternalLinks > a[title*="Radarr"]:active {
     background-color: rgb(255, 194, 48) !important;
-    color: var(--textColor) !important;
+    color: black !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[title*="Sonarr"]:hover,
-.itemExternalLinks.focuscontainer-x > a[title*="Sonarr"]:active {
+.layout-desktop .itemExternalLinks > a[title*="Sonarr"]:hover,
+.itemExternalLinks > a[title*="Sonarr"]:active {
     background-color: rgb(7, 186, 233) !important;
-    color: var(--textColor) !important;
+    color: black !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[title*="Bazarr"]:hover,
-.itemExternalLinks.focuscontainer-x > a[title*="Bazarr"]:active {
-    background-color: rgb(0, 0, 0) !important;
-    color: var(--textColor) !important;
+.layout-desktop .itemExternalLinks > a[title*="Bazarr"]:hover,
+.itemExternalLinks > a[title*="Bazarr"]:active {
+    background-color: var(--textColor) !important;
+    color: black !important;
 }
 
 .itemTags,
