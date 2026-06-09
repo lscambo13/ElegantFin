@@ -3084,7 +3084,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
     background: var(--selectorBackgroundColor) !important;
 }
 
-.verticalSection {
+.verticalSection:not(:empty) {
     margin-top: 0.5em;
     margin-bottom: 1em;
 }
