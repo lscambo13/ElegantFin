@@ -2958,8 +2958,15 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .layout-tv .nextUpSection,
 .layout-tv .detailSection > #listChildrenCollapsible,
 .collectionItems,
-.programGuideSection {
+.programGuideSection,
+/* Support .series-episodes-section for KefinTweaks (https://github.com/ranaldsgift/KefinTweaks) */
+.series-episodes-section,
+.series-episodes-section ~ #listChildrenCollapsible {
     grid-column: 1 / -1;
+}
+
+.series-episodes-section {
+    order: 4;
 }
 
 .collectionItems {
