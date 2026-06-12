@@ -4076,6 +4076,13 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     container-type: size;
     height: var(--appBarHeight);
     max-height: var(--appBarHeight);
+    position: sticky;
+    top: 0;
+    z-index: 1099;
+}
+
+.touch-menu-la {
+    z-index: 1099;
 }
 
 @container skinHeader (min-height: 4.9em) {
