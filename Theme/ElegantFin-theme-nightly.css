@@ -1969,6 +1969,7 @@ progress + span {
     color: var(--textColor) !important;
 }
 
+/* Support for Jellyfin Enhanced (https://github.com/n00bcodr/Jellyfin-Enhanced) */
 .layout-desktop .itemExternalLinks > a[href*="letterboxd.com"]:hover,
 .itemExternalLinks > a[href*="letterboxd.com"]:active {
     background-color: rgb(20, 24, 28) !important;
@@ -2789,9 +2790,10 @@ div[data-role="controlgroup"] a.ui-btn-active {
     margin-bottom: 1.5em;
 }
 
-/* .layout-mobile .detailSection {
-    grid-template-columns: 1fr !important;
-} */
+/* Support .tmdb-review-swipe-container for Jellyfin Enhanced (https://github.com/n00bcodr/Jellyfin-Enhanced) */
+.tmdb-review-swipe-container {
+    max-width: 93vw;
+}
 
 .detailPageContent {
     gap: 1em;
