@@ -4077,13 +4077,14 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     container-name: skinHeader;
     container-type: size;
     height: var(--appBarHeight);
-    max-height: var(--appBarHeight);
     position: sticky;
     top: 0;
     z-index: 1099;
 }
 
 .touch-menu-la {
+    height: 100vh;
+    height: 100dvh;
     z-index: 1099;
 }
 
