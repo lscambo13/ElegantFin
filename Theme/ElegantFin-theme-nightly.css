@@ -1249,23 +1249,21 @@ select {
     }
 }
 
-/* Theme video styling rolled back because jellyfin does not differentiate between the main video player and theme video playback nicely*/
-/* .videoPlayerContainer {
+body:not(.hide-scroll) > .videoPlayerContainer {
     position: relative !important;
-    -webkit-mask: var(--themeVideoPlayerMask);
-    mask: var(--themeVideoPlayerMask);
-    height: 90vh;
+    -webkit-mask: var(--headerBlurMask);
+    mask: var(--headerBlurMask);
+    height: 80vh;
 }
 
-.layout-mobile .videoPlayerContainer {
+.layout-mobile body:not(.hide-scroll) > .videoPlayerContainer {
+    height: 40vh;
     z-index: 1;
-    height: 35vh;
 }
 
-.videoPlayerContainer>.htmlvideoplayer {
-    width: -webkit-fill-available;
-    object-fit: cover;
-} */
+.layout-desktop > body:not(.hide-scroll) > .videoPlayerContainer ~ #reactRoot > .backgroundContainer.withBackdrop {
+    opacity: 0.25;
+}
 
 .itemBackdrop {
     display: block !important;
