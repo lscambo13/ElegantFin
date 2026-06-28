@@ -974,6 +974,8 @@ select {
     padding: var(--padding);
     transition: width 0.5s;
     box-sizing: content-box;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 /* this makes the cards bigger and center aligned on older browsers */
@@ -1125,6 +1127,8 @@ select {
 .emby-scroller,
 .scrollX {
     padding-left: var(--sidePadding);
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: var(--sidePadding);
 }
 
 .sectionTabs .scrollX {
