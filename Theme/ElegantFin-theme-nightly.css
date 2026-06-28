@@ -2379,7 +2379,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 .emby-button.block,
 .button-alt,
 .raised,
-#btnDeleteImage,
+.raised:focus,
 .manageRecordingButton,
 .dashboardActionsContainer > .emby-button {
     color: var(--fullContrastColor);
@@ -2406,11 +2406,6 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 
 .fab:focus {
     background: var(--lighterGradientPoint) !important;
-    filter: brightness(1.2);
-}
-
-.raised:focus {
-    background: inherit;
     filter: brightness(1.2);
 }
 
@@ -2550,7 +2545,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .button-delete,
 .btnRevoke,
 #btnShutdown {
-    background: var(--btnDeleteColor);
+    background: var(--btnDeleteColor) !important;
     border: solid var(--btnDeleteBorderColor) var(--borderWidth);
     color: white !important;
 }
