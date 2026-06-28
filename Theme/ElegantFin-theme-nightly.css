@@ -12,6 +12,7 @@
 
     /* Base theme colors */
     color-scheme: dark;
+    color: var(--textColor);
     --darkerGradientPoint: #111827;
     --darkerGradientPointAlpha: rgba(17, 24, 39, 0.85);
     --lighterGradientPoint: #1d2635;
@@ -24,16 +25,15 @@
     --darkerBorderColor: hsl(214, 13%, 22%);
     --lighterBorderColor: hsla(0, 0%, 100%, 0.2);
 
-    --selectorBackgroundColor: rgb(55, 65, 81);
-    --selectorBackgroundColorAlpha: rgba(55, 65, 81, 0.5);
+    --selectorBackgroundColor: hsl(217, 19%, 27%);
+    --selectorBackgroundColorAlpha: hsla(217, 19%, 27%, 0.5);
 
-    --activeColorAlpha: rgba(119, 91, 244, 0.9);
-    --activeColor: rgb(119, 91, 244);
     --osdSeekBarPlayedColor: var(--textColor);
     --osdSeekBarBufferedColorAlpha: rgba(128, 128, 128, 0.5);
     --osdSeekBarThumbColor: white;
     --tableBodyColor: rgb(31 41 55 / 1);
-    --uiAccentColor: rgb(117 111 226);
+    --accentColor: rgb(117 111 226);
+    --accentHoverColor: hsl(243, 75%, 62%);
     --btnMiniPlayColor: rgb(41 154 93);
     --btnMiniPlayBorderColor: rgb(50, 167, 105);
 
@@ -51,6 +51,9 @@
     /* dark theme based text colors */
     --textColor: rgb(209, 213, 219);
     --dimTextColor: rgb(156, 163, 175);
+    --fullContrastColor: #fff;
+    --zeroContrastColor: #000;
+    --svgFilter: none;
 
     /* textures */
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
@@ -67,20 +70,19 @@
     --hoverGradientV: linear-gradient(
         0deg,
         transparent,
-        rgb(255 255 255 / 35%) 45%,
-        rgb(255 255 255 / 35%) 55%,
+        hsla(0, 0%, 100%, 0.35) 45%,
+        hsla(0, 0%, 100%, 0.35) 55%,
         transparent
     );
     --hoverGradientH: linear-gradient(
         90deg,
         transparent,
-        rgb(255 255 255 / 35%) 45%,
-        rgb(255 255 255 / 35%) 55%,
+        hsla(0, 0%, 100%, 0.35) 45%,
+        hsla(0, 0%, 100%, 0.35) 55%,
         transparent
     );
 
     --itemBackdropMask: linear-gradient(180deg, rgba(0, 0, 0, 0.8), 75%, transparent);
-    /* --themeVideoPlayerMask: linear-gradient(180deg, rgba(0, 0, 0, 1), 85%, transparent); */
 
     /* standard component sizes */
     --largerRadius: 1.25em;
@@ -101,6 +103,8 @@
     --blurLargest: blur(20px);
 
     --shadow: 0.1em 0.1em 0.15em hsla(0, 0%, 0%, 0.3);
+    --cardShadow: 0 1px 6px 0px hsla(0, 0%, 0%, 0.3);
+    --iconShadow: 0.1em 0.1em 0.15em hsla(0, 0%, 0%, 0.7);
 
     /* use "" to enable a fancy blur behind the app header / top bar [default]; 
        use none (without quotes) to disable it */
@@ -287,7 +291,7 @@ select {
 }
 
 ::selection {
-    background: var(--activeColorAlpha);
+    background: var(--accentHoverColor);
 }
 
 .cardImageIcon {
@@ -300,14 +304,14 @@ select {
 
 .card:focus .cardBox.visualCardBox,
 .card:focus .cardBox:not(.visualCardBox) .cardScalable {
-    border-color: white !important;
+    border-color: var(--fullContrastColor) !important;
 }
 
 .mdl-radio__focus-circle,
 .mdl-radio.show-focus .mdl-radio__button:focus + .mdl-radio__circles .mdl-radio__outer-circle,
 .mdl-radio.show-focus .mdl-radio__button:focus + .mdl-radio__circles .mdl-radio__inner-circle {
-    background: var(--uiAccentColor);
-    color: var(--uiAccentColor);
+    background: var(--accentColor);
+    color: var(--accentColor);
 }
 
 .emby-button {
@@ -318,7 +322,7 @@ select {
 .paper-icon-button-light.show-focus:focus,
 .emby-tabs .emby-button.show-focus:focus {
     background-color: var(--highlightOutlineColor) !important;
-    color: #fff !important;
+    color: var(--fullContrastColor) !important;
 }
 
 .emby-tabs .emby-button.show-focus:focus {
@@ -369,7 +373,7 @@ select {
     border-radius: var(--largeRadius);
     border: var(--darkerBorderColor) solid var(--borderWidthDouble) !important;
     overflow: hidden !important;
-    box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.4);
+    box-shadow: var(--cardShadow);
     transition: transform 125ms;
 }
 
@@ -431,7 +435,7 @@ select {
 
 .card-hoverable:hover .cardScalable,
 .card-hoverable:hover .visualCardBox {
-    border-color: white !important;
+    border-color: var(--fullContrastColor) !important;
 }
 
 .card-hoverable:hover .visualCardBox .cardScalable {
@@ -533,7 +537,7 @@ select {
 .layout-desktop .cardOverlayButton-br > button {
     color: white;
     display: var(--extraCardButtonsVisibility);
-    text-shadow: var(--shadow);
+    text-shadow: var(--iconShadow);
 }
 .cardOverlayButton-br .cardOverlayButton-hover[data-action="menu"],
 .layout-desktop .listItemButton[data-action="menu"] {
@@ -561,7 +565,7 @@ select {
     background-color: transparent !important;
     color: white;
     border: none;
-    text-shadow: 1px 1px 0.1em black;
+    text-shadow: var(--iconShadow);
     color: white;
 }
 
@@ -999,7 +1003,7 @@ select {
 
 .card .cardTextCentered {
     /* text-align-last: left; */
-    text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.8);
+    text-shadow: var(--shadow);
 }
 
 .detailPageWrapperContainer {
@@ -1109,7 +1113,7 @@ select {
 #itemDetailPage .emby-scroller,
 #itemDetailPage .scrollX {
     margin: 0 calc(-1 * var(--sidePadding));
-    padding-left: calc(var(--sidePadding));
+    padding-left: var(--sidePadding);
     /* mask-image: linear-gradient(90deg, transparent, white var(--sidePadding), white calc(100vw - var(--sidePadding)), transparent); */
 }
 
@@ -1121,7 +1125,7 @@ select {
 
 .emby-scroller,
 .scrollX {
-    padding-left: calc(var(--sidePadding));
+    padding-left: var(--sidePadding);
 }
 
 .sectionTabs .scrollX {
@@ -1186,6 +1190,7 @@ select {
     -webkit-text-fill-color: transparent;
     margin-left: -0.125em;
     transform: translateY(-0.02em);
+    font-variation-settings: "FILL" 1 !important;
 }
 
 [dir="ltr"] .mediaInfoCriticRating {
@@ -1396,6 +1401,7 @@ body:not(.hide-scroll) > .videoPlayerContainer {
     display: grid;
     /* this centers the title and other text on 10.11.0 */
     text-align: center;
+    color: var(--textColor);
 }
 
 /* Both the blocks below position the poster in main media page in the center */
@@ -1647,6 +1653,7 @@ html,
 .appfooter {
     background-color: var(--headerColor) !important;
     backdrop-filter: var(--blurLargest) !important;
+    color: var(--textColor);
 }
 
 .lyricPage {
@@ -1674,7 +1681,7 @@ html,
 }
 
 .buttonActive {
-    color: var(--uiAccentColor) !important;
+    color: var(--accentColor) !important;
 }
 
 #divRunningTasks progress {
@@ -1712,7 +1719,8 @@ html,
 
 .itemProgressBarForeground {
     border-radius: 0 var(--largeRadius) var(--largeRadius) 0;
-    background-color: var(--dimTextColor);
+    background-color: light-dark(var(--zeroContrastColor), var(--textColor));
+    opacity: 0.75;
 }
 
 .backgroundProgress > div,
@@ -1721,16 +1729,16 @@ html,
 }
 
 .playbackProgress > div {
-    background-color: var(--uiAccentColor);
+    background-color: var(--accentColor);
 }
 
 ::-moz-progress-bar {
-    background: var(--uiAccentColor) !important;
+    background: var(--accentColor) !important;
     border-radius: var(--smallRadius) inherit var(--smallRadius) 0;
 }
 
 ::-webkit-progress-value {
-    background: var(--uiAccentColor) !important;
+    background: var(--accentColor) !important;
     border-radius: var(--smallRadius) inherit var(--smallRadius) 0;
 }
 
@@ -1743,7 +1751,7 @@ progress,
 }
 
 progress + span {
-    color: var(--uiAccentColor) !important;
+    color: var(--accentColor) !important;
 }
 
 .mdl-spinner__circle {
@@ -1850,10 +1858,19 @@ progress + span {
 
 .selectLabel {
     max-height: 2em;
+    color: var(--textColor);
+}
+
+.inputLabelUnfocused {
+    color: var(--textColor);
+}
+
+.inputLabelFocused {
+    color: var(--fullContrastColor);
 }
 
 .button-link {
-    color: rgb(200, 200, 200);
+    color: var(--dimTextColor);
 }
 
 .button-link:hover {
@@ -1862,7 +1879,7 @@ progress + span {
 }
 
 .button-link:active {
-    color: rgb(243, 243, 243) !important;
+    color: var(--fullContrastColor) !important;
     text-decoration: none;
 }
 
@@ -1882,7 +1899,7 @@ progress + span {
 }
 
 .btnHeaderSave.button-flat {
-    color: var(--uiAccentColor) !important;
+    color: var(--accentColor) !important;
     gap: 0.3em;
     border-radius: var(--smallRadius);
 }
@@ -1927,7 +1944,7 @@ progress + span {
 
 .layout-desktop .itemExternalLinks > a:hover,
 .itemExternalLinks > a:active {
-    background-color: var(--activeColor) !important;
+    background-color: var(--accentColor) !important;
     color: white !important;
 }
 
@@ -1952,7 +1969,7 @@ progress + span {
 .layout-desktop .itemExternalLinks > a[href*="trakt.tv"]:hover,
 .itemExternalLinks > a[href*="trakt.tv"]:active {
     background-color: rgb(171, 58, 173) !important;
-    color: var(--textColor) !important;
+    color: white !important;
 }
 
 .layout-desktop .itemExternalLinks > a[href*="theaudiodb.com"]:hover,
@@ -1964,14 +1981,14 @@ progress + span {
 .layout-desktop .itemExternalLinks > a[href*="musicbrainz.org"]:hover,
 .itemExternalLinks > a[href*="musicbrainz.org"]:active {
     background-color: rgb(186, 71, 143) !important;
-    color: var(--textColor) !important;
+    color: white !important;
 }
 
 /* Support for Jellyfin Enhanced (https://github.com/n00bcodr/Jellyfin-Enhanced) */
 .layout-desktop .itemExternalLinks > a[href*="letterboxd.com"]:hover,
 .itemExternalLinks > a[href*="letterboxd.com"]:active {
     background-color: rgb(20, 24, 28) !important;
-    color: var(--textColor) !important;
+    color: white !important;
 }
 
 .layout-desktop .itemExternalLinks > a[title*="Radarr"]:hover,
@@ -2081,7 +2098,7 @@ progress + span {
 .innerCardFooter,
 .chapterThumbTextContainer {
     background: var(--cardFooterGradient);
-    text-shadow: 0.1em 0.1em 0px black;
+    text-shadow: var(--shadow);
     padding: 0em 2em 2em 2em;
     align-content: end;
     display: grid;
@@ -2189,7 +2206,7 @@ progress + span {
     border-radius: var(--smallerRadius) !important;
     box-shadow: inset 0em 7em 10em 20px rgba(0, 0, 0, 0.8);
     background: transparent;
-    border-color: white;
+    border-color: var(--fullContrastColor);
     border-style: solid;
     border-width: var(--borderWidthDouble);
     outline: none;
@@ -2197,7 +2214,7 @@ progress + span {
 
 @supports (display: revert) {
     .emby-checkbox:checked + span + .checkboxOutline {
-        outline: solid var(--borderWidth) white;
+        outline: solid var(--borderWidth) var(--fullContrastColor);
     }
 }
 
@@ -2210,7 +2227,7 @@ progress + span {
 
 .itemSelectionPanel .material-icons.check:before {
     font-size: 4em;
-    color: #ffffff;
+    color: var(--fullContrastColor);
     padding: 0.25em;
 }
 
@@ -2291,7 +2308,7 @@ progress + span {
     }
 
     .emby-checkbox:focus + span + .checkboxOutline {
-        border-color: white !important;
+        border-color: var(--fullContrastColor) !important;
         outline: var(--borderWidth) solid var(--highlightOutlineColor);
     }
 }
@@ -2366,7 +2383,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 #btnDeleteImage,
 .manageRecordingButton,
 .dashboardActionsContainer > .emby-button {
-    color: #fff;
+    color: var(--fullContrastColor);
     border-radius: var(--smallRadius);
     background: var(--lighterGradientPoint);
     border: var(--defaultBorder);
@@ -2383,7 +2400,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 }
 
 .fab {
-    color: #fff;
+    color: var(--fullContrastColor);
     background: var(--lighterGradientPoint);
     border: var(--defaultBorder);
 }
@@ -2401,7 +2418,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 .raised:active,
 .fab:active,
 .emby-button:active {
-    filter: brightness(1.2) !important;
+    filter: brightness(1.05) !important;
     transform: scale(0.98);
 }
 
@@ -2446,18 +2463,18 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 }
 
 .layout-desktop .detailButton:not(.btnPlay):hover {
-    color: black;
+    color: var(--zeroContrastColor);
     background: var(--dimTextColor);
 }
 
 .detailButton:active {
-    color: black;
+    color: var(--zeroContrastColor);
     background: var(--textColor);
 }
 
 .btnPlay.detailButton {
     background-color: var(--textColor);
-    color: black;
+    color: var(--zeroContrastColor);
     border-radius: 3em;
     border-color: var(--borderColor);
     height: 3em;
@@ -2516,18 +2533,18 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 
 .localnav > .emby-button {
     background: var(--lighterGradientPoint) !important;
-    color: #fff;
+    color: var(--fullContrastColor);
     padding: 0.8em 0.8em;
 }
 
 div[data-role="controlgroup"] a.ui-btn-active {
     background: var(--selectorBackgroundColor) !important;
-    color: #fff !important;
+    color: var(--fullContrastColor) !important;
 }
 
 .guide-date-tab-button.emby-tab-button-active,
 .guide-date-tab-button:focus {
-    color: white;
+    color: var(--fullContrastColor);
 }
 
 #btnDeleteImage,
@@ -2536,11 +2553,13 @@ div[data-role="controlgroup"] a.ui-btn-active {
 #btnShutdown {
     background: var(--btnDeleteColor);
     border: solid var(--btnDeleteBorderColor) var(--borderWidth);
+    color: white !important;
 }
 
 .button-submit {
     background: var(--btnSubmitColor) !important;
     border: solid var(--btnSubmitBorderColor) var(--borderWidth) !important;
+    color: white !important;
 }
 
 .collapseContent,
@@ -2548,6 +2567,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .formDialogHeader:not(.formDialogHeader-clear) {
     background-color: var(--headerColor);
     backdrop-filter: var(--blurDefault);
+    color: var(--textColor);
 }
 
 .paperList {
@@ -2571,6 +2591,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 
 .listItemIcon:not(.listItemIcon-transparent) {
     background-color: var(--lighterGradientPoint) !important;
+    color: var(--textColor);
 }
 
 .listItemIcon.notification_important {
@@ -2582,7 +2603,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .listItemIcon.schedule:not(.listItemIcon-transparent),
 .listItemIcon.person:not(.listItemIcon-transparent),
 .listItemIcon.live_tv:not(.listItemIcon-transparent) {
-    background-color: rgb(41, 49, 83) !important;
+    background-color: var(--darkerGradientPoint) !important;
     border: var(--defaultBorder);
 }
 
@@ -2631,7 +2652,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .listItem[data-type="Audio"]:has(.playlistIndexIndicatorImage) .listItemBodyText {
-    color: white;
+    color: var(--fullContrastColor);
     font-weight: 600;
 }
 
@@ -2712,7 +2733,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .Mui-selected {
-    background-color: var(--activeColor) !important;
+    background-color: var(--accentColor) !important;
 }
 
 .actionsheetDivider {
@@ -2741,7 +2762,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 } */
 
 .actionSheetMenuItem:has(.listItemIcon.check) {
-    background-color: var(--activeColor);
+    background-color: var(--accentColor);
 }
 
 .actionSheetMenuItem:has(.listItemIcon.check) .listItemBodyText {
@@ -2776,7 +2797,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .navMenuOption-selected {
-    background-color: var(--activeColor) !important;
+    background-color: var(--accentColor) !important;
 }
 
 #itemDetailPage .detailSection {
@@ -2849,18 +2870,22 @@ div[data-role="controlgroup"] a.ui-btn-active {
 
 .selectVideoContainer.trackSelectionFieldContainer > label {
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23d1d5db" viewBox="0 0 24 24"><g stroke-width="1.5"><path d="M2 12c0-4.7 0-7 1.5-8.5C4.9 2 7.3 2 12 2s7 0 8.5 1.5C22 4.9 22 7.3 22 12s0 7-1.5 8.5C19.1 22 16.7 22 12 22s-7 0-8.5-1.5C2 19.1 2 16.7 2 12Z"/><path stroke-linecap="round" d="M17 2.5v19M7 2.5v19M2.5 7H7m14.5 0H17M2.5 17H7m14.5 0H17M2 12h20"/></g></svg>');
+    filter: var(--svgFilter);
 }
 
 .selectAudioContainer.trackSelectionFieldContainer > label {
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23d1d5db" viewBox="0 0 24 24"><g stroke-width="1.5"><path d="M9 19a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM21 17a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM9 19V8M21 17V6"/><path stroke-linecap="round" d="m15.7 3.8-4 1.3c-1.3.4-2 .6-2.3 1.2C9 6.8 9 7.5 9 8.9V12l12-4v-.5c0-2.5 0-3.7-.8-4.3-.9-.6-2-.2-4.5.6Z"/></g></svg>');
+    filter: var(--svgFilter);
 }
 
 .selectSubtitlesContainer.trackSelectionFieldContainer > label {
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23d1d5db" viewBox="0 0 24 24"><g stroke-width="1.5"><path d="M2 12c0-3.8 0-5.7 1.2-6.8C4.3 4 6.2 4 10 4h4c3.8 0 5.7 0 6.8 1.2C22 6.3 22 8.2 22 12s0 5.7-1.2 6.8C19.7 20 17.8 20 14 20h-4c-3.8 0-5.7 0-6.8-1.2C2 17.7 2 15.8 2 12Z"/><path stroke-linecap="round" d="M10 16H6M14 13h4M14 16h-1.5M9.5 13h2M18 16h-1.5M6 13h1"/></g></svg>');
+    filter: var(--svgFilter);
 }
 
 .selectSourceContainer.trackSelectionFieldContainer > label {
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="%23d1d5db" d="m15.4 4.05-.5.56.5-.56Zm3.95 3.57-.5.55.5-.55Zm2.3 2.53-.68.3.68-.3ZM3.17 20.83l.53-.53-.53.53Zm17.66 0-.53-.53.53.53Zm-6.83.42h-4v1.5h4v-1.5ZM2.75 14v-4h-1.5v4h1.5Zm18.5-.44V14h1.5v-.44h-1.5Zm-6.36-8.95 3.96 3.56 1-1.11L15.9 3.5l-1 1.11Zm7.86 8.95c0-1.69.02-2.75-.41-3.71l-1.37.6c.26.6.28 1.3.28 3.11h1.5Zm-3.9-5.39c1.35 1.22 1.85 1.7 2.12 2.29l1.37-.61c-.43-.96-1.23-1.66-2.49-2.8l-1 1.12Zm-8.82-5.42c1.58 0 2.18.01 2.71.22l.54-1.4c-.85-.33-1.78-.32-3.25-.32v1.5Zm5.86.75c-1.08-.98-1.76-1.6-2.61-1.93l-.54 1.4c.53.2.98.59 2.15 1.64l1-1.11ZM10 21.25c-1.9 0-3.26 0-4.29-.14-1-.13-1.58-.39-2-.81l-1.07 1.06c.75.75 1.7 1.08 2.87 1.24 1.15.15 2.63.15 4.49.15v-1.5ZM1.25 14c0 1.86 0 3.34.15 4.49a4.71 4.71 0 0 0 1.24 2.87L3.7 20.3c-.42-.43-.67-1-.81-2.01A36 36 0 0 1 2.75 14h-1.5ZM14 22.75c1.86 0 3.34 0 4.49-.15a4.71 4.71 0 0 0 2.87-1.24L20.3 20.3c-.43.42-1 .68-2.01.81-1.03.14-2.38.14-4.29.14v1.5ZM21.25 14c0 1.9 0 3.26-.14 4.29-.13 1-.39 1.58-.81 2l1.06 1.07a4.71 4.71 0 0 0 1.24-2.87c.15-1.15.15-2.63.15-4.49h-1.5Zm-18.5-4c0-1.9 0-3.26.14-4.29.14-1 .39-1.58.81-2L2.64 2.63A4.71 4.71 0 0 0 1.4 5.51c-.15 1.15-.15 2.63-.15 4.49h1.5Zm7.28-8.75c-1.87 0-3.36 0-4.51.15a4.72 4.72 0 0 0-2.88 1.24L3.7 3.7c.42-.42 1-.67 2.02-.81 1.03-.14 2.4-.14 4.31-.14v-1.5Z"/><path stroke="%23d1d5db" stroke-width="1.5" d="M13 2.5V5c0 2.36 0 3.54.73 4.27.73.73 1.91.73 4.27.73h4"/></svg>');
+    filter: var(--svgFilter);
 }
 
 .detailSectionContent a:not(.overview-expand) {
@@ -3000,11 +3025,11 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .alphaPickerButton {
     font-family: monospace;
     margin: 0.15em;
-    color: rgba(255, 255, 255, 0.25);
+    color: var(--dimTextColor);
 }
 
 .alphaPickerButton-selected {
-    color: rgba(255, 255, 255, 1);
+    color: var(--zeroContrastColor) !important;
 }
 
 .alphaPicker-vertical {
@@ -3105,7 +3130,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .sectionTitleTextButton:active {
-    color: white !important;
+    color: var(--fullContrastColor) !important;
 }
 
 .sectionTitleContainer-cards {
@@ -3141,6 +3166,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
     width: 1.5rem;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23D1D5DB' aria-hidden='true'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z'%3E%3C/path%3E%3C/svg%3E")
         no-repeat center center;
+    filter: var(--svgFilter);
     background-size: contain;
     /* Stops miscalculating the size on hover effect */
 }
@@ -3176,7 +3202,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .upNextContainer .upNextDialog-countdownText {
-    color: white;
+    color: var(--fullContrastColor);
 }
 
 .skip-button-container {
@@ -3188,7 +3214,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
     box-shadow: var(--shadow);
     margin-right: var(--sidePadding);
     border-radius: 3em;
-    color: black;
+    color: var(--zeroContrastColor);
 }
 
 /* this allows the skip button get focused correctly on TVs using remote navigation; needs 10.10.7*/
@@ -3198,7 +3224,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .skip-button:hover {
-    background-color: white;
+    background-color: var(--fullContrastColor);
 }
 
 .skip-button:active {
@@ -3208,6 +3234,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 
 .toast,
 .upNextContainer {
+    color: var(--textColor);
     background: var(--headerColor) !important;
     border: var(--defaultBorder) !important;
     backdrop-filter: var(--blurDefault);
@@ -3223,8 +3250,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 
 @media (hover: hover) and (pointer: fine) {
     .paper-icon-button-light:hover:not(:disabled) {
-        color: #fff;
-        background-color: rgb(255 255 255 / 5%);
+        color: white;
     }
 
     .actionSheetMenuItem.emby-button:has(.listItemIcon.material-icons.check[style*="hidden"]):hover {
@@ -3244,16 +3270,16 @@ div[data-role="controlgroup"] a.ui-btn-active {
 
     .button-flat:hover {
         background-color: rgba(255, 255, 255, 0.2);
-        color: white;
+        color: var(--fullContrastColor);
     }
 
     .btnPlay.detailButton:hover {
         background-color: var(--textColor);
-        color: black;
+        color: var(--zeroContrastColor);
     }
 
     .alphaPickerButton:hover {
-        color: rgba(255, 255, 255, 1);
+        color: var(--fullContrastColor);
     }
 
     .listItem:hover {
@@ -3286,7 +3312,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .paper-icon-button-light:active:not(:disabled) {
-    color: #fff;
+    color: white;
     background-color: rgb(255 255 255 / 5%);
 }
 
@@ -3312,7 +3338,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .inputLabelFocused,
 .selectLabelFocused,
 .textareaLabelFocused {
-    color: #fff;
+    color: var(--fullContrastColor);
 }
 
 .emby-select-withcolor:focus,
@@ -3375,7 +3401,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
     font-size: 4em;
     white-space: pre-wrap;
     padding-bottom: 0.5ch;
-    color: white;
+    color: var(--fullContrastColor);
 }
 
 .nameContainer > h1.itemName,
@@ -3574,7 +3600,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 .progressring-spiner {
-    border-color: var(--uiAccentColor);
+    border-color: var(--accentColor);
 }
 
 .skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.semiTransparent.noHeaderRight {
@@ -3632,7 +3658,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     margin-bottom: -1em;
     font-size: 1.875em;
     font-weight: 800;
-    color: white;
+    color: var(--fullContrastColor);
     text-align: center;
 }
 
@@ -3688,7 +3714,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 .filterIndicator {
-    background: var(--activeColor);
+    background: var(--accentColor);
 }
 
 /* this :not() is needed to prevent affecting the mixed media libraries on the home page */
@@ -3861,16 +3887,16 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 .MuiTabs-flexContainer > .MuiButtonBase-root.Mui-selected {
-    color: white;
+    color: var(--fullContrastColor);
     background-color: transparent !important;
 }
 
 .MuiToggleButtonGroup-grouped.Mui-selected {
-    color: white;
+    color: var(--fullContrastColor);
 }
 
 .MuiButtonBase-root.MuiIconButton-root:hover {
-    color: white;
+    color: var(--fullContrastColor);
     background-color: transparent;
 }
 
@@ -3930,7 +3956,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 
 .skinHeader-withBackground.semiTransparent .headerButton,
 .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) .headerButton {
-    text-shadow: 1px 1px 0 #00000080;
+    text-shadow: var(--iconShadow);
+    color: white;
 }
 
 /* this keeps the header elements aligned when its height is modified */
@@ -3995,7 +4022,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 
 .sectionTabs .emby-tab-button-active {
     margin: 0.25em 0.5em;
-    color: black;
+    color: var(--zeroContrastColor);
     background-color: var(--textColor);
 }
 
@@ -4121,6 +4148,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 .skinHeader {
     /* this is for testing a fix for iOS  */
     padding-top: max(env(safe-area-inset-top), var(--safe-area-inset-top)) !important;
+    color: var(--textColor);
 }
 
 .nowPlayingPage {
@@ -4212,7 +4240,7 @@ for extended styling, use the add-on */
 .detail-button:hover,
 .favorite-button:hover {
     background: var(--dimTextColor);
-    color: black;
+    color: var(--zeroContrastColor);
 }
 
 /* basic styling for the Media Bar Plugin - end */
