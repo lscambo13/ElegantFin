@@ -2556,6 +2556,13 @@ div[data-role="controlgroup"] a.ui-btn-active {
     color: white !important;
 }
 
+.userPreferencesPage .button-submit {
+    position: sticky !important;
+    bottom: calc(1em + max(env(safe-area-inset-bottom), var(--safe-area-inset-bottom, 1px)));
+    box-shadow: 0 0.75em 2em 3em var(--darkerGradientPoint);
+    z-index: 2 !important;
+}
+
 .collapseContent,
 .formDialogFooter:not(.formDialogFooter-clear),
 .formDialogHeader:not(.formDialogHeader-clear) {
