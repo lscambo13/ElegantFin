@@ -19,7 +19,7 @@
     order: 2;
 }
 
-.backdrop,
+.backdrop:not(.tmla-mask),
 .backdrop-container,
 .backdrop-overlay {
     mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), 70%, rgba(0, 0, 0, 0));
@@ -27,7 +27,7 @@
     background-color: transparent;
 }
 
-.backdrop {
+.backdrop:not(.tmla-mask) {
     transform-origin: center left;
 }
 
@@ -63,7 +63,7 @@
     top: 10vh;
 }
 
-.backdrop,
+.backdrop:not(.tmla-mask),
 .backdrop-container,
 .backdrop-overlay {
     mask-image: none;
@@ -163,7 +163,7 @@
         top: calc(100% - 15em);
     }
 
-    .backdrop {
+    .backdrop:not(.tmla-mask) {
         transform-origin: center;
     }
 
