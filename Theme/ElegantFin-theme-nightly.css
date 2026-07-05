@@ -2440,6 +2440,14 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     transform: scale(1.25);
 }
 
+.cardScalable .material-icons.more_vert:before {
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 700,
+        "GRAD" 0,
+        "opsz" 35;
+}
+
 .emby-button[title="Favorite"] .material-icons.favorite:before {
     font-variation-settings:
         "FILL" 1,
