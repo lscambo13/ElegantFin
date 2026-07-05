@@ -972,8 +972,6 @@ select {
     padding: var(--padding);
     transition: width 0.5s;
     box-sizing: content-box;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
 }
 
 /* this makes the cards bigger and center aligned on older browsers */
@@ -985,6 +983,8 @@ select {
 
 .layout-mobile .card {
     --padding: 1px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 /* this makes the card sizes smaller when phone is in landscape mode */
