@@ -1764,6 +1764,10 @@ progress + span {
     border-width: 0.25em;
 }
 
+.sliderContainer {
+    --thumb: 0.4em;
+}
+
 .mdl-slider-container {
     height: 1em;
 }
@@ -1773,21 +1777,31 @@ progress + span {
 }
 
 .mdl-slider-background-flex-container {
-    padding: 0;
+    padding: 0 calc(var(--thumb) / 2);
+}
+
+.sliderBubbleTrack {
+    margin: 0 calc(var(--thumb) / 2);
+}
+
+.sliderBubbleText {
+    font-size: 1.5em;
 }
 
 /* this is the osd player slider */
 .mdl-slider-background-flex {
-    border-radius: var(--smallRadius);
-    height: 0.4em;
-    margin-top: -0.2em;
+    border-radius: var(--thumb);
+    height: var(--thumb);
+    margin-top: calc(var(--thumb) / -2);
     background: var(--osdSeekBarBufferedColorAlpha);
     transition: 0.2s linear;
 }
 
 .sliderContainer:active .mdl-slider-background-flex {
-    height: 0.6em;
-    margin-top: -0.3em;
+    --h: calc(var(--thumb) * 1.5);
+    height: var(--h);
+    border-radius: var(--h);
+    margin-top: calc(var(--h) / -2);
 }
 
 .mdl-slider-background-lower {
@@ -1800,47 +1814,36 @@ progress + span {
 
 .mdl-slider::-webkit-slider-thumb {
     background: var(--osdSeekBarThumbColor);
-    width: 0.4em !important;
-    height: 0.4em !important;
-    border-radius: 0.4em;
+    width: var(--thumb) !important;
+    height: var(--thumb) !important;
+    border-radius: var(--thumb);
+    transition: 0.2s linear;
 }
 
-.sliderContainer:hover .mdl-slider::-webkit-slider-thumb {
-    width: 0.2em !important;
-    height: 0.8em !important;
-    border-radius: 0.2em;
-    transform: scale(1);
-}
-
-.sliderContainer:active .mdl-slider::-webkit-slider-thumb,
+.mdl-slider:hover::-webkit-slider-thumb,
+.layout-mobile .mdl-slider::-webkit-slider-thumb,
 .mdl-slider.show-focus:focus::-webkit-slider-thumb {
-    width: 0.2em !important;
-    height: 0.8em !important;
-    border-radius: 0.2em;
-    transform: scale(1) scaleY(1.25);
+    width: calc(var(--thumb) * 1.25) !important;
+    height: calc(var(--thumb) * 5) !important;
+    border-radius: var(--thumb);
+    transform: scale(0.5);
 }
 
-/* These Firefox thumb styles are separate because combining them breaks the effect from chrome */
+/* These Firefox thumb styles are separate because combining them breaks the effect on chrome */
 .mdl-slider::-moz-range-thumb {
     background: var(--osdSeekBarThumbColor);
-    width: 0.4em !important;
-    height: 0.4em !important;
-    border-radius: 0.4em;
+    width: var(--thumb) !important;
+    height: var(--thumb) !important;
+    border-radius: var(--thumb);
+    transition: 0.2s linear;
 }
 
-.sliderContainer:hover .mdl-slider::-moz-range-thumb {
-    width: 0.2em !important;
-    height: 0.8em !important;
-    border-radius: 0.2em;
-    transform: scale(1);
-}
-
-.sliderContainer:active .mdl-slider::-moz-range-thumb,
+.mdl-slider:hover::-moz-range-thumb,
 .mdl-slider.show-focus:focus::-moz-range-thumb {
-    width: 0.2em !important;
-    height: 0.8em !important;
-    border-radius: 0.2em;
-    transform: scale(1) scaleY(1.25);
+    width: calc(var(--thumb) * 1.25) !important;
+    height: calc(var(--thumb) * 5) !important;
+    border-radius: var(--thumb);
+    transform: scale(0.5);
 }
 
 .sliderMarkerContainer {
@@ -3540,10 +3543,6 @@ div[data-role="controlgroup"] a.ui-btn-active {
     background-color: var(--headerColor) !important;
     border-radius: var(--largeRadius) !important;
     border: var(--defaultBorder) !important;
-}
-
-.sliderBubbleText {
-    font-size: 1.5em;
 }
 
 fieldset {
