@@ -1188,7 +1188,7 @@ select {
 .starIcon {
     --tmdb: linear-gradient(to right, #90cea1, #01b4e4);
     --imdb: linear-gradient(to right, #f2db83, #dba506);
-    --colors: var(---tmdb);
+    --colors: var(--tmdb);
     background: var(--colors);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
