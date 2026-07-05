@@ -30,6 +30,12 @@
 :root {
     --elegantFinFooterText: "ElegantFin Nightly";
 
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 425;
+    font-style: normal;
+    -webkit-tap-highlight-color: transparent !important;
+
     /* Base theme colors */
     color-scheme: dark;
     color: var(--textColor);
@@ -83,7 +89,7 @@
     --headerColorGradientAlt: linear-gradient(180deg, rgba(30, 40, 54, 1), 70%, transparent);
     --headerBlurMask: linear-gradient(180deg, white 50%, 85%, transparent);
 
-    --cardFooterGradient: linear-gradient(0deg, rgb(0 0 0 / 90%), 40%, transparent);
+    --cardFooterGradient: linear-gradient(0deg, hsla(0, 0%, 5%, 0.95), 40%, transparent);
     --topOSDGradient: linear-gradient(180deg, hsla(0, 0%, 0%, 0.8), 45%, hsla(0, 0%, 0%, 0));
     --bottomOSDGradient: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8), 45%, hsla(0, 0%, 0%, 0));
 
@@ -124,7 +130,7 @@
 
     --shadow: 0.1em 0.1em 0.15em hsla(0, 0%, 0%, 0.3);
     --cardShadow: 0 1px 6px 0px hsla(0, 0%, 0%, 0.3);
-    --iconShadow: 0.1em 0.1em 0.15em hsla(0, 0%, 0%, 0.7);
+    --iconShadow: 0px 0px 2px hsla(0, 0%, 0%, 0.8), 1px 1px 0px hsla(0, 0%, 0%, 0.5);
 
     /* use "" to enable a fancy blur behind the app header / top bar [default]; 
        use none (without quotes) to disable it */
@@ -205,12 +211,11 @@
     --resumeCardScale: 1;
 }
 
-html {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 425;
-    font-style: normal;
-    -webkit-tap-highlight-color: transparent !important;
+:root.layout-mobile {
+    --headerColorGradient: var(--headerColorGradientAlt);
+    --blurLargest: blur(12px);
+    --headerBlurMask: linear-gradient(180deg, white 60%, 90%, transparent);
+    --itemColumnGap: 0.4em;
 }
 
 body {
@@ -226,13 +231,6 @@ select {
 .layout-desktop > body:has(> audio[src]) {
     --primaryItemPageNegativeSpace: calc(14vh + 5em);
     --secondaryItemPageNegativeSpace: calc(60vh + 5em);
-}
-
-.layout-mobile {
-    --headerColorGradient: var(--headerColorGradientAlt);
-    --blurLargest: blur(12px);
-    --headerBlurMask: linear-gradient(180deg, white 60%, 90%, transparent);
-    --itemColumnGap: 0.5em;
 }
 
 .layout-mobile > body {
