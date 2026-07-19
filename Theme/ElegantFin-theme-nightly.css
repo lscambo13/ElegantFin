@@ -194,6 +194,14 @@
        none: makes them always hidden only on mobile */
     --miniOverlayButtonVisibility: block;
 
+    /* none: keeps the media 'Ends at...' time indicator always hidden on phones [default];
+       block: shows the the time when the media will end */
+    --endsAtVisibility: block;
+
+    /* block: keeps the critics tomato rating visible [default];
+       none: hides the critics tomato rating on phones */
+    --criticsRatingVisibility: none;
+
     /* use "" to enable the card hover effect [default]; 
        use none (without quotes) to disable it */
     --cardHoverEffect: "";
@@ -1204,6 +1212,16 @@ select {
 
 [dir="ltr"] .mediaInfoCriticRating::after {
     content: "%";
+}
+
+@media (max-width: 31.25em) {
+    .itemMiscInfo .endsAt {
+        display: var(--endsAtVisibility);
+    }
+
+    .mediaInfoCriticRating {
+        display: var(--criticsRatingVisibility);
+    }
 }
 
 .detailRibbon:has(.portraitCard .folder) {
