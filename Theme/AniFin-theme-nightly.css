@@ -1,8 +1,8 @@
-/*! ElegantFin Theme Nightly for Jellyfin by lscambo13 */
+/*! AniFin Theme Nightly for Jellyfin - an anime-focused fork of ElegantFin by lscambo13 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
-/* @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
+/* @import url("https://cdn.jsdelivr.net/gh/TakiConcepts/AniFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
@@ -28,7 +28,7 @@
 }
 
 :root {
-    --elegantFinFooterText: "ElegantFin Nightly";
+    --elegantFinFooterText: "AniFin Nightly";
 
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -39,37 +39,37 @@
     /* Base theme colors */
     color-scheme: dark;
     color: var(--textColor);
-    --darkerGradientPoint: #111827;
-    --darkerGradientPointAlpha: rgba(17, 24, 39, 0.85);
-    --lighterGradientPoint: #1d2635;
-    --lighterGradientPointAlpha: rgba(29, 38, 53, 0.85);
-    --gradientPointAlpha: rgba(29, 38, 53, 0.3);
-    --headerColor: rgba(30, 40, 54, 0.8);
-    --drawerColor: rgba(30, 40, 54, 0.9);
+    --darkerGradientPoint: #170f26;
+    --darkerGradientPointAlpha: rgba(23, 15, 38, 0.85);
+    --lighterGradientPoint: #2c1e47;
+    --lighterGradientPointAlpha: rgba(44, 30, 71, 0.85);
+    --gradientPointAlpha: rgba(44, 30, 71, 0.3);
+    --headerColor: rgba(40, 27, 64, 0.8);
+    --drawerColor: rgba(40, 27, 64, 0.9);
 
-    --borderColor: hsl(214, 13%, 32%);
-    --darkerBorderColor: hsl(214, 13%, 22%);
-    --lighterBorderColor: hsla(0, 0%, 100%, 0.2);
+    --borderColor: hsl(280, 22%, 34%);
+    --darkerBorderColor: hsl(280, 22%, 22%);
+    --lighterBorderColor: hsla(320, 100%, 92%, 0.2);
 
-    --selectorBackgroundColor: hsl(217, 19%, 27%);
-    --selectorBackgroundColorAlpha: hsla(217, 19%, 27%, 0.5);
+    --selectorBackgroundColor: hsl(280, 20%, 28%);
+    --selectorBackgroundColorAlpha: hsla(280, 20%, 28%, 0.5);
 
-    --osdSeekBarPlayedColor: var(--textColor);
+    --osdSeekBarPlayedColor: var(--accentColor);
     --osdSeekBarBufferedColorAlpha: rgba(128, 128, 128, 0.5);
     --osdSeekBarThumbColor: white;
-    --tableBodyColor: rgb(31 41 55 / 1);
-    --accentColor: rgb(117 111 226);
-    --accentHoverColor: hsl(243, 75%, 62%);
+    --tableBodyColor: rgb(38 27 56 / 1);
+    --accentColor: rgb(236 72 153);
+    --accentHoverColor: hsl(330, 81%, 62%);
     --btnMiniPlayColor: rgb(41 154 93);
     --btnMiniPlayBorderColor: rgb(50, 167, 105);
 
     /* Base component colors */
     --btnDeleteColor: rgb(169, 29, 29);
     --btnDeleteBorderColor: rgb(217, 84, 84);
-    --btnSubmitColor: rgb(61, 54, 178);
-    --btnSubmitBorderColor: rgb(117 111 226);
-    --checkboxCheckedBgColor: rgb(79, 70, 229);
-    --highlightOutlineColor: rgb(37, 99, 235);
+    --btnSubmitColor: rgb(157, 23, 106);
+    --btnSubmitBorderColor: rgb(236, 72, 153);
+    --checkboxCheckedBgColor: rgb(219, 39, 119);
+    --highlightOutlineColor: rgb(34, 211, 238);
 
     --defaultBorder: var(--borderWidth) solid var(--borderColor);
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
@@ -85,8 +85,8 @@
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
     --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), 25%, var(--lighterGradientPoint));
     --backgroundAlphaOverlay: linear-gradient(180deg, var(--darkerGradientPointAlpha) 80%, transparent);
-    --headerColorGradient: linear-gradient(180deg, rgba(30, 40, 54, 0.95) 30%, 55%, transparent 90%);
-    --headerColorGradientAlt: linear-gradient(180deg, rgba(30, 40, 54, 1), 70%, transparent);
+    --headerColorGradient: linear-gradient(180deg, rgba(40, 27, 64, 0.95) 30%, 55%, transparent 90%);
+    --headerColorGradientAlt: linear-gradient(180deg, rgba(40, 27, 64, 1), 70%, transparent);
     --headerBlurMask: linear-gradient(180deg, white 50%, 85%, transparent);
 
     --cardFooterGradient: linear-gradient(0deg, hsla(0, 0%, 5%, 0.95), 40%, transparent);
@@ -154,9 +154,9 @@
        use 'Material Icons' to revert to stock Jellyfin icons */
     --iconPack: "Material Symbols Rounded";
 
-    /* none: hides the watched and mark favorite buttons on hover [default];
-       block: makes them visible */
-    --extraCardButtonsVisibility: none;
+    /* block: makes the watched and mark favorite buttons visible on hover [AniFin default, handy for tracking episodes];
+       none: hides them */
+    --extraCardButtonsVisibility: block;
 
     /* block: makes the three-dot menu button visible [default];
        none: hides the three-dot menu button on hover */
@@ -166,9 +166,9 @@
        none: always hides the original title of Movie/TV */
     --itemOriginalTitleVisibility: block;
 
-    /* none: hides the media library card labels [default]; 
-       block: makes them visible */
-    --libraryLabelVisibility: none;
+    /* block: shows media library card labels [AniFin default, helps tell similar-looking series/seasons apart];
+       none: hides them */
+    --libraryLabelVisibility: block;
 
     /* block: shows the Movie/TV clear logo if it is available [default]; 
        none: makes the clear logo always hidden */
@@ -206,9 +206,9 @@
        use a figure between 0% and 20% according to your liking */
     --backdropTrimFromTop: 10%;
 
-    /* use 1 to keep the size 'Continue Watching' cards normal [default]; 
-       use numbers greater than 1.0 to increase their size (example: 1.25) */
-    --resumeCardScale: 1;
+    /* use 1 to keep the size 'Continue Watching' cards normal;
+       use numbers greater than 1.0 to increase their size (example: 1.25) [AniFin default: 1.15, to make your next episode stand out] */
+    --resumeCardScale: 1.15;
 }
 
 :root.layout-mobile {
@@ -1609,11 +1609,11 @@ html,
 
 .backgroundContainer.withBackdrop {
     opacity: 0.9;
-    background: linear-gradient(0deg, var(--darkerGradientPoint), 45%, rgba(17, 24, 39, 0.25));
+    background: linear-gradient(0deg, var(--darkerGradientPoint), 45%, rgba(23, 15, 38, 0.25));
 }
 
 .layout-tv .backgroundContainer.withBackdrop {
-    background: linear-gradient(0deg, var(--darkerGradientPoint), 45%, rgba(17, 24, 39, 0.95));
+    background: linear-gradient(0deg, var(--darkerGradientPoint), 45%, rgba(23, 15, 38, 0.95));
 }
 
 .layout-mobile .withSectionTabs .backgroundContainer.withBackdrop {
@@ -3637,7 +3637,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 
 #loginPage .padded-left.padded-right.padded-bottom-page {
     width: 28em;
-    background: rgba(30, 40, 54, 0.7);
+    background: rgba(40, 27, 64, 0.7);
     padding: 2em 2em 1em 2em !important;
     border-radius: var(--largerRadius);
     backdrop-filter: var(--blurDefault);

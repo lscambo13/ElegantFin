@@ -1,6 +1,6 @@
 # Pull Request
 
-Thanks for contributing to ElegantFin! Please review the **contributor guidelines** before submitting.
+Thanks for contributing to AniFin! Please review the **contributor guidelines** before submitting.
 
 ## Type of Change
 

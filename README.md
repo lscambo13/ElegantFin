@@ -1,33 +1,35 @@
 <!-- Banner Image -->
-<img src="Theme/assets/img/banner.png?raw=true" alt="ElegantFin Theme for Jellyfin - Banner">
+<img src="Theme/assets/img/banner.png?raw=true" alt="AniFin Theme for Jellyfin - Banner">
 
 <div align="center">
-  <a href="https://www.jsdelivr.com/package/gh/lscambo13/ElegantFin">
+  <a href="https://www.jsdelivr.com/package/gh/TakiConcepts/AniFin">
     <img
-      src="https://img.shields.io/jsdelivr/gh/hm/lscambo13/ElegantFin?style=flat&logo=jsdelivr&logoColor=%23f65e34&label=jsDelivr%20Hits&labelColor=white&color=%23f65e34"
+      src="https://img.shields.io/jsdelivr/gh/hm/TakiConcepts/AniFin?style=flat&logo=jsdelivr&logoColor=%23f65e34&label=jsDelivr%20Hits&labelColor=white&color=%23f65e34"
       alt="jsDelivr Requests"
     />
   </a>
   <br>
-  <a href="https://github.com/lscambo13/ElegantFin/stargazers">
+  <a href="https://github.com/TakiConcepts/AniFin/stargazers">
     <img
-      src="https://img.shields.io/github/stars/lscambo13/ElegantFin?style=flat&logo=github&logoColor=%231f2328&label=GitHub%20Stars&labelColor=white&color=%231f2328"
+      src="https://img.shields.io/github/stars/TakiConcepts/AniFin?style=flat&logo=github&logoColor=%231f2328&label=GitHub%20Stars&labelColor=white&color=%231f2328"
       alt="GitHub Repo stars"
     />
   </a>
 </div>
 
-## ⭐ ElegantFin Theme
+## ⭐ AniFin Theme
 
-This is a Jellyfin theme inspired from Jellyseerr to improve the overall look and experience with various fixes to the UI/UX. It gives Jellyfin a fresh, modern look, and it aims to work on mobile, desktop, and TV, with just one import.
+AniFin is a Jellyfin theme for anime watchers, forked from [ElegantFin](https://github.com/lscambo13/ElegantFin) by lscambo13. It keeps ElegantFin's modern layout and UI/UX fixes, adds an anime-inspired color palette, and defaults a few of its built-in toggles to settings better suited for browsing and tracking episodic anime. It aims to work on mobile, desktop, and TV, with just one import.
 
-#### **Author:** [lscambo13](https://github.com/lscambo13)
+#### **Author:** [TakiConcepts](https://github.com/TakiConcepts) &mdash; forked from [ElegantFin](https://github.com/lscambo13/ElegantFin) by [lscambo13](https://github.com/lscambo13)
 
 <hr>
 
 ### ✨ Key Features
 
-- modern layouts and color tones
+- vibrant, anime-inspired color palette (deep violet base with a sakura-pink accent)
+- library card labels and mark-played/favorite buttons on by default, for easier episode tracking
+- larger Continue Watching cards, so your next episode stands out
 - new and improved animations on most elements
 - rounded corners and even spacing everywhere
 - stylish borders, hover effects and shadows
@@ -40,7 +42,7 @@ This is a Jellyfin theme inspired from Jellyseerr to improve the overall look an
 
 ### 🖼️ Theme Showcase
 
-Captured on ElegantFin v25.08.02
+The screenshots below are from upstream ElegantFin v25.08.02 and show the shared layout; AniFin repaints it in the anime-inspired palette described above.
 
 <details>
   <summary> 💻 <i>Desktop and </i>📱 <i>Mobile Screenshots</i></summary>
@@ -104,7 +106,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <b>Paste the following in Custom CSS code box:</b>
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");
+@import url("https://cdn.jsdelivr.net/gh/TakiConcepts/AniFin@main/Theme/AniFin-jellyfin-theme-build-latest-minified.css");
 ```
 
 <details>
@@ -228,9 +230,9 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
  
 > <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/3e88e270-40f9-48ba-8173-f65b94344f8d" />
 > 
-> - ElegantFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code right after the main import in Custom CSS box, click save and finally refresh your app/webpage.
+> - AniFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code right after the main import in Custom CSS box, click save and finally refresh your app/webpage.
 >   ```css
->   @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
+>   @import url("https://cdn.jsdelivr.net/gh/TakiConcepts/AniFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
 >   ```
 > - To undo this change, simply remove this code block.
    
@@ -259,8 +261,8 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
  
 >   <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/0cab75aa-8fcd-4174-b0db-cc533b724bca" />
 > 
-> - Check out the [the theme Playground page](https://github.com/lscambo13/ElegantFin/discussions/221) for different color themes.
-> - You can also experiment and share your own take there if you wish.
+> - AniFin ships with its own anime-inspired palette by default, but you can still browse upstream ElegantFin's [theme Playground page](https://github.com/lscambo13/ElegantFin/discussions/221) for other community color themes and adapt their `:root` variables.
+> - You can also experiment and share your own take in this fork's own discussions/issues.
  
 </details>
 
@@ -293,10 +295,10 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 ### 🛠️ Troubleshooting
 
 <details>
-  <summary>1️⃣ - <i>How do I check which version of ElegantFin I am using?</i></summary>
+  <summary>1️⃣ - <i>How do I check which version of AniFin I am using?</i></summary>
  
 > - Check the version number at the bottom in the Settings screen.
-> - It should be something like `ElegantFin v26.YY.ZZ`.
+> - It should be something like `AniFin v26.YY.ZZ`.
 > 
 > <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/c697f508-16db-4b1a-bfac-123decd943fa" />
  
@@ -345,8 +347,8 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 <details>
   <summary>6️⃣ - <i>How do I report bugs/issues?</i></summary>
  
-> - First check [here](https://github.com/lscambo13/ElegantFin/issues?q=) whether a similar issue has been reported already. If it exists, upvote and comment there to let me know.
-> - Alternatively, create a new issue [here](https://github.com/lscambo13/ElegantFin/issues/new/choose).
+> - For issues specific to AniFin's palette or UX defaults, check [here](https://github.com/TakiConcepts/AniFin/issues) whether a similar issue has been reported already, or open a new one in this repo.
+> - For issues inherited from the underlying ElegantFin layout, it's also worth checking [upstream's issue tracker](https://github.com/lscambo13/ElegantFin/issues?q=).
  
 </details>
 
@@ -363,7 +365,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 Please read the [Contributor Guidelines](./CONTRIBUTING.md) before opening pull requests.
 
-This is a hobby project. If it helped you, your support really means a lot.
+This is a hobby project built on top of ElegantFin. If ElegantFin's original work helped you, consider supporting its author:
 
 [![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=lscambo13&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/lscambo13)
 
@@ -371,4 +373,4 @@ This is a hobby project. If it helped you, your support really means a lot.
 
 ### 🙏 Feedback Appreciated
 
-Please use the right template when creating an [issue](https://github.com/lscambo13/ElegantFin/issues/new/choose) to [report bugs](https://github.com/lscambo13/ElegantFin/issues/new?template=bug_report.md) or [provide suggestions](https://github.com/lscambo13/ElegantFin/issues/new?template=feature_request.md).
+Please use the right template when creating an [issue](https://github.com/TakiConcepts/AniFin/issues/new/choose) to [report bugs](https://github.com/TakiConcepts/AniFin/issues/new?template=bug_report.md) or [provide suggestions](https://github.com/TakiConcepts/AniFin/issues/new?template=feature_request.md).

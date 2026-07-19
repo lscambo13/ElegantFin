@@ -1,4 +1,6 @@
 {
+    "name": "anifin",
+    "description": "AniFin - an anime-focused Jellyfin theme forked from ElegantFin",
     "devDependencies": {
         "css-declaration-sorter": "^7.4.0",
         "cssnano": "^8.0.1",
@@ -6,11 +8,11 @@
         "postcss-cli": "^11.0.1"
     },
     "scripts": {
-        "build:theme": "postcss ./Theme/ElegantFin-theme-nightly.css -o ./Theme/ElegantFin-jellyfin-theme-build-latest-minified.css",
+        "build:theme": "postcss ./Theme/AniFin-theme-nightly.css -o ./Theme/AniFin-jellyfin-theme-build-latest-minified.css",
         "build:covers-addon": "postcss ./Theme/assets/add-ons/custom-media-covers-nightly.css -o ./Theme/assets/add-ons/custom-media-covers-latest-min.css",
         "build:mediabar-addon": "postcss ./Theme/assets/add-ons/media-bar-plugin-support-nightly.css -o ./Theme/assets/add-ons/media-bar-plugin-support-latest-min.css",
         "build:release": "npm run build:theme && npm run build:covers-addon && npm run build:mediabar-addon",
-        "watch:theme": "postcss ./Theme/ElegantFin-theme-nightly.css -o ./Theme/ElegantFin-theme-nightly-min.css --watch --verbose",
+        "watch:theme": "postcss ./Theme/AniFin-theme-nightly.css -o ./Theme/AniFin-theme-nightly-min.css --watch --verbose",
         "watch:covers-addon": "postcss ./Theme/assets/add-ons/custom-media-covers-nightly.css -o ./Theme/assets/add-ons/custom-media-covers-nightly-min.css --watch --verbose",
         "watch:mediabar-addon": "postcss ./Theme/assets/add-ons/media-bar-plugin-support-nightly.css -o ./Theme/assets/add-ons/media-bar-plugin-support-nightly-min.css --watch --verbose",
         "watch:fixes-addon": "postcss ./Theme/assets/add-ons/seamless-fork-compatibility-nightly.css -o ./Theme/assets/add-ons/seamless-fork-compatibility-nightly-min.css --watch --verbose"

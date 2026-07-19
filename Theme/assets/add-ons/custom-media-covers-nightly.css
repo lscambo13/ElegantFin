@@ -1,4 +1,4 @@
-/*! Add-on: Custom Media Covers Nightly for the ElegantFin Theme for Jellyfin by lscambo13 */
+/*! Add-on: Custom Media Covers Nightly for the AniFin Theme for Jellyfin - forked from ElegantFin by lscambo13 */
 
 :root {
     /* my media library default covers customizations */
@@ -16,20 +16,20 @@
     --colorOverlayRecordedtvCover: rgb(120, 100, 28);
     --colorOverlayAnimeCover: rgb(189, 203, 99);
     --colorOverlaySportsCover: rgb(233, 126, 60);
-    --urlMoviesCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/movies.webp);
-    --urlTvshowsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/tvshows.webp);
-    --urlLivetvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/livetv.webp);
-    --urlPlaylistsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/playlists.webp);
-    --urlBoxsetsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/boxsets.webp);
-    --urlMusicCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/music.webp);
-    --urlHomevideosCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/homevideos.webp);
-    --urlBooksCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/books.webp);
-    --urlFoldersCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
-    --urlMixedCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/mixed.webp);
-    --urlRecordedmoviesCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/recordedmovies.webp);
-    --urlRecordedtvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/recordedtv.webp);
-    --urlAnimeCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/anime.webp);
-    --urlSportsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/sports.webp);
+    --urlMoviesCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/movies.webp);
+    --urlTvshowsCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/tvshows.webp);
+    --urlLivetvCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/livetv.webp);
+    --urlPlaylistsCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/playlists.webp);
+    --urlBoxsetsCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/boxsets.webp);
+    --urlMusicCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/music.webp);
+    --urlHomevideosCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/homevideos.webp);
+    --urlBooksCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/books.webp);
+    --urlFoldersCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
+    --urlMixedCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/mixed.webp);
+    --urlRecordedmoviesCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/recordedmovies.webp);
+    --urlRecordedtvCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/recordedtv.webp);
+    --urlAnimeCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/anime.webp);
+    --urlSportsCover: url(https://raw.githubusercontent.com/TakiConcepts/AniFin/refs/heads/main/Theme/assets/img/library-covers/sports.webp);
 }
 
 [data-type="CollectionFolder"] .defaultCardBackground,
