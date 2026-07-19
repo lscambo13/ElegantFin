@@ -99,6 +99,33 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 <hr>
 
+
+### 🎬 Optional: Item detail trailer backdrop (local trailers)
+
+Fades the **static item backdrop** into a **muted local trailer** on movie/series detail pages when Jellyfin has LocalTrailers for that item. Uses a dedicated `<video>` layer (not the main/theme player), so it does not fight [#247](https://github.com/lscambo13/ElegantFin/issues/247) / [#246](https://github.com/lscambo13/ElegantFin/issues/246).
+
+**1. CSS** — add under your ElegantFin import:
+
+```css
+@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/item-detail-trailer-backdrop.css");
+```
+
+**2. JS** — load `Theme/assets/add-ons/item-detail-trailer-backdrop.js` via [JavaScript Injector](https://github.com/n00bcodr/Jellyfin-JavaScript-Injector) (or File Transformation / equivalent). Inject on the web client after login.
+
+Behavior (v1):
+
+- Local trailers only (`ApiClient.getLocalTrailers`)
+- Muted, playsInline, loop; fade-in after a short delay; bottom edge fades to **transparency** (CSS mask), not a fixed color
+- Skips when `prefers-reduced-motion` or narrow touch layouts
+- Tears down on navigate away; pauses when Play is clicked
+- No trailer → unchanged static backdrop
+
+Requires trailers in the library (e.g. `*-trailer.*` or `Trailers/` extras) and a library scan so Jellyfin indexes them as LocalTrailers.
+
+See issue [#303](https://github.com/lscambo13/ElegantFin/issues/303).
+
+---
+
 ### 👇 How to install/setup this theme?
 
 <b>Paste the following in Custom CSS code box:</b>

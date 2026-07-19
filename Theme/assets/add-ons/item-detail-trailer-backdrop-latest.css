@@ -1,0 +1,141 @@
+/*! Add-on: Item Detail Trailer Backdrop (#303)
+ *
+ * HOME / MEDIA BAR:
+ * ElegantFin media-bar-plugin-support applies:
+ *   .backdrop, .backdrop-container { mask-image: linear-gradient(...70%...) }
+ * That is what fades the front-page slideshow. This file DISABLES that mask
+ * on Media Bar only so home stays unmasked.
+ *
+ * DETAIL PAGES:
+ * Our local-trailer host keeps a transparency mask (inline via JS + rules
+ * below), scoped only to #itemDetailPage:not(.hide).
+ */
+
+/* =========================================================================
+ * 1) MEDIA BAR — strip bottom mask from Media Bar Enhanced + ElegantFin support
+ *    MBE ships its own mask-image on .backdrop/.backdrop-container/.video-backdrop
+ *    (loaded AFTER branding via plugin inject), so we also inject this late via JS.
+ * ========================================================================= */
+.slides .backdrop,
+.slides .backdrop-container,
+.slides .backdrop-overlay,
+.slides .gradient-overlay,
+.slides .video-backdrop,
+.backdrop-container,
+.backdrop-container.full-width-video,
+.backdrop-container .backdrop,
+.backdrop-container .backdrop-overlay,
+.backdrop-container .video-backdrop,
+.backdrop-container video,
+.backdrop,
+.backdrop-overlay,
+.gradient-overlay,
+.gradient-overlay.full-width-video,
+.video-backdrop,
+.video-backdrop-default,
+#slides-container .backdrop,
+#slides-container .backdrop-container,
+#slides-container .gradient-overlay,
+#slides-container video,
+body.media-bar-mobile-16-9 .backdrop-container,
+body.media-bar-mobile-16-9 .gradient-overlay,
+body.media-bar-mobile-16-9 .backdrop,
+body.media-bar-mobile-4-3 .backdrop-container,
+body.media-bar-mobile-4-3 .gradient-overlay,
+body.media-bar-mobile-4-3 .backdrop {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+    -webkit-mask-size: auto !important;
+    mask-size: auto !important;
+    -webkit-mask-repeat: initial !important;
+    mask-repeat: initial !important;
+}
+
+/* =========================================================================
+ * 2) Kill any of OUR trailer nodes outside visible detail
+ * ========================================================================= */
+#itemDetailPage.hide .elegantfin-item-trailer-host,
+#itemDetailPage.hide .elegantfin-item-trailer-bg,
+.slides .elegantfin-item-trailer-host,
+.slides .elegantfin-item-trailer-bg,
+.backdrop-container .elegantfin-item-trailer-host,
+.backdrop-container .elegantfin-item-trailer-bg,
+#homeTab .elegantfin-item-trailer-host,
+#indexPage .elegantfin-item-trailer-host,
+body > .elegantfin-item-trailer-host {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    pointer-events: none !important;
+}
+
+/* =========================================================================
+ * 3) DETAIL PAGE trailer only
+ * ========================================================================= */
+#itemDetailPage:not(.hide) #itemBackdrop.itemBackdrop.elegantfin-has-trailer-video {
+    position: relative !important;
+    background-attachment: scroll !important;
+    background-position: center top !important;
+    overflow: visible !important;
+    z-index: 1 !important;
+}
+
+#itemDetailPage:not(.hide) #itemBackdrop.itemBackdrop > .elegantfin-item-trailer-host.elegantfin-trailer-active {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: calc(100% + 275px) !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+#itemDetailPage:not(.hide) #itemBackdrop.itemBackdrop > .elegantfin-item-trailer-host.elegantfin-trailer-active > .elegantfin-item-trailer-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    pointer-events: none !important;
+    display: block !important;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+
+#itemDetailPage:not(.hide) #itemBackdrop.itemBackdrop > .elegantfin-item-trailer-host.elegantfin-trailer-active > .elegantfin-item-trailer-bg.is-visible {
+    opacity: 1 !important;
+}
+
+#itemDetailPage:not(.hide).elegantfin-trailer-playing .detailPageWrapperContainer {
+    background: transparent !important;
+    background-image: none !important;
+    position: relative;
+    z-index: 5;
+}
+
+#itemDetailPage:not(.hide).elegantfin-trailer-playing .detailLogo {
+    z-index: 6 !important;
+    position: absolute !important;
+}
+
+#itemDetailPage:not(.hide).elegantfin-trailer-playing .detailImageContainer,
+#itemDetailPage:not(.hide).elegantfin-trailer-playing .mainDetailButtons,
+#itemDetailPage:not(.hide).elegantfin-trailer-playing .nameContainer {
+    position: relative;
+    z-index: 6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #itemDetailPage .elegantfin-item-trailer-host {
+        display: none !important;
+    }
+}
