@@ -90,10 +90,11 @@ body > .elegantfin-item-trailer-host {
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
+    max-width: 100% !important;
     height: calc(100% + 275px) !important;
-    overflow: hidden !important;
+    overflow: hidden !important; /* clip video only inside host */
     pointer-events: none !important;
-    z-index: 1 !important;
+    z-index: 0 !important; /* under detail content / episode rows */
     display: block !important;
     visibility: visible !important;
 }
@@ -139,3 +140,66 @@ body > .elegantfin-item-trailer-host {
         display: none !important;
     }
 }
+
+/* =========================================================================
+ * 4) DETAIL CONTENT — episodes/cast rows must full-bleed; never masked/clipped
+ *    Negative-margin scrollers need overflow:visible ancestors. Trailer host
+ *    must stay under secondary content (z-index) and not paint over it.
+ * ========================================================================= */
+#itemDetailPage:not(.hide) .detailPageWrapperContainer,
+#itemDetailPage:not(.hide) .detailPagePrimaryContainer,
+#itemDetailPage:not(.hide) .detailPageSecondaryContainer,
+#itemDetailPage:not(.hide) .detailPageContent,
+#itemDetailPage:not(.hide) #childrenCollapsible,
+#itemDetailPage:not(.hide) #listChildrenCollapsible,
+#itemDetailPage:not(.hide) #childrenContent {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+    max-width: none !important;
+}
+
+/* Restore ElegantFin full-bleed horizontal scrollers (no edge mask) */
+#itemDetailPage:not(.hide) .emby-scroller-container,
+#itemDetailPage:not(.hide) .emby-scroller,
+#itemDetailPage:not(.hide) .scrollX,
+#itemDetailPage:not(.hide) .itemsContainer.scrollSlider {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+    max-width: none !important;
+}
+
+/* Keep trailer BELOW primary+secondary content so it cannot cover episodes */
+#itemDetailPage:not(.hide) #itemBackdrop.itemBackdrop {
+    z-index: 0 !important;
+}
+#itemDetailPage:not(.hide) #itemBackdrop.itemBackdrop > .elegantfin-item-trailer-host.elegantfin-trailer-active {
+    z-index: 0 !important;
+    /* do not let host create a clipped containing block over page width */
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    max-width: 100% !important;
+}
+
+#itemDetailPage:not(.hide) .detailLogo {
+    z-index: 6 !important;
+}
+#itemDetailPage:not(.hide) .detailPageWrapperContainer,
+#itemDetailPage:not(.hide).elegantfin-trailer-playing .detailPageWrapperContainer {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+#itemDetailPage:not(.hide) .detailPageSecondaryContainer {
+    position: relative !important;
+    z-index: 7 !important;
+    width: 100% !important;
+}
+

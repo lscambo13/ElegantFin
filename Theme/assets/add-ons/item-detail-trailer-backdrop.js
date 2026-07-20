@@ -382,7 +382,8 @@
             if (cs.position === 'static') {
                 backdropEl.style.position = 'relative';
             }
-            backdropEl.style.overflow = 'hidden';
+            // never clip siblings / page width — host clips the video itself
+            backdropEl.style.overflow = 'visible';
         } catch (e) { /* ignore */ }
 
         var host = backdropEl.querySelector(':scope > .' + CFG.hostClass);
