@@ -91,7 +91,7 @@ body > .elegantfin-item-trailer-host {
     right: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    height: calc(100% + 275px) !important;
+    height: calc(100% + 305px) !important;
     overflow: hidden !important; /* clip video only inside host */
     pointer-events: none !important;
     z-index: 0 !important; /* under detail content / episode rows */

@@ -104,9 +104,9 @@
     var TRANSPARENCY_MASK = (
         'linear-gradient(to bottom,' +
         '#000 0%,' +
-        '#000 calc(100% - 220px),' +
-        'rgba(0,0,0,0.65) calc(100% - 140px),' +
-        'rgba(0,0,0,0.25) calc(100% - 70px),' +
+        '#000 calc(100% - 250px),' +
+        'rgba(0,0,0,0.65) calc(100% - 160px),' +
+        'rgba(0,0,0,0.25) calc(100% - 80px),' +
         'transparent 100%)'
     );
 
