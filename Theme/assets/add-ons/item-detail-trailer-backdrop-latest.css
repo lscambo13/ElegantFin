@@ -203,16 +203,35 @@ body > .elegantfin-item-trailer-host {
     width: 100% !important;
 }
 
-/* 5) KefinTweaks series episodes full-bleed
- * scripts/seriesEpisodes.js sets overflow:hidden inline for ElegantFin — clips width.
- */
+/* 5) KefinTweaks series-episodes-section: full viewport width + scroll buttons on page right */
 #itemDetailPage .series-episodes-section,
-#itemDetailPage .custom-scroller-container.series-episodes-section,
-.libraryPage .series-episodes-section {
+#itemDetailPage .custom-scroller-container.series-episodes-section {
     overflow: visible !important;
-    overflow-x: visible !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    grid-column: 1 / -1 !important;
 }
-#itemDetailPage .series-episodes-section .emby-scroller,
+#itemDetailPage .series-episodes-section > .sectionTitleContainer {
+    padding-left: var(--sidePadding, 3.3%) !important;
+    padding-right: var(--sidePadding, 3.3%) !important;
+}
+#itemDetailPage .series-episodes-section > .emby-scroller,
 #itemDetailPage .series-episodes-section .custom-scroller {
     overflow-x: auto !important;
+    width: 100% !important;
+    padding-left: var(--sidePadding, 3.3%) !important;
+    padding-right: var(--sidePadding, 3.3%) !important;
+    box-sizing: border-box !important;
+}
+#itemDetailPage .series-episodes-section > .emby-scrollbuttons,
+#itemDetailPage .series-episodes-section .emby-scrollbuttons {
+    position: absolute !important;
+    top: 0 !important;
+    right: max(0.25em, calc(var(--sidePadding, 3.3%) - 0.25em)) !important;
+    left: auto !important;
+    z-index: 5 !important;
 }
