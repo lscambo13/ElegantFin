@@ -1,6 +1,0 @@
-/*! ElegantFin bedroom stack — import this OR the three lines in branding.
- * Order matters: theme → media-bar support → detail trailer → media-bar unmask last.
- */
-@import url("./media-bar-plugin-support-latest-min.css");
-@import url("./item-detail-trailer-backdrop.css");
-@import url("./media-bar-unmask.css");
