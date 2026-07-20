@@ -1,0 +1,7 @@
+/*! Optional ElegantFin add-on stack (after main theme import).
+ * Order: media-bar layout support → item-detail trailer → media-bar unmask last.
+ * Or import each file separately from Custom CSS.
+ */
+@import url("./media-bar-plugin-support-latest-min.css");
+@import url("./item-detail-trailer-backdrop.css");
+@import url("./media-bar-unmask.css");

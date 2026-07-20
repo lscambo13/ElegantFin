@@ -1,0 +1,34 @@
+/*! Add-on: Media Bar unmask — kill bottom dissolve on home slideshow
+ * Media Bar Enhanced injects mask-image on .backdrop / .video-backdrop after
+ * branding CSS; this file is meant to load LAST among ElegantFin imports
+ * (or pair with late JS). Safe no-op when MBE is not installed.
+ */
+.slides .backdrop,
+.slides .backdrop-container,
+.slides .backdrop-overlay,
+.slides .gradient-overlay,
+.slides .video-backdrop,
+.backdrop-container,
+.backdrop-container.full-width-video,
+.backdrop-container .backdrop,
+.backdrop-container .video-backdrop,
+.backdrop,
+.backdrop-overlay,
+.gradient-overlay,
+.gradient-overlay.full-width-video,
+.video-backdrop,
+#slides-container .backdrop,
+#slides-container .backdrop-container,
+#slides-container .gradient-overlay,
+#slides-container video,
+body.media-bar-mobile-16-9 .backdrop-container,
+body.media-bar-mobile-16-9 .gradient-overlay,
+body.media-bar-mobile-16-9 .backdrop,
+body.media-bar-mobile-4-3 .backdrop-container,
+body.media-bar-mobile-4-3 .gradient-overlay,
+body.media-bar-mobile-4-3 .backdrop {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+}

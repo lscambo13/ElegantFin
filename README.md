@@ -99,6 +99,49 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 <hr>
 
+
+### 🎬 Optional: Item detail trailer backdrop (local trailers)
+
+Fades the **static item backdrop** into a **muted local trailer** on movie/series detail pages when Jellyfin has LocalTrailers for that item. Uses a dedicated `<video>` layer (not the main/theme player), so it does not fight [#247](https://github.com/lscambo13/ElegantFin/issues/247) / [#246](https://github.com/lscambo13/ElegantFin/issues/246).
+
+Also ships **layout CSS** that belongs in the add-on (not Custom CSS hacks):
+
+| File | What it does |
+|------|----------------|
+| `item-detail-trailer-backdrop.css` + `.js` | Detail trailer video, transparency mask, host under logo (~+305px), detail-only scope |
+| ↳ same CSS | Detail readability (`.backgroundContainer.withBackdrop`), **KefinTweaks** `.series-episodes-section` full-bleed + scroll buttons on the page right |
+| `media-bar-unmask.css` | Optional: remove home **Media Bar Enhanced** bottom `mask-image` dissolve (load **after** `media-bar-plugin-support`) |
+| `elegantfin-optional-addons-stack.css` | Convenience: media-bar support + trailer + unmask in one import (still need main theme + JS) |
+
+**1. CSS** — under your main ElegantFin import (imports only; no inline overrides needed):
+
+```css
+@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");
+@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
+@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/item-detail-trailer-backdrop.css");
+@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/media-bar-unmask.css");
+```
+
+Or import `elegantfin-optional-addons-stack.css` after the main theme (stack does not include the main theme file).
+
+**2. JS** — load `Theme/assets/add-ons/item-detail-trailer-backdrop.js` via [JavaScript Injector](https://github.com/n00bcodr/Jellyfin-JavaScript-Injector) (or File Transformation / equivalent). Keep CSS and JS on the **same release/commit**.
+
+Behavior:
+
+- Local trailers only (`ApiClient.getLocalTrailers` → progressive `stream.mp4`)
+- Transparency bottom mask (not solid paint); host extends under the clear logo
+- Detail pages only — purged on home; does not restyle Media Bar slides
+- **Start position**: from the **beginning by default**. Optional random mid-trailer:
+  ```js
+  window.ElegantFinItemTrailer = { randomStart: true, minPercent: 10, maxPercent: 75 };
+  ```
+  or `localStorage.elegantfin-item-trailer-random-start = "1"`
+- Series episode rows (KefinTweaks `.series-episodes-section`): full viewport width; `<` `>` on the right edge (works around Kefin `overflow:hidden` + padded detail layout). Prefer also fixing upstream Kefin when available.
+- `media-bar-unmask.css`: optional full-bleed home bar without bottom dissolve (MBE plugin CSS otherwise wins the cascade)
+
+Requires trailers in the library (e.g. `*-trailer.*` or `Trailers/` extras) and a library scan so Jellyfin indexes them as LocalTrailers.
+
+
 ### 👇 How to install/setup this theme?
 
 <b>Paste the following in Custom CSS code box:</b>
