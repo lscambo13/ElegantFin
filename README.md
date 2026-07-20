@@ -115,6 +115,11 @@ Fades the **static item backdrop** into a **muted local trailer** on movie/serie
 Behavior (v1):
 
 - Local trailers only (`ApiClient.getLocalTrailers`)
+- **Start position**: from the **beginning by default** (unlike Media Bar, where random start is on by default). Optional random mid-trailer start:
+  ```js
+  window.ElegantFinItemTrailer = { randomStart: true, minPercent: 10, maxPercent: 75 };
+  ```
+  or `localStorage.elegantfin-item-trailer-random-start = "1"` (+ optional `-random-min` / `-random-max`)
 - Muted, playsInline, loop; fade-in after a short delay; bottom edge fades to **transparency** (CSS mask), not a fixed color
 - Skips when `prefers-reduced-motion` or narrow touch layouts
 - Tears down on navigate away; pauses when Play is clicked

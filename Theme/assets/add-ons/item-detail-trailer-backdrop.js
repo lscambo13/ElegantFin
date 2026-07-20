@@ -4,6 +4,10 @@
  * When a movie/series detail page has local trailers, crossfade the static
  * .itemBackdrop into a muted <video> layer (bottom edge = transparency mask) (NOT Jellyfin's main/theme player).
  *
+ * Random start: OFF by default (always from beginning). Enable via
+ *   window.ElegantFinItemTrailer = { randomStart: true, minPercent: 10, maxPercent: 75 }
+ *   or localStorage elegantfin-item-trailer-random-start=1
+ *
  * Install: load this script via JavaScript Injector (or equivalent) after the
  * ElegantFin CSS import. Pair with item-detail-trailer-backdrop.css.
  *
@@ -22,8 +26,80 @@
         minWidthEm: 42,
         // How long to wait for detail DOM after hash change
         domWaitMs: 4000,
-        domPollMs: 100
+        domPollMs: 100,
+        // Random start — OFF by default on item detail (start from beginning).
+        // Media Bar uses its own setting (ON by default there).
+        // Override: window.ElegantFinItemTrailer = { randomStart: true, minPercent: 10, maxPercent: 75 }
+        randomStart: false,
+        randomStartMinPercent: 10,
+        randomStartMaxPercent: 75
     };
+
+    function readUserTrailerConfig() {
+        try {
+            var u = window.ElegantFinItemTrailer;
+            if (!u || typeof u !== 'object') return;
+            if (typeof u.randomStart === 'boolean') CFG.randomStart = u.randomStart;
+            if (typeof u.minPercent === 'number') CFG.randomStartMinPercent = u.minPercent;
+            if (typeof u.maxPercent === 'number') CFG.randomStartMaxPercent = u.maxPercent;
+            if (typeof u.randomStartMinPercent === 'number') CFG.randomStartMinPercent = u.randomStartMinPercent;
+            if (typeof u.randomStartMaxPercent === 'number') CFG.randomStartMaxPercent = u.randomStartMaxPercent;
+        } catch (e) { /* ignore */ }
+        // localStorage override: elegantfin-item-trailer-random-start = "1" | "0"
+        try {
+            var ls = window.localStorage && localStorage.getItem('elegantfin-item-trailer-random-start');
+            if (ls === '1' || ls === 'true') CFG.randomStart = true;
+            if (ls === '0' || ls === 'false') CFG.randomStart = false;
+            var mn = localStorage.getItem('elegantfin-item-trailer-random-min');
+            var mx = localStorage.getItem('elegantfin-item-trailer-random-max');
+            if (mn != null && mn !== '') CFG.randomStartMinPercent = parseInt(mn, 10) || CFG.randomStartMinPercent;
+            if (mx != null && mx !== '') CFG.randomStartMaxPercent = parseInt(mx, 10) || CFG.randomStartMaxPercent;
+        } catch (e2) { /* ignore */ }
+    }
+
+    function clampPercent(n, fallback) {
+        n = parseInt(n, 10);
+        if (isNaN(n)) return fallback;
+        return Math.max(0, Math.min(100, n));
+    }
+
+    /** Pick start seconds within duration when randomStart is enabled; else 0. */
+    function pickDetailTrailerStartSeconds(duration) {
+        if (!CFG.randomStart) return 0;
+        if (!duration || duration < 3 || !isFinite(duration)) return 0;
+        var minP = clampPercent(CFG.randomStartMinPercent, 10) / 100;
+        var maxP = clampPercent(CFG.randomStartMaxPercent, 75) / 100;
+        if (maxP < minP) {
+            var tmp = minP;
+            minP = maxP;
+            maxP = tmp;
+        }
+        // leave ~2s tail so there is always motion
+        var usable = Math.max(0, duration - 2);
+        var lo = usable * minP;
+        var hi = usable * maxP;
+        if (hi <= lo) return Math.max(0, lo);
+        return lo + Math.random() * (hi - lo);
+    }
+
+    function applyDetailTrailerStart(video) {
+        if (!video) return;
+        var apply = function () {
+            try {
+                var d = video.duration;
+                var t = pickDetailTrailerStartSeconds(d);
+                if (t > 0 && isFinite(t)) {
+                    video.currentTime = t;
+                    log('detail trailer start at', Math.round(t * 10) / 10, 's /', Math.round(d), 's', CFG.randomStart ? '(random)' : '(start)');
+                }
+            } catch (e) { /* ignore seek errors */ }
+        };
+        if (video.readyState >= 1 && isFinite(video.duration) && video.duration > 0) {
+            apply();
+        } else {
+            video.addEventListener('loadedmetadata', apply, { once: true });
+        }
+    }
 
     var TRANSPARENCY_MASK = (
         'linear-gradient(to bottom,' +
@@ -375,6 +451,7 @@
         state.video = video;
         applyTransparencyMask(host);
         applyTransparencyMask(video);
+        applyDetailTrailerStart(video);
 
         log(
             'mounted inside',
@@ -513,6 +590,7 @@
     }
 
     function bind() {
+        readUserTrailerConfig();
         window.addEventListener('hashchange', onRoute);
         window.addEventListener('popstate', onRoute);
         document.addEventListener('viewshow', onRoute, true);
