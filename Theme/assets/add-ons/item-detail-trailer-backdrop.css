@@ -203,3 +203,16 @@ body > .elegantfin-item-trailer-host {
     width: 100% !important;
 }
 
+/* 5) KefinTweaks series episodes full-bleed
+ * scripts/seriesEpisodes.js sets overflow:hidden inline for ElegantFin — clips width.
+ */
+#itemDetailPage .series-episodes-section,
+#itemDetailPage .custom-scroller-container.series-episodes-section,
+.libraryPage .series-episodes-section {
+    overflow: visible !important;
+    overflow-x: visible !important;
+}
+#itemDetailPage .series-episodes-section .emby-scroller,
+#itemDetailPage .series-episodes-section .custom-scroller {
+    overflow-x: auto !important;
+}
