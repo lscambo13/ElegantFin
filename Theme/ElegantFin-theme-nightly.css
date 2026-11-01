@@ -3249,6 +3249,11 @@ div[data-role="controlgroup"] a.ui-btn-active {
     border: var(--defaultBorder);
 }
 
+.headerUserButton.show-focus:focus {
+    border-color: var(--highlightOutlineColor) !important;
+    box-shadow: 0 0 0 var(--borderWidthDouble) var(--highlightOutlineColor);
+}
+
 .MuiAvatar-circular {
     width: 1.5em;
     height: 1.5em;
