@@ -2365,9 +2365,15 @@ progress + span {
     box-shadow: inset 0em 7em 10em 20px var(--multiSelectOverlayColor);
 }
 
+/* box-shadow instead of outline: outline ignores border-radius before Chromium 94 (e.g. Tizen 6.5) */
 @supports (display: revert) {
     .emby-checkbox:checked + span + .checkboxOutline {
-        outline: solid var(--borderWidth) #fff;
+        outline: none;
+        box-shadow: 0 0 0 var(--borderWidth) #fff;
+    }
+
+    .emby-checkbox:checked + span + .multiSelectCheckboxOutline {
+        box-shadow: inset 0em 7em 10em 20px var(--multiSelectOverlayColor), 0 0 0 var(--borderWidth) #fff;
     }
 }
 
@@ -2466,7 +2472,12 @@ progress + span {
 @supports (display: revert) {
     .emby-checkbox:focus + span + .checkboxOutline {
         border-color: #fff !important;
-        outline: var(--borderWidth) solid var(--highlightOutlineColor);
+        outline: none;
+        box-shadow: 0 0 0 var(--borderWidth) var(--highlightOutlineColor);
+    }
+
+    .emby-checkbox:checked:focus + span + .multiSelectCheckboxOutline {
+        box-shadow: inset 0em 7em 10em 20px var(--multiSelectOverlayColor), 0 0 0 var(--borderWidth) var(--highlightOutlineColor);
     }
 }
 
@@ -3238,6 +3249,11 @@ div[data-role="controlgroup"] a.ui-btn-active {
     border: var(--defaultBorder);
 }
 
+.headerUserButton.show-focus:focus {
+    border-color: var(--highlightOutlineColor) !important;
+    box-shadow: 0 0 0 var(--borderWidthDouble) var(--highlightOutlineColor);
+}
+
 .MuiAvatar-circular {
     width: 1.5em;
     height: 1.5em;
@@ -3509,7 +3525,8 @@ div[data-role="controlgroup"] a.ui-btn-active {
     .emby-input:focus,
     .emby-textarea:focus {
         border-color: var(--highlightOutlineColor) !important;
-        outline: thin solid var(--highlightOutlineColor) !important;
+        outline: none !important;
+        box-shadow: 0 0 0 1px var(--highlightOutlineColor) !important;
         background-color: var(--textareaBackgroundColor);
     }
 }
