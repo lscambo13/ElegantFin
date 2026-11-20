@@ -1,0 +1,4 @@
+/* Load the Jellyfin 12 Modern rules last so they can override the base theme. */
+@import url("./ElegantFin-jellyfin-theme-build-latest-minified.css");
+@import url("./assets/add-ons/media-bar-plugin-support-latest-min.css");
+@import url("./ElegantFin-jellyfin-12-modern-overrides.css");
