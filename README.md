@@ -104,10 +104,10 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 **Jellyfin 12 Modern display mode** — Replace your existing ElegantFin and Media Bar imports with this line at the top of Custom CSS. Keep your personal CSS rules below it.
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/Rybeardawg1/ElegantFin@jellyfin-12-modern/Theme/ElegantFin-modern.css");
+@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-modern.css");
 ```
 
-This fork loads ElegantFin, its Media Bar styling, and the Modern layout rules in that order. The [editable Modern stylesheet](Theme/ElegantFin-jellyfin-12-modern-overrides.css) comes from [mihaif7’s v26.11.19 companion release](https://github.com/mihaif7/elegantfin-jf12/releases/tag/v26.11.19).
+This import loads ElegantFin, its Media Bar styling, and the Modern layout rules in that order. The [Modern stylesheet](Theme/ElegantFin-jellyfin-12-modern-overrides.css) comes from [mihaif7’s v26.11.19 companion release](https://github.com/mihaif7/elegantfin-jf12/releases/tag/v26.11.19).
 
 **Legacy display modes and earlier Jellyfin versions** — Use the original theme import.
 
