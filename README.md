@@ -101,7 +101,15 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 ### 👇 How to install/setup this theme?
 
-<b>Paste the following in Custom CSS code box:</b>
+**Jellyfin 12 Modern display mode** — Replace your existing ElegantFin and Media Bar imports with this line at the top of Custom CSS. Keep your personal CSS rules below it.
+
+```css
+@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-modern.css");
+```
+
+This import loads ElegantFin, its Media Bar styling, and the Modern layout rules in that order. The [Modern stylesheet](Theme/ElegantFin-jellyfin-12-modern-overrides.css) comes from [mihaif7’s v26.11.19 companion release](https://github.com/mihaif7/elegantfin-jf12/releases/tag/v26.11.19).
+
+**Legacy display modes and earlier Jellyfin versions** — Use the original theme import.
 
 ```css
 @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");
@@ -130,7 +138,7 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 <br>
 
-**Note:** On Jellyfin v12, you will need to set `User Settings > Display > Display Mode` to `"Desktop (Legacy)"` on desktop, or `"Mobile (Legacy)"` on mobile. The new (non-legacy) UI is not yet fully supported.
+After saving, refresh the Jellyfin web client. To return to the original theme on Jellyfin 12, use the Legacy import above and select **Desktop (Legacy)** or **Mobile (Legacy)** under **User Settings → Display → Display Mode**.
 
 <hr>
 
@@ -231,6 +239,8 @@ https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
 
 <details>
   <summary><i>7. Enable alternative style for the Media Bar plugin</i></summary>
+
+The Jellyfin 12 Modern import already includes this add-on.
  
 > <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/3e88e270-40f9-48ba-8173-f65b94344f8d" />
 > 
