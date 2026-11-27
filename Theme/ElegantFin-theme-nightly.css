@@ -2764,6 +2764,11 @@ div[data-role="controlgroup"] a.ui-btn-active {
     border-bottom: var(--defaultBorder);
 }
 
+/* The navigation app bar is empty during video playback. */
+body:has(> .videoPlayerContainer) .MuiAppBar-root:empty {
+    display: none;
+}
+
 .MuiDrawer-paper {
     background: var(--drawerColor);
     backdrop-filter: var(--blurLarge);
